@@ -1,33 +1,39 @@
 /* ============================================================
-   Englisch B2.1 – gemeinsames Aussehen für alle Seiten
-   Aufbau: 1) Variablen  2) Grundlagen  3) Startseite
-            4) Quiz  5) Gamification  6) Abschluss  7) Handy
-   Stil: dunkles "Clay"-Theme, indigo + grün, verspielt aber
-         lesbar. Schrift: Baloo 2 (Überschriften) + Nunito (Text).
+   Englisch üben – gemeinsames Aussehen für alle Seiten
+   Stil: HELL & verspielt, Farben wie Stina_Schulhund (teal + orange).
+   Schrift: Baloo 2 (Überschriften) + Nunito (Text).
+   Aufbau: 1) Variablen 2) Grundlagen 3) Kopfleiste 4) Landingpage
+           5) Quiz 6) Feedback 7) Abschluss 8) Handy 9) A11y
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
 
-/* 1) Farben & Maße zentral als Variablen ------------------- */
+/* 1) Farben & Maße ---------------------------------------- */
 :root {
-  --bg:        #0e1024;     /* dunkler Hintergrund   */
-  --bg-card:   #1a1d3d;     /* Kästen                */
-  --bg-soft:   #242853;     /* Buttons, Felder       */
-  --text:      #eef1ff;     /* Schrift  (Kontrast 13:1) */
-  --muted:     #a6adda;     /* Nebentext (Kontrast 6:1) */
-  --accent:    #8b95ff;     /* Hauptfarbe (indigo, hell für dunkel) */
-  --accent-2:  #2fe0b0;     /* Akzent (grün-türkis)  */
-  --good:      #3ddc84;     /* richtig               */
-  --bad:       #ff6b7a;     /* falsch                */
-  --gold:      #ffd34e;     /* Streak / Belohnung    */
-  --radius:    24px;        /* große, weiche Ecken (Clay) */
-  --shadow:    0 18px 40px -12px rgba(0,0,0,.55);
-  /* tastbarer Clay-Schatten: außen tief + innen heller Rand */
-  --clay:      0 10px 24px -8px rgba(0,0,0,.5),
-               inset 0 1px 0 rgba(255,255,255,.06);
-  --maxw:      720px;
-  /* sanfte, exponentielle Beschleunigung – kein Bounce */
-  --ease:      cubic-bezier(.22,1,.36,1);
+  --bg:        #eaf4f5;     /* sehr helles Teal-Off-White */
+  --bg-2:      #e2f0f1;
+  --surface:   #ffffff;
+  --ink:       #133036;     /* dunkles Teal-Anthrazit (Kontrast 12:1) */
+  --muted:     #5b7b81;     /* Nebentext (Kontrast 4.6:1) */
+  --line:      #d8e9ea;
+
+  --teal:      #16a7b5;     /* Hauptfarbe (wie Referenz-Header) */
+  --teal-d:    #0e7d89;     /* dunkler für 3D/Text/Hover */
+  --teal-l:    #d3eef1;
+  --orange:    #f08a1d;     /* Akzent (wie oranger „G“-Button) */
+  --orange-d:  #d3730c;
+
+  --good:      #18a558;     /* richtig */
+  --good-bg:   #e6f7ee;
+  --bad:       #e6452f;     /* falsch (Referenz-Rot) */
+  --bad-bg:    #fdeae6;
+  --gold:      #f0a500;     /* Serie/Belohnung */
+
+  --radius:    24px;
+  --shadow:    0 16px 34px -16px rgba(16,90,100,.40);
+  --shadow-sm: 0 6px 16px -8px rgba(16,90,100,.28);
+  --maxw:      780px;
+  --ease:      cubic-bezier(.22,1,.36,1);   /* ease-out, kein Bounce */
 }
 
 /* 2) Grundlagen ------------------------------------------- */
@@ -36,251 +42,189 @@
 body {
   margin: 0;
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: radial-gradient(1100px 560px at 50% -12%, #232a5e 0%, var(--bg) 58%);
-  color: var(--text);
+  color: var(--ink);
   line-height: 1.6;
   min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(620px 420px at 10% -6%,  rgba(22,167,181,.16), transparent 60%),
+    radial-gradient(560px 420px at 96% 2%,   rgba(240,138,29,.14), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  background-attachment: fixed;
 }
 
-.wrap {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 28px 20px 60px;
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 22px 20px 64px; }
+
+a { color: var(--teal-d); }
+
+h1, h2, h3, .btn, .badge, .chip, .appbar__title { font-family: "Baloo 2", "Nunito", sans-serif; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.12; }
+h1 { font-size: clamp(1.9rem, 5.5vw, 2.8rem); font-weight: 800; margin: .2em 0 .1em; letter-spacing: -.015em; }
+h2 { font-size: 1.4rem; font-weight: 700; margin: 1.3em 0 .4em; }
+
+.lead { color: var(--muted); margin-top: 0; font-size: 1.1rem; }
+
+/* 3) Kopfleiste (teal, wie Referenz) ---------------------- */
+.appbar {
+  position: sticky; top: 0; z-index: 50;
+  background: linear-gradient(180deg, var(--teal), var(--teal-d));
+  color: #fff; box-shadow: var(--shadow-sm);
 }
+.appbar__in { max-width: var(--maxw); margin: 0 auto; padding: 12px 20px;
+              display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.appbar__title { font-weight: 700; font-size: 1.05rem; color: #fff; text-decoration: none;
+                 display: inline-flex; align-items: center; gap: 9px; }
+.appbar__title .dot { width: 26px; height: 26px; border-radius: 9px; background: var(--orange);
+                      display: grid; place-items: center; color: #fff; font-weight: 800; font-size: .95rem; }
+.appbar a.back { color: #fff; text-decoration: none; font-weight: 700; opacity: .92; font-size: .95rem; }
+.appbar a.back:hover { opacity: 1; }
 
-a { color: var(--accent); }
+/* 4) Landingpage ------------------------------------------ */
+.hero { text-align: center; padding: 26px 0 4px; }
+.hero h1 { margin: 0 0 .15em; }
+.hero .lead { max-width: 34ch; margin: 0 auto 6px; }
+.hero .stat { display: inline-block; margin-top: 8px; color: var(--teal-d); font-weight: 800;
+              background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+              padding: 6px 16px; border-radius: 999px; font-size: .92rem; }
 
-h1, h2, h3, .btn, .badge, .chip { font-family: "Baloo 2", "Nunito", sans-serif; }
-h1, h2, h3 { text-wrap: balance; line-height: 1.15; }
-h1 { font-size: clamp(1.7rem, 5vw, 2.3rem); font-weight: 700; margin: .2em 0 .1em; letter-spacing: -.01em; }
-h2 { font-size: 1.35rem; font-weight: 600; margin: 1.4em 0 .4em; }
+.group { margin-top: 34px; }
+.group__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+.group__head h2 { margin: 0; }
+.group__head .count { color: var(--muted); font-weight: 700; font-size: .9rem; }
 
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
+.topics { display: grid; gap: 12px; margin-top: 14px; }
+@media (min-width: 620px) { .topics { grid-template-columns: 1fr 1fr; } }
+
+.topic {
+  position: relative; display: flex; align-items: center; gap: 14px;
+  text-decoration: none; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  padding: 14px 16px; box-shadow: var(--shadow-sm);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
 }
-.topbar a { text-decoration: none; color: var(--muted); font-weight: 600; }
-.topbar a:hover { color: var(--text); }
-
-.lead { color: var(--muted); margin-top: 0; }
-
-/* Erklär-Box über dem Quiz */
-.explain {
-  background: var(--bg-card);
-  border: 1px solid #2c326a;
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  box-shadow: var(--clay);
-  margin: 18px 0 26px;
+.topic:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--teal); }
+.topic .n {
+  flex: none; width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+  font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 1.05rem;
+  background: var(--teal-l); color: var(--teal-d);
 }
+.topic.ready .n { background: var(--teal); color: #fff; }
+.topic .t { font-weight: 700; line-height: 1.25; }
+.topic .meta { display: block; font-weight: 700; font-size: .78rem; color: var(--muted); margin-top: 2px; }
+.topic.ready .meta { color: var(--good); }
+.topic .best { margin-left: auto; flex: none; font-weight: 800; font-size: .82rem; color: var(--gold); }
+.topic.soon { opacity: .72; }
+.topic.soon:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--line); }
+
+/* 5) Quiz ------------------------------------------------- */
+.quiz { margin-top: 6px; }
+.quiz__intro { color: var(--muted); margin: 2px 0 12px; }
+
+.explain { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+           padding: 20px 22px; box-shadow: var(--shadow-sm); margin: 16px 0 24px; }
 .explain h2 { margin-top: .2em; }
 .explain ul { margin: .4em 0; padding-left: 1.2em; }
-.explain li { margin: .3em 0; }
-.explain .ex { color: var(--accent-2); font-style: italic; }
+.explain li { margin: .35em 0; }
+.explain .ex { color: var(--teal-d); font-style: italic; font-weight: 700; }
 
-/* 3) Startseite: Themen-Karten ---------------------------- */
-.cards { display: grid; gap: 16px; margin-top: 22px; }
-@media (min-width: 620px) { .cards { grid-template-columns: 1fr 1fr; } }
-
-.card {
-  display: block;
-  text-decoration: none;
-  color: var(--text);
-  background: var(--bg-card);
-  border: 1px solid #2c326a;
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
-  transition: transform .12s ease, border-color .12s ease;
-}
-.card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.card .badge {
-  display: inline-block;
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  color: var(--bg);
-  background: var(--accent-2);
-  padding: 3px 9px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-.card h2 { margin: .1em 0 .25em; font-size: 1.15rem; }
-.card p  { color: var(--muted); margin: 0; font-size: .95rem; }
-.card .best { margin-top: 12px; font-size: .85rem; color: var(--gold); min-height: 1.2em; }
-
-/* 4) Quiz ------------------------------------------------- */
-.quiz { margin-top: 8px; }
-
-.statusbar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-  font-weight: 600;
-}
-.chip {
-  background: var(--bg-soft);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: .9rem;
-}
-.chip .num { color: var(--accent-2); }
+.statusbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; font-weight: 800; }
+.chip { background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+        border-radius: 999px; padding: 7px 15px; font-size: .92rem; color: var(--ink); }
+.chip .num { color: var(--teal-d); }
 .chip.streak .num { color: var(--gold); }
 
-.progress {
-  height: 10px;
-  background: var(--bg-soft);
-  border-radius: 999px;
-  overflow: hidden;
-  margin-bottom: 22px;
-}
-.progress > span {
-  display: block;
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  transition: width .35s ease;
-}
+.progress { height: 14px; background: #fff; border: 1px solid var(--line); border-radius: 999px;
+            overflow: hidden; margin-bottom: 22px; box-shadow: inset 0 1px 3px rgba(16,90,100,.08); }
+.progress > span { display: block; height: 100%; width: 0%; border-radius: 999px;
+                   background: linear-gradient(90deg, var(--teal), var(--orange));
+                   transition: width .45s var(--ease); }
 
-.question {
-  background: var(--bg-card);
-  border: 1px solid #2c326a;
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow);
-}
-.q-type {
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--muted);
-  font-weight: 700;
-}
-.q-text { font-size: 1.2rem; margin: 10px 0 18px; }
+.question { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+            padding: 24px; box-shadow: var(--shadow); }
+.q-type { font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--teal-d); font-weight: 800; }
+.q-text { font-size: 1.3rem; font-weight: 700; margin: 10px 0 20px; line-height: 1.4; }
 
-/* Multiple-Choice-Optionen */
-.options { display: grid; gap: 10px; }
+.options { display: grid; gap: 12px; }
 .option {
-  text-align: left;
-  font-size: 1rem;
-  color: var(--text);
-  background: var(--bg-soft);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 13px 16px;
-  cursor: pointer;
-  transition: border-color .12s, background .12s;
+  text-align: left; font-family: "Nunito", sans-serif; font-size: 1.05rem; font-weight: 700;
+  color: var(--ink); background: #fff; border: 2px solid var(--line); border-radius: 16px;
+  padding: 15px 18px; cursor: pointer; box-shadow: 0 3px 0 var(--line);
+  transition: transform .12s var(--ease), border-color .15s var(--ease), box-shadow .12s var(--ease), background .15s var(--ease);
 }
-.option { transition: border-color .15s var(--ease), background .15s var(--ease), transform .12s var(--ease); }
-.option:hover:not(:disabled) { border-color: var(--accent); transform: translateY(-1px); }
-.option:active:not(:disabled) { transform: scale(.98); }
-.option:disabled { cursor: default; opacity: .95; }
-.option.correct { border-color: var(--good); background: rgba(46,204,113,.16); }
-.option.wrong   { border-color: var(--bad);  background: rgba(255,93,108,.16); }
+.option:hover:not(:disabled) { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 5px 0 var(--line); }
+.option:active:not(:disabled) { transform: translateY(1px); box-shadow: 0 1px 0 var(--line); }
+.option:disabled { cursor: default; }
+.option.correct { border-color: var(--good); background: var(--good-bg); box-shadow: 0 3px 0 #bfe9cd; }
+.option.wrong   { border-color: var(--bad);  background: var(--bad-bg);  box-shadow: 0 3px 0 #f6c6bd; }
 
-/* Eingabefeld für Lückentext / Umformen */
 .answer-input {
-  width: 100%;
-  font-size: 1.05rem;
-  color: var(--text);
-  background: var(--bg-soft);
-  border: 2px solid #343a72;
-  border-radius: 12px;
-  padding: 13px 16px;
-  outline: none;
+  width: 100%; font-family: "Nunito", sans-serif; font-size: 1.08rem; font-weight: 700; color: var(--ink);
+  background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 15px 18px; outline: none;
+  transition: border-color .15s var(--ease), box-shadow .15s var(--ease);
 }
-.answer-input:focus { border-color: var(--accent); }
-.answer-input.correct { border-color: var(--good); }
-.answer-input.wrong   { border-color: var(--bad); }
+.answer-input::placeholder { color: #9bb4b8; font-weight: 600; }
+.answer-input:focus { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(22,167,181,.18); }
+.answer-input.correct { border-color: var(--good); background: var(--good-bg); }
+.answer-input.wrong   { border-color: var(--bad);  background: var(--bad-bg); }
 
-/* Knöpfe */
 .btn {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  background: var(--accent);
-  border: none;
-  border-radius: 12px;
-  padding: 13px 22px;
-  cursor: pointer;
-  transition: filter .12s, transform .12s;
+  font-family: "Baloo 2", sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff;
+  background: var(--teal); border: none; border-radius: 16px; padding: 14px 24px; cursor: pointer;
+  box-shadow: 0 5px 0 var(--teal-d), var(--shadow-sm);
+  transition: transform .12s var(--ease), box-shadow .12s var(--ease), filter .12s var(--ease);
 }
-.btn:hover { filter: brightness(1.08); }
-.btn:active { transform: scale(.96); }            /* tastbares Drücken */
-.btn.ghost { background: var(--bg-soft); }
-.btn[disabled] { opacity: .4; cursor: default; }
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--teal-d); }
+.btn.accent { background: var(--orange); box-shadow: 0 5px 0 var(--orange-d), var(--shadow-sm); }
+.btn.accent:active { box-shadow: 0 1px 0 var(--orange-d); }
+.btn.ghost { color: var(--teal-d); background: #fff; box-shadow: 0 4px 0 var(--line), var(--shadow-sm); }
+.btn.ghost:active { box-shadow: 0 1px 0 var(--line); }
+.btn[disabled] { opacity: .45; cursor: default; box-shadow: none; transform: none; }
 
-.actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.actions { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
 
-/* 5) Feedback nach Antwort -------------------------------- */
-.feedback {
-  margin-top: 16px;
-  padding: 14px 16px;
-  border-radius: 12px;
-  font-size: .98rem;
-  display: none;            /* per JS eingeblendet */
-}
-.feedback.show { display: block; }
-.feedback.good { background: rgba(46,204,113,.14); border: 1px solid var(--good); }
-.feedback.bad  { background: rgba(255,93,108,.14); border: 1px solid var(--bad); }
-.feedback .tag { font-weight: 800; }
+/* 6) Feedback --------------------------------------------- */
+.feedback { margin-top: 18px; padding: 15px 17px; border-radius: 16px; font-size: 1rem; display: none; }
+.feedback.show { display: block; animation: slidein .3s var(--ease); }
+.feedback.good { background: var(--good-bg); border: 1.5px solid var(--good); }
+.feedback.bad  { background: var(--bad-bg);  border: 1.5px solid var(--bad); }
+.feedback .tag { font-family: "Baloo 2", sans-serif; font-weight: 800; }
 .feedback.good .tag { color: var(--good); }
 .feedback.bad  .tag { color: var(--bad); }
-.feedback .why { color: var(--text); }
-.feedback .sol { color: var(--accent-2); font-weight: 600; }
+.feedback .why { color: var(--ink); }
+.feedback .sol { color: var(--good); font-weight: 800; }
+.feedback.bad .sol { color: var(--bad); }
 
-/* kleine Belohnungs-Animation bei Streak */
-@keyframes pop { 0%{transform:scale(.6);opacity:0} 60%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
-.spark { display:inline-block; animation: pop .4s ease; }
+@keyframes slidein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes pop { 0%{transform:scale(.6);opacity:0} 60%{transform:scale(1.18)} 100%{transform:scale(1);opacity:1} }
+.spark { display: inline-block; font-weight: 800; color: var(--gold); animation: pop .42s var(--ease); }
 
-/* 6) Abschluss-Screen ------------------------------------- */
-.result {
-  text-align: center;
-  background: var(--bg-card);
-  border: 1px solid #2c326a;
-  border-radius: var(--radius);
-  padding: 38px 24px;
-  box-shadow: var(--shadow);
-}
+/* 7) Abschluss-Screen ------------------------------------- */
+.result { text-align: center; background: var(--surface); border: 1px solid var(--line);
+          border-radius: var(--radius); padding: 40px 24px; box-shadow: var(--shadow); }
 .result .ring {
-  --p: 0;                   /* Prozent, per JS gesetzt */
-  width: 160px; height: 160px;
-  margin: 8px auto 20px;
-  border-radius: 50%;
+  --p: 0; width: 172px; height: 172px; margin: 10px auto 22px; border-radius: 50%;
   display: grid; place-items: center;
   background:
-    radial-gradient(closest-side, var(--bg-card) 78%, transparent 79%),
-    conic-gradient(var(--accent-2) calc(var(--p) * 1%), var(--bg-soft) 0);
+    radial-gradient(closest-side, var(--surface) 77%, transparent 78%),
+    conic-gradient(var(--teal) calc(var(--p) * 1%), #dcebec 0);
 }
-.result .ring b { font-size: 2.1rem; }
-.result .msg { font-size: 1.15rem; margin: 6px 0 4px; }
-.result .sub { color: var(--muted); }
+.result .ring b { font-family: "Baloo 2", sans-serif; font-size: 2.4rem; color: var(--ink); }
+.result .msg { font-size: 1.25rem; font-weight: 800; margin: 6px 0 4px; }
+.result .sub { color: var(--muted); font-weight: 600; }
 
-/* 7) Handy ------------------------------------------------ */
+/* 8) Handy ------------------------------------------------ */
 @media (max-width: 480px) {
-  .q-text { font-size: 1.08rem; }
-  .wrap { padding: 20px 14px 50px; }
+  .q-text { font-size: 1.12rem; }
+  .wrap { padding: 18px 14px 52px; }
 }
 
-/* 8) Tastatur-Fokus & Barrierefreiheit -------------------- */
-:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 6px;
-}
+/* 9) Tastatur-Fokus & Barrierefreiheit -------------------- */
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 8px; }
 
-/* Wer im System "weniger Bewegung" einstellt, bekommt keine. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important; scroll-behavior: auto !important;
   }
 }

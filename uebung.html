@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Übung – English Grammar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="appbar">
+    <div class="appbar__in">
+      <a class="back" href="index.html">← Übersicht</a>
+      <span class="appbar__title" id="bar-title" style="font-size:1rem"></span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 id="topic-title">…</h1>
+    <p class="quiz__intro" id="topic-intro"></p>
+
+    <!-- quiz.js baut hier das Quiz hinein -->
+    <section class="quiz" id="quiz"></section>
+  </main>
+
+  <script src="js/topics.js"></script>
+  <script>
+    (function () {
+      // Themen-Nummer aus der Adresse lesen: uebung.html?id=27
+      var id = parseInt(new URLSearchParams(location.search).get("id"), 10);
+      var topic = (window.TOPICS || []).find(function (t) { return t.id === id; });
+
+      var titleEl = document.getElementById("topic-title");
+      var barEl   = document.getElementById("bar-title");
+      var introEl = document.getElementById("topic-intro");
+
+      if (!topic) {
+        titleEl.textContent = "Thema nicht gefunden";
+        introEl.innerHTML = '<a href="index.html">Zurück zur Übersicht</a>';
+        return;
+      }
+
+      titleEl.textContent = topic.id + " · " + topic.title;
+      barEl.textContent = topic.title;
+      document.title = topic.title + " – English Grammar";
+
+      if (!topic.file) {
+        introEl.innerHTML = 'Dieses Thema ist noch in Arbeit. ' +
+          '<a href="index.html">Anderes Thema wählen</a>';
+        return;
+      }
+
+      // Erst die Inhalts-Datei laden, DANN die Logik – Reihenfolge zählt.
+      var data = document.createElement("script");
+      data.src = "js/data/" + topic.file;
+      data.onload = function () {
+        // kurze Themen-Einleitung aus der Daten-Datei zeigen
+        if (typeof QUIZ_DATA !== "undefined" && QUIZ_DATA.intro) introEl.textContent = QUIZ_DATA.intro;
+        var logic = document.createElement("script");
+        logic.src = "js/quiz.js";
+        document.body.appendChild(logic);
+      };
+      data.onerror = function () {
+        introEl.textContent = "Übungen konnten nicht geladen werden.";
+      };
+      document.body.appendChild(data);
+    })();
+  </script>
+</body>
+</html>

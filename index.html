@@ -3,45 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Englisch B2.1 – Grammatik üben</title>
+  <title>English Grammar – üben</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="wrap">
-    <h1>Englisch B2.1 üben</h1>
-    <p class="lead">Erst kurz erklärt, dann spielerisch üben. Wähle ein Thema.</p>
-
-    <div class="cards">
-      <a class="card" href="tenses.html">
-        <span class="badge">Modul 1</span>
-        <h2>Tenses</h2>
-        <p>Present Perfect vs. Past Simple, Verlaufsformen, Zukunft. Plus die since/for-Falle.</p>
-        <div class="best" data-best="best:Tenses"></div>
-      </a>
-
-      <a class="card" href="passive-reported.html">
-        <span class="badge">Modul 2</span>
-        <h2>Passive &amp; Reported Speech</h2>
-        <p>Passiv in allen Zeiten, indirekte Rede mit backshift, say vs. tell.</p>
-        <div class="best" data-best="best:Passive &amp; Reported Speech"></div>
-      </a>
-
-      <a class="card" href="relative-conjunctions.html">
-        <span class="badge">Modul 3</span>
-        <h2>Relativsätze &amp; Konjunktionen</h2>
-        <p>who/which/that/whose, defining vs. non-defining, although/despite/because of.</p>
-        <div class="best" data-best="best:Relativsätze &amp; Konjunktionen"></div>
-      </a>
+  <header class="appbar">
+    <div class="appbar__in">
+      <a class="appbar__title" href="index.html"><span class="dot">G</span> English Grammar</a>
+      <span style="opacity:.9;font-weight:700;font-size:.9rem" id="ready-count"></span>
     </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Grammatik üben</h1>
+      <p class="lead">Wähle ein Thema, lies die kurze Erklärung und übe spielerisch mit Sofort-Feedback.</p>
+      <span class="stat" id="hero-stat"></span>
+    </section>
+
+    <div id="topic-list"></div>
   </main>
 
-  <!-- Zeigt die gespeicherte Bestpunktzahl pro Modul (falls vorhanden) -->
+  <script src="js/topics.js"></script>
   <script>
-    document.querySelectorAll(".best").forEach(function (n) {
-      var p = 0;
-      try { p = parseInt(localStorage.getItem(n.dataset.best) || "0", 10); } catch (e) {}
-      n.textContent = p > 0 ? "Bestpunktzahl: " + p : "";
-    });
+    (function () {
+      var groups = window.TOPIC_GROUPS, topics = window.TOPICS;
+      var fertig = topics.filter(function (t) { return t.file; }).length;
+
+      document.getElementById("ready-count").textContent = fertig + " / " + topics.length + " bereit";
+      document.getElementById("hero-stat").textContent = fertig + " von " + topics.length + " Themen sind schon spielbar";
+
+      function bestFor(t) {
+        // Bestpunktzahl wird in quiz.js unter "best:<title>" gespeichert
+        try { return parseInt(localStorage.getItem("best:" + t.title) || "0", 10); } catch (e) { return 0; }
+      }
+
+      var root = document.getElementById("topic-list");
+
+      groups.forEach(function (g) {
+        var items = topics.filter(function (t) { return t.group === g.key; });
+        if (!items.length) return;
+        var fertigG = items.filter(function (t) { return t.file; }).length;
+
+        var sec = document.createElement("section");
+        sec.className = "group";
+        sec.innerHTML =
+          '<div class="group__head"><h2>' + g.name + '</h2>' +
+          '<span class="count">' + fertigG + " / " + items.length + ' bereit</span></div>' +
+          '<div class="topics"></div>';
+        var grid = sec.querySelector(".topics");
+
+        items.forEach(function (t) {
+          var best = t.file ? bestFor(t) : 0;
+          if (t.file) {
+            var a = document.createElement("a");
+            a.className = "topic ready";
+            a.href = "uebung.html?id=" + t.id;
+            a.innerHTML =
+              '<span class="n">' + t.id + '</span>' +
+              '<span><span class="t">' + t.title + '</span>' +
+              '<span class="meta">Spielbar · üben →</span></span>' +
+              (best > 0 ? '<span class="best">' + best + ' P</span>' : '');
+            grid.appendChild(a);
+          } else {
+            var d = document.createElement("div");
+            d.className = "topic soon";
+            d.innerHTML =
+              '<span class="n">' + t.id + '</span>' +
+              '<span><span class="t">' + t.title + '</span>' +
+              '<span class="meta">in Arbeit</span></span>';
+            grid.appendChild(d);
+          }
+        });
+
+        root.appendChild(sec);
+      });
+    })();
   </script>
 </body>
 </html>
