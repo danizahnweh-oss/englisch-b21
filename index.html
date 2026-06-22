@@ -16,6 +16,7 @@
 
   <main class="wrap">
     <section class="hero">
+      <p class="greet" id="greet"></p>
       <h1>Grammatik üben</h1>
       <p class="lead">Wähle ein Thema, lies die kurze Erklärung und übe spielerisch mit Sofort-Feedback.</p>
       <span class="stat" id="hero-stat"></span>
@@ -29,6 +30,12 @@
     (function () {
       var groups = window.TOPIC_GROUPS, topics = window.TOPICS;
       var fertig = topics.filter(function (t) { return t.file; }).length;
+
+      // Persönliche, zeit-abhängige Begrüßung für Nadja
+      var h = new Date().getHours();
+      var gruss = h < 5 ? "Noch wach" : h < 11 ? "Guten Morgen" : h < 17 ? "Hallo" : h < 22 ? "Guten Abend" : "Gute Nacht";
+      document.getElementById("greet").innerHTML =
+        gruss + ', Nadja <span class="wave">👋</span>';
 
       document.getElementById("ready-count").textContent = fertig + " / " + topics.length + " bereit";
       document.getElementById("hero-stat").textContent = fertig + " von " + topics.length + " Themen sind schon spielbar";

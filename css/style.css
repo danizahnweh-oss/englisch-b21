@@ -81,6 +81,10 @@ h2 { font-size: 1.4rem; font-weight: 700; margin: 1.3em 0 .4em; }
 
 /* 4) Landingpage ------------------------------------------ */
 .hero { text-align: center; padding: 26px 0 4px; }
+.hero .greet { margin: 0 0 6px; font-family: "Baloo 2", sans-serif; font-weight: 800;
+               color: var(--brand-d); font-size: 1.05rem; animation: slidein .4s var(--ease); }
+.hero .greet .wave { display: inline-block; animation: wave 1.6s var(--ease) 1; transform-origin: 70% 80%; }
+@keyframes wave { 0%,100%{transform:rotate(0)} 20%{transform:rotate(16deg)} 40%{transform:rotate(-8deg)} 60%{transform:rotate(12deg)} 80%{transform:rotate(-4deg)} }
 .hero h1 { margin: 0 0 .15em; }
 .hero .lead { max-width: 34ch; margin: 0 auto 6px; }
 .hero .stat { display: inline-block; margin-top: 8px; color: var(--brand-d); font-weight: 800;
