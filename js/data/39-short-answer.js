@@ -7,110 +7,301 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Do you live in London? - Yes, I ___.",
+      "frage": "Do you like coffee? – Yes, I ___.",
       "optionen": [
         "do",
-        "live",
+        "like",
         "am"
       ],
       "richtig": 0,
-      "erklaerung": "Die Frage mit 'Do' wird in der Kurzantwort mit dem Hilfsverb 'do' beantwortet, nicht mit dem Vollverb."
+      "erklaerung": "Frage mit 'do' -> Kurzantwort mit 'do'."
     },
     {
       "type": "mc",
-      "frage": "Is she your teacher? - No, she ___.",
+      "frage": "Are you tired? – No, I ___.",
       "optionen": [
-        "doesn't",
-        "isn't",
-        "not"
+        "amn't",
+        "am not",
+        "not am"
       ],
       "richtig": 1,
-      "erklaerung": "Die Frage mit 'Is' wird mit 'be' beantwortet. Verneint heißt das 'isn't'."
+      "erklaerung": "Bei 'be' wird mit 'am not' verneint; 'amn't' gibt es nicht."
+    },
+    {
+      "type": "gap",
+      "frage": "Is she a teacher? – Yes, she ___.",
+      "richtig": [
+        "is"
+      ],
+      "erklaerung": "Frage mit 'is' -> Kurzantwort 'Yes, she is'."
     },
     {
       "type": "mc",
-      "frage": "Can Tom play the guitar? - Yes, he ___.",
+      "frage": "Can he swim? – Yes, he ___.",
       "optionen": [
         "can",
         "cans",
         "does"
       ],
       "richtig": 0,
-      "erklaerung": "Bei Fragen mit dem Modalverb 'can' wiederholt man 'can'. Modalverben bekommen kein -s."
+      "erklaerung": "Modalverb 'can' wird in der Kurzantwort wiederholt."
     },
     {
       "type": "gap",
-      "frage": "Does he work here? - No, he ___. (verneinte Kurzantwort)",
+      "frage": "Does he play tennis? – No, he ___ (Kurzform).",
       "richtig": [
         "doesn't",
         "does not"
       ],
-      "erklaerung": "Frage mit 'Does' -> Kurzantwort mit 'does'. Verneint: doesn't / does not."
+      "erklaerung": "3. Person Singular im Present Simple -> 'doesn't'."
     },
     {
-      "type": "gap",
-      "frage": "Are they at home? - Yes, they ___. (positive Kurzantwort)",
-      "richtig": [
-        "are"
+      "type": "mc",
+      "frage": "Have you finished? – Yes, I ___.",
+      "optionen": [
+        "did",
+        "have",
+        "do"
       ],
-      "erklaerung": "Frage mit 'Are' -> Kurzantwort mit 'are'. In positiven Kurzantworten benutzt man keine Kurzform."
+      "richtig": 1,
+      "erklaerung": "Present Perfect mit 'have' -> Kurzantwort 'have'."
     },
     {
       "type": "gap",
-      "frage": "Did you see the film? - No, I ___. (verneinte Kurzantwort)",
+      "frage": "Are they at home? – No, they ___ (Kurzform).",
       "richtig": [
-        "didn't",
-        "did not"
+        "aren't",
+        "are not"
       ],
-      "erklaerung": "Frage im Past mit 'Did' -> Kurzantwort mit 'did'. Verneint: didn't / did not."
+      "erklaerung": "'be' im Plural -> 'aren't'."
     },
     {
-      "type": "gap",
-      "frage": "Have you finished your homework? - Yes, I ___. (positive Kurzantwort)",
-      "richtig": [
+      "type": "mc",
+      "frage": "Did you see the film? – Yes, I ___.",
+      "optionen": [
+        "saw",
+        "did",
         "have"
       ],
-      "erklaerung": "Im Present Perfect mit 'Have' antwortet man mit 'have'. Positiv ohne Kurzform."
+      "richtig": 1,
+      "erklaerung": "Past Simple-Frage mit 'did' -> Kurzantwort 'did'."
     },
     {
       "type": "gap",
-      "frage": "Will it rain tomorrow? - No, it ___. (verneinte Kurzantwort)",
+      "frage": "Is it cold today? – Yes, it ___.",
       "richtig": [
-        "won't",
-        "will not"
+        "is"
       ],
-      "erklaerung": "Frage mit 'Will' -> Kurzantwort mit 'will'. Verneinte Kurzform von will not ist won't."
+      "erklaerung": "'is' wird in der positiven Kurzantwort wiederholt."
+    },
+    {
+      "type": "mc",
+      "frage": "Do they live here? – No, they ___.",
+      "optionen": [
+        "don't",
+        "doesn't",
+        "aren't"
+      ],
+      "richtig": 0,
+      "erklaerung": "Plural im Present Simple -> 'don't'."
     },
     {
       "type": "transform",
-      "frage": "Antworte mit einer positiven Short Answer: 'Do your parents speak English?'",
+      "frage": "Beantworte kurz und bejahend: 'Are you ready?'",
       "richtig": [
-        "Yes, they do.",
-        "Yes, they do"
+        "Yes, I am.",
+        "Yes, I am"
       ],
-      "erklaerung": "'Do' + 'your parents' -> Kurzantwort 'Yes, they do.' Das Pronomen für 'parents' ist 'they'."
+      "erklaerung": "'be'-Frage -> 'Yes, I am.'"
+    },
+    {
+      "type": "gap",
+      "frage": "Will you come to the party? – Yes, I ___.",
+      "richtig": [
+        "will"
+      ],
+      "erklaerung": "Future mit 'will' -> Kurzantwort 'will'."
+    },
+    {
+      "type": "mc",
+      "frage": "Was the test difficult? – No, it ___.",
+      "optionen": [
+        "wasn't",
+        "weren't",
+        "didn't"
+      ],
+      "richtig": 0,
+      "erklaerung": "'was' im Singular -> 'wasn't'."
+    },
+    {
+      "type": "gap",
+      "frage": "Does your sister speak French? – Yes, she ___.",
+      "richtig": [
+        "does"
+      ],
+      "erklaerung": "3. Person Singular -> Kurzantwort 'does'."
     },
     {
       "type": "transform",
-      "frage": "Antworte mit einer verneinten Short Answer: 'Is your brother a doctor?'",
+      "frage": "Beantworte kurz und verneinend (Kurzform): 'Has he got a car?'",
       "richtig": [
-        "No, he isn't.",
-        "No, he isn't",
-        "No, he is not.",
-        "No, he is not",
-        "No, he's not.",
-        "No, he's not"
+        "No, he hasn't.",
+        "No, he hasn't",
+        "No, he has not.",
+        "No, he has not"
       ],
-      "erklaerung": "'Is' + 'your brother' -> 'No, he isn't.' Das Pronomen für 'brother' ist 'he'."
+      "erklaerung": "'have got'-Frage -> 'No, he hasn't.'"
+    },
+    {
+      "type": "mc",
+      "frage": "Were they happy with the result? – Yes, they ___.",
+      "optionen": [
+        "was",
+        "were",
+        "did"
+      ],
+      "richtig": 1,
+      "erklaerung": "Plural in der Vergangenheit von 'be' -> 'were'."
+    },
+    {
+      "type": "gap",
+      "frage": "Should I call him? – No, you ___ (Kurzform).",
+      "richtig": [
+        "shouldn't",
+        "should not"
+      ],
+      "erklaerung": "Modalverb 'should' -> Verneinung 'shouldn't'."
+    },
+    {
+      "type": "mc",
+      "frage": "Is your brother coming with us? – No, he ___.",
+      "optionen": [
+        "doesn't",
+        "isn't",
+        "won't"
+      ],
+      "richtig": 1,
+      "erklaerung": "Present Continuous mit 'is' -> Kurzantwort 'isn't'."
     },
     {
       "type": "transform",
-      "frage": "Antworte mit einer positiven Short Answer: 'Can you help me?'",
+      "frage": "Beantworte kurz und bejahend: 'Could she help you?'",
       "richtig": [
-        "Yes, I can.",
-        "Yes, I can"
+        "Yes, she could.",
+        "Yes, she could"
       ],
-      "erklaerung": "'Can you' -> 'Yes, I can.' Aus 'you' wird 'I', das Modalverb 'can' wird wiederholt."
+      "erklaerung": "Modalverb 'could' wird in der Kurzantwort wiederholt."
+    },
+    {
+      "type": "gap",
+      "frage": "Are you going to study tonight? – Yes, I ___.",
+      "richtig": [
+        "am"
+      ],
+      "erklaerung": "'be going to' nutzt 'be' -> Kurzantwort 'am'."
+    },
+    {
+      "type": "mc",
+      "frage": "Has the train arrived yet? – Yes, it ___.",
+      "optionen": [
+        "has",
+        "is",
+        "did"
+      ],
+      "richtig": 0,
+      "erklaerung": "Present Perfect mit 'has' (3. Pers. Sg.) -> 'has'."
+    },
+    {
+      "type": "gap",
+      "frage": "Must we wear a uniform? – No, you ___ (verneinte Modalform, Kurzform).",
+      "richtig": [
+        "don't have to",
+        "do not have to"
+      ],
+      "erklaerung": "Verneinung von 'must' (keine Pflicht) ist 'don't have to', nicht 'mustn't'."
+    },
+    {
+      "type": "transform",
+      "frage": "Beantworte kurz und verneinend (Kurzform): 'Did the children enjoy the trip?'",
+      "richtig": [
+        "No, they didn't.",
+        "No, they didn't",
+        "No, they did not.",
+        "No, they did not"
+      ],
+      "erklaerung": "Past Simple mit 'did', Plural -> 'No, they didn't.'"
+    },
+    {
+      "type": "mc",
+      "frage": "Would you like some tea? – Yes, I ___.",
+      "optionen": [
+        "do",
+        "would",
+        "like"
+      ],
+      "richtig": 1,
+      "erklaerung": "'Would you like' -> Kurzantwort mit 'would'."
+    },
+    {
+      "type": "gap",
+      "frage": "Have your parents been to London? – No, they ___ (Kurzform).",
+      "richtig": [
+        "haven't",
+        "have not"
+      ],
+      "erklaerung": "Present Perfect mit 'have', Plural -> 'haven't'."
+    },
+    {
+      "type": "mc",
+      "frage": "Is anyone helping you? – No, ___.",
+      "optionen": [
+        "nobody is",
+        "nobody isn't",
+        "anybody isn't"
+      ],
+      "richtig": 0,
+      "erklaerung": "Mit 'nobody' steht das Verb positiv: 'No, nobody is.'"
+    },
+    {
+      "type": "transform",
+      "frage": "Beantworte kurz und bejahend: 'Hadn't they left before you arrived?'",
+      "richtig": [
+        "Yes, they had.",
+        "Yes, they had"
+      ],
+      "erklaerung": "Past Perfect mit 'had' -> bejahte Kurzantwort 'Yes, they had.'"
+    },
+    {
+      "type": "gap",
+      "frage": "You're coming, ___ you? – Yes, I am. (passende Frageanhängsel-Antwort: Lücke = Hilfsverb)",
+      "richtig": [
+        "aren't"
+      ],
+      "erklaerung": "Question tag zu 'You're coming' ist 'aren't you?'; Kurzantwort 'Yes, I am.'"
+    },
+    {
+      "type": "mc",
+      "frage": "Need I bring my passport? – No, you ___.",
+      "optionen": [
+        "needn't",
+        "don't need",
+        "mustn't"
+      ],
+      "richtig": 0,
+      "erklaerung": "Modales 'need' -> verneinte Kurzantwort 'No, you needn't.'"
+    },
+    {
+      "type": "transform",
+      "frage": "Beantworte kurz und verneinend (Kurzform): 'Would the manager have approved this?'",
+      "richtig": [
+        "No, he wouldn't.",
+        "No, she wouldn't.",
+        "No, he wouldn't",
+        "No, she wouldn't",
+        "No, he would not.",
+        "No, she would not."
+      ],
+      "erklaerung": "Conditional Perfect: nur das erste Hilfsverb 'would' steht in der Kurzantwort -> 'No, he/she wouldn't.'"
     }
   ]
 };

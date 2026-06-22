@@ -7,107 +7,298 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "What is the correct plural of \"child\"?",
+      "frage": "What is the plural of \"book\"?",
       "optionen": [
-        "childs",
-        "children",
-        "childes"
+        "books",
+        "bookes",
+        "books'"
       ],
-      "richtig": 1,
-      "erklaerung": "\"child\" ist eine unregelmäßige Form: der Plural lautet \"children\"."
+      "richtig": 0,
+      "erklaerung": "Regelmäßiger Plural: einfach -s anhängen."
+    },
+    {
+      "type": "gap",
+      "frage": "I have two ___ (dog) at home.",
+      "richtig": [
+        "dogs"
+      ],
+      "erklaerung": "Regelmäßiger Plural mit -s."
+    },
+    {
+      "type": "transform",
+      "frage": "Put into the plural: \"a car\".",
+      "richtig": [
+        "cars"
+      ],
+      "erklaerung": "Regelmäßiger Plural ohne Artikel: cars."
+    },
+    {
+      "type": "gap",
+      "frage": "There are many ___ (apple) in the basket.",
+      "richtig": [
+        "apples"
+      ],
+      "erklaerung": "Regelmäßiger Plural mit -s."
+    },
+    {
+      "type": "transform",
+      "frage": "Put into the plural: \"a table\".",
+      "richtig": [
+        "tables"
+      ],
+      "erklaerung": "Regelmäßiger Plural ohne Artikel: tables."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct plural: \"There are three ___ in the garden.\" (mouse)",
+      "frage": "What is the plural of \"bus\"?",
       "optionen": [
-        "mouses",
-        "mice",
-        "mouse"
+        "buss",
+        "buses",
+        "busies"
       ],
       "richtig": 1,
-      "erklaerung": "\"mouse\" hat die unregelmäßige Pluralform \"mice\"."
+      "erklaerung": "Nach -s wird -es angehängt: buses."
+    },
+    {
+      "type": "gap",
+      "frage": "She washed all the ___ (dish) after dinner.",
+      "richtig": [
+        "dishes"
+      ],
+      "erklaerung": "Nach -sh wird -es angehängt: dishes."
     },
     {
       "type": "mc",
-      "frage": "Which plural form is correct?",
+      "frage": "What is the plural of \"box\"?",
       "optionen": [
-        "two knifes",
-        "two knives",
-        "two knifs"
+        "boxs",
+        "boxes",
+        "boxies"
       ],
       "richtig": 1,
-      "erklaerung": "Nomen auf -fe wie \"knife\" bilden den Plural meist mit -ves: \"knives\"."
+      "erklaerung": "Nach -x wird -es angehängt: boxes."
     },
     {
       "type": "gap",
-      "frage": "I bought two ___ for breakfast. (tomato)",
-      "richtig": [
-        "tomatoes"
-      ],
-      "erklaerung": "\"tomato\" endet auf -o und nimmt im Plural -es: \"tomatoes\"."
-    },
-    {
-      "type": "gap",
-      "frage": "She has very small ___. (foot)",
-      "richtig": [
-        "feet"
-      ],
-      "erklaerung": "\"foot\" ist unregelmäßig: der Plural ist \"feet\"."
-    },
-    {
-      "type": "gap",
-      "frage": "There are many big ___ in the city. (church)",
+      "frage": "We saw three ___ (church) in the old town.",
       "richtig": [
         "churches"
       ],
-      "erklaerung": "Nach -ch hängt man -es an: \"church\" → \"churches\"."
+      "erklaerung": "Nach -ch wird -es angehängt: churches."
+    },
+    {
+      "type": "transform",
+      "frage": "Put into the plural: \"a tomato\".",
+      "richtig": [
+        "tomatoes"
+      ],
+      "erklaerung": "Manche Wörter auf -o bekommen -es: tomatoes."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"baby\"?",
+      "optionen": [
+        "babys",
+        "babies",
+        "babyes"
+      ],
+      "richtig": 1,
+      "erklaerung": "Konsonant + y: y wird zu -ies: babies."
     },
     {
       "type": "gap",
-      "frage": "We saw three ___ on the farm. (sheep)",
+      "frage": "There are five ___ (city) in this region.",
       "richtig": [
-        "sheep"
+        "cities"
       ],
-      "erklaerung": "\"sheep\" hat dieselbe Form im Singular und Plural: \"sheep\"."
+      "erklaerung": "Konsonant + y wird zu -ies: cities."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"boy\"?",
+      "optionen": [
+        "boies",
+        "boys",
+        "boyes"
+      ],
+      "richtig": 1,
+      "erklaerung": "Vokal + y: nur -s anhängen: boys."
+    },
+    {
+      "type": "transform",
+      "frage": "Put into the plural: \"a key\".",
+      "richtig": [
+        "keys"
+      ],
+      "erklaerung": "Vokal + y: nur -s anhängen: keys."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"leaf\"?",
+      "optionen": [
+        "leafs",
+        "leaves",
+        "leafes"
+      ],
+      "richtig": 1,
+      "erklaerung": "-f wird zu -ves: leaves."
     },
     {
       "type": "gap",
-      "frage": "The two ___ are best friends. (lady)",
+      "frage": "The thieves stole two expensive ___ (knife).",
       "richtig": [
-        "ladies"
+        "knives"
       ],
-      "erklaerung": "Konsonant + y wird zu -ies: \"lady\" → \"ladies\"."
+      "erklaerung": "-fe wird zu -ves: knives."
     },
     {
       "type": "transform",
-      "frage": "Setze in den Plural: \"This box is empty.\"",
+      "frage": "Put into the plural: \"a wolf\".",
       "richtig": [
-        "These boxes are empty.",
-        "These boxes are empty"
+        "wolves"
       ],
-      "erklaerung": "\"box\" → \"boxes\" (-es nach -x); \"this\" → \"these\" und \"is\" → \"are\"."
+      "erklaerung": "-f wird zu -ves: wolves."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"child\"?",
+      "optionen": [
+        "childs",
+        "childes",
+        "children"
+      ],
+      "richtig": 2,
+      "erklaerung": "Unregelmäßiger Plural: children."
+    },
+    {
+      "type": "gap",
+      "frage": "Three ___ (man) and two women were waiting outside.",
+      "richtig": [
+        "men"
+      ],
+      "erklaerung": "Unregelmäßig: man wird zu men."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"foot\"?",
+      "optionen": [
+        "foots",
+        "feet",
+        "feets"
+      ],
+      "richtig": 1,
+      "erklaerung": "Unregelmäßig durch Vokalwechsel: feet."
+    },
+    {
+      "type": "gap",
+      "frage": "The dentist checked all my ___ (tooth).",
+      "richtig": [
+        "teeth"
+      ],
+      "erklaerung": "Unregelmäßiger Plural: teeth."
     },
     {
       "type": "transform",
-      "frage": "Setze in den Plural: \"The man is reading a book.\"",
+      "frage": "Put into the plural: \"this mouse\".",
       "richtig": [
-        "The men are reading books.",
-        "The men are reading books",
-        "The men are reading the books.",
-        "The men are reading the books"
+        "these mice"
       ],
-      "erklaerung": "\"man\" → \"men\" (unregelmäßig), \"book\" → \"books\"; das Verb wird zu \"are reading\"."
+      "erklaerung": "this wird zu these, mouse wird unregelmäßig zu mice."
+    },
+    {
+      "type": "mc",
+      "frage": "Which sentence is correct?",
+      "optionen": [
+        "There are two sheeps in the field.",
+        "There are two sheep in the field.",
+        "There are two sheepes in the field."
+      ],
+      "richtig": 1,
+      "erklaerung": "sheep hat dieselbe Form im Singular und Plural."
+    },
+    {
+      "type": "gap",
+      "frage": "We caught three big ___ (fish) at the lake.",
+      "richtig": [
+        "fish",
+        "fishes"
+      ],
+      "erklaerung": "fish bleibt meist unverändert; fishes ist möglich für verschiedene Arten."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the plural of \"crisis\"?",
+      "optionen": [
+        "crisises",
+        "crises",
+        "crisi"
+      ],
+      "richtig": 1,
+      "erklaerung": "Griechischer Ursprung: -is wird zu -es: crises."
+    },
+    {
+      "type": "gap",
+      "frage": "The scientist studied several different ___ (phenomenon).",
+      "richtig": [
+        "phenomena"
+      ],
+      "erklaerung": "Griechischer Plural: phenomenon wird zu phenomena."
     },
     {
       "type": "transform",
-      "frage": "Setze in den Plural: \"A leaf fell from the tree.\"",
+      "frage": "Put the underlined word into the plural: \"The analysis was difficult.\"",
       "richtig": [
-        "Leaves fell from the tree.",
-        "Leaves fell from the tree",
-        "Leaves fell from the trees.",
-        "Leaves fell from the trees"
+        "The analyses were difficult.",
+        "The analyses were difficult"
       ],
-      "erklaerung": "\"leaf\" → \"leaves\" (-f wird zu -ves); der unbestimmte Artikel \"a\" entfällt im Plural."
+      "erklaerung": "analysis wird zu analyses; was wird zu were."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct sentence.",
+      "optionen": [
+        "My trousers is too long.",
+        "My trousers are too long.",
+        "My trouser are too long."
+      ],
+      "richtig": 1,
+      "erklaerung": "trousers ist nur Plural und braucht 'are'."
+    },
+    {
+      "type": "gap",
+      "frage": "The news ___ (be) very surprising this morning.",
+      "richtig": [
+        "was",
+        "is"
+      ],
+      "erklaerung": "news sieht plural aus, ist aber Singular (unzählbar): was/is."
+    },
+    {
+      "type": "transform",
+      "frage": "Put into the plural: \"a passer-by\".",
+      "richtig": [
+        "passers-by"
+      ],
+      "erklaerung": "Bei zusammengesetzten Nomen wird das Hauptwort zum Plural: passers-by."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the correct plural of \"mother-in-law\"?",
+      "optionen": [
+        "mother-in-laws",
+        "mothers-in-law",
+        "mother-in-law"
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Hauptnomen wird zum Plural: mothers-in-law."
+    },
+    {
+      "type": "gap",
+      "frage": "The two ___ (criterion) for the award are talent and effort.",
+      "richtig": [
+        "criteria"
+      ],
+      "erklaerung": "Griechischer Plural: criterion wird zu criteria."
     }
   ]
 };

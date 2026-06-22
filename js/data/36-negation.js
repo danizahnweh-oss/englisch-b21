@@ -7,112 +7,312 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct negation: \"She ___ like coffee.\"",
+      "frage": "Welcher Satz ist die richtige Verneinung von 'She is happy.'?",
       "optionen": [
-        "doesn't",
-        "don't",
-        "not"
+        "She isn't happy.",
+        "She not happy.",
+        "She doesn't happy."
       ],
       "richtig": 0,
-      "erklaerung": "Bei 'she' (3. Person Singular) im Present Simple verneint man mit 'doesn't' + Infinitiv (like)."
+      "erklaerung": "Bei 'be' wird 'not' direkt angehängt: is + not = isn't."
+    },
+    {
+      "type": "gap",
+      "frage": "I ___ like coffee. (Verneinung im Present Simple)",
+      "richtig": [
+        "don't",
+        "do not"
+      ],
+      "erklaerung": "Im Present Simple verneint man mit 'do not / don't' + Grundform."
     },
     {
       "type": "mc",
-      "frage": "Which sentence is correct?",
+      "frage": "Verneine: 'He plays football.'",
       "optionen": [
-        "I didn't saw the film.",
-        "I didn't see the film.",
-        "I don't saw the film."
+        "He doesn't plays football.",
+        "He doesn't play football.",
+        "He don't play football."
       ],
       "richtig": 1,
-      "erklaerung": "Nach 'didn't' steht immer der Infinitiv (see), nicht die Vergangenheitsform (saw)."
+      "erklaerung": "In der 3. Person Singular: 'doesn't' + Grundform (ohne -s)."
+    },
+    {
+      "type": "gap",
+      "frage": "We ___ have any money. (Present Simple, Verneinung)",
+      "richtig": [
+        "don't",
+        "do not"
+      ],
+      "erklaerung": "'we' nimmt 'don't' / 'do not'."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine den Satz: 'They are at home.'",
+      "richtig": [
+        "They aren't at home.",
+        "They are not at home.",
+        "They're not at home."
+      ],
+      "erklaerung": "Bei 'are' wird 'not' angehängt: aren't / are not."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct word: \"There is ___ milk in the fridge.\"",
+      "frage": "Verneine: 'I can swim.'",
       "optionen": [
-        "any",
-        "no",
-        "not"
+        "I don't can swim.",
+        "I can't swim.",
+        "I cannot to swim."
       ],
       "richtig": 1,
-      "erklaerung": "Vor einem Substantiv verneint man mit 'no' (= kein). 'not' und 'any' passen hier grammatikalisch nicht ('not any' wäre möglich, aber 'no' allein ist korrekt)."
+      "erklaerung": "Modalverben verneint man direkt mit 'not': can + not = can't."
     },
     {
       "type": "gap",
-      "frage": "Verneine den Satz: \"They ___ (not / play) football on Mondays.\" Schreibe nur die fehlende verneinte Verbform.",
+      "frage": "It ___ raining now. (Present Continuous, Verneinung)",
       "richtig": [
-        "don't play",
-        "do not play"
+        "isn't",
+        "is not",
+        "'s not"
       ],
-      "erklaerung": "Bei 'they' im Present Simple: 'do not / don't' + Infinitiv (play)."
+      "erklaerung": "Present Continuous mit 'be': it is not / isn't + -ing."
+    },
+    {
+      "type": "mc",
+      "frage": "Welche Verneinung ist korrekt im Past Simple: 'She went to school.'?",
+      "optionen": [
+        "She didn't went to school.",
+        "She didn't go to school.",
+        "She not went to school."
+      ],
+      "richtig": 1,
+      "erklaerung": "Past Simple verneint man mit 'didn't' + Grundform."
     },
     {
       "type": "gap",
-      "frage": "Fill in the negation: \"He ___ (not / be) at home yesterday.\"",
+      "frage": "You ___ tired yesterday. (Past Simple von 'be', Verneinung)",
       "richtig": [
-        "wasn't",
-        "was not"
+        "weren't",
+        "were not"
       ],
-      "erklaerung": "'be' in der Vergangenheit (he) wird mit 'was not / wasn't' verneint - ohne 'did'."
+      "erklaerung": "'you' im Past: were not / weren't."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine den Satz: 'He has finished his homework.'",
+      "richtig": [
+        "He hasn't finished his homework.",
+        "He has not finished his homework."
+      ],
+      "erklaerung": "Present Perfect: has + not = hasn't, dann das Partizip."
+    },
+    {
+      "type": "mc",
+      "frage": "Verneine: 'I was at the party.'",
+      "optionen": [
+        "I wasn't at the party.",
+        "I didn't was at the party.",
+        "I weren't at the party."
+      ],
+      "richtig": 0,
+      "erklaerung": "'I' im Past von 'be': was not / wasn't."
     },
     {
       "type": "gap",
-      "frage": "Complete with a contraction: \"We ___ (will not) forget you.\"",
+      "frage": "They ___ come to the meeting tomorrow. (will-Future, Verneinung)",
       "richtig": [
         "won't",
         "will not"
       ],
-      "erklaerung": "Die Kurzform von 'will not' ist unregelmäßig: 'won't'."
-    },
-    {
-      "type": "gap",
-      "frage": "Fill in the gap: \"___ knows the answer.\" (Niemand kennt die Antwort.)",
-      "richtig": [
-        "Nobody",
-        "No one",
-        "No-one"
-      ],
-      "erklaerung": "'Nobody / No one' verneint bereits; das Verb bleibt positiv (knows)."
-    },
-    {
-      "type": "transform",
-      "frage": "Verneine den Satz: \"I can speak French.\"",
-      "richtig": [
-        "I can't speak French.",
-        "I cannot speak French.",
-        "I can not speak French."
-      ],
-      "erklaerung": "Modalverben wie 'can' werden direkt mit 'not' verneint: 'cannot / can't'."
-    },
-    {
-      "type": "transform",
-      "frage": "Verneine den Satz: \"She has finished her homework.\"",
-      "richtig": [
-        "She hasn't finished her homework.",
-        "She has not finished her homework."
-      ],
-      "erklaerung": "Im Present Perfect verneint man das Hilfsverb 'have/has' mit 'not': 'hasn't finished'."
-    },
-    {
-      "type": "transform",
-      "frage": "Verneine den Satz: \"Tom went to school today.\"",
-      "richtig": [
-        "Tom didn't go to school today.",
-        "Tom did not go to school today."
-      ],
-      "erklaerung": "Im Past Simple verneint man mit 'did not / didn't' + Infinitiv (go), nicht 'went'."
+      "erklaerung": "will + not = won't (unregelmäßige Kurzform)."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct answer: \"Do you like pizza?\" - \"No, I ___.\"",
+      "frage": "Welcher Satz ist korrekt verneint?",
       "optionen": [
-        "don't",
-        "doesn't",
-        "am not"
+        "She musn't go now.",
+        "She mustn't go now.",
+        "She doesn't must go now."
       ],
-      "richtig": 0,
-      "erklaerung": "In der Kurzantwort zu 'Do you...?' wird das Hilfsverb wiederholt: 'No, I don't.'"
+      "richtig": 1,
+      "erklaerung": "'must' wird zu 'mustn't' (must not), nicht mit 'do'."
+    },
+    {
+      "type": "gap",
+      "frage": "We ___ seen that film before. (Present Perfect, Verneinung)",
+      "richtig": [
+        "haven't",
+        "have not"
+      ],
+      "erklaerung": "'we have' verneint: have not / haven't + Partizip."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine den Satz: 'I am reading a book.'",
+      "richtig": [
+        "I am not reading a book.",
+        "I'm not reading a book."
+      ],
+      "erklaerung": "Bei 'I am' gibt es keine Kurzform 'amn't': nur 'I'm not' oder 'I am not'."
+    },
+    {
+      "type": "mc",
+      "frage": "Verneine: 'There is some milk in the fridge.'",
+      "optionen": [
+        "There isn't some milk in the fridge.",
+        "There isn't any milk in the fridge.",
+        "There is no any milk in the fridge."
+      ],
+      "richtig": 1,
+      "erklaerung": "In verneinten Sätzen wird 'some' zu 'any'."
+    },
+    {
+      "type": "gap",
+      "frage": "She ___ to call me back. (Past Simple, Verneinung von 'forget')",
+      "richtig": [
+        "didn't forget",
+        "did not forget"
+      ],
+      "erklaerung": "Past Simple: didn't + Grundform 'forget' (nicht 'forgot')."
+    },
+    {
+      "type": "mc",
+      "frage": "Welcher Satz hat die richtige Verneinung mit 'no'?",
+      "optionen": [
+        "I have no any time.",
+        "I have no time.",
+        "I haven't no time."
+      ],
+      "richtig": 1,
+      "erklaerung": "'no' + Nomen ersetzt 'not any'; keine doppelte Verneinung."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine den Satz: 'You should eat so much sugar.'",
+      "richtig": [
+        "You shouldn't eat so much sugar.",
+        "You should not eat so much sugar."
+      ],
+      "erklaerung": "should + not = shouldn't."
+    },
+    {
+      "type": "gap",
+      "frage": "He ___ been to London yet. (Present Perfect, 3. Person, Verneinung)",
+      "richtig": [
+        "hasn't",
+        "has not"
+      ],
+      "erklaerung": "3. Person: has not / hasn't + been."
+    },
+    {
+      "type": "mc",
+      "frage": "Verneine: 'I saw somebody in the garden.'",
+      "optionen": [
+        "I didn't see somebody in the garden.",
+        "I didn't see anybody in the garden.",
+        "I didn't saw anybody in the garden."
+      ],
+      "richtig": 1,
+      "erklaerung": "In der Verneinung wird 'somebody' zu 'anybody'; nach 'didn't' steht die Grundform."
+    },
+    {
+      "type": "gap",
+      "frage": "We ___ going to buy a new car this year. (Verneinung von 'be going to')",
+      "richtig": [
+        "aren't",
+        "are not",
+        "'re not"
+      ],
+      "erklaerung": "'be going to' wird über 'be' verneint: are not / aren't going to."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine den Satz: 'I would tell him the truth.'",
+      "richtig": [
+        "I wouldn't tell him the truth.",
+        "I would not tell him the truth."
+      ],
+      "erklaerung": "would + not = wouldn't."
+    },
+    {
+      "type": "mc",
+      "frage": "Welcher Satz vermeidet die doppelte Verneinung korrekt?",
+      "optionen": [
+        "I don't know nothing.",
+        "I don't know anything.",
+        "I know nothing about anything not."
+      ],
+      "richtig": 1,
+      "erklaerung": "Im Standardenglisch keine doppelte Verneinung: 'don't' + 'anything'."
+    },
+    {
+      "type": "gap",
+      "frage": "There was ___ in the room. (niemand – ein Verneinungswort)",
+      "richtig": [
+        "nobody",
+        "no one",
+        "no-one"
+      ],
+      "erklaerung": "Das negative Pronomen 'nobody/no one' steht hier statt 'not... anybody'."
+    },
+    {
+      "type": "mc",
+      "frage": "Verneine den Imperativ: 'Open the window.'",
+      "optionen": [
+        "Not open the window.",
+        "Don't open the window.",
+        "Open not the window."
+      ],
+      "richtig": 1,
+      "erklaerung": "Verneinter Imperativ: 'Don't' + Grundform."
+    },
+    {
+      "type": "transform",
+      "frage": "Verneine mit Kurzform: 'I have got a brother.'",
+      "richtig": [
+        "I haven't got a brother.",
+        "I have not got a brother.",
+        "I've not got a brother."
+      ],
+      "erklaerung": "'have got' wird über 'have' verneint: haven't got."
+    },
+    {
+      "type": "gap",
+      "frage": "Neither Tom ___ Anna passed the exam. (Korrelat zu 'neither')",
+      "richtig": [
+        "nor"
+      ],
+      "erklaerung": "'neither ... nor ...' ist die feste negative Verbindung."
+    },
+    {
+      "type": "mc",
+      "frage": "Welcher Satz drückt die Verneinung mit einer Question-Tag korrekt aus?",
+      "optionen": [
+        "She can drive, can she?",
+        "She can't drive, can she?",
+        "She can't drive, can't she?"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach negativer Aussage folgt ein positiver Tag: 'can't ..., can she?'"
+    },
+    {
+      "type": "transform",
+      "frage": "Mache den Satz verneint und nutze 'hardly' für 'fast nie' nicht – verneine normal: 'He understood the question.'",
+      "richtig": [
+        "He didn't understand the question.",
+        "He did not understand the question."
+      ],
+      "erklaerung": "Past Simple: didn't + Grundform 'understand' (nicht 'understood')."
+    },
+    {
+      "type": "mc",
+      "frage": "Welche Verneinung von 'I think she is right.' ist im Englischen am natürlichsten?",
+      "optionen": [
+        "I think she isn't right.",
+        "I don't think she is right.",
+        "I think not she is right."
+      ],
+      "richtig": 1,
+      "erklaerung": "Im Englischen verneint man oft das übergeordnete Verb 'think': 'I don't think...'."
     }
   ]
 };

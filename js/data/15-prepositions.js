@@ -7,103 +7,288 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct preposition: \"We usually meet ___ Sunday afternoon.\"",
+      "frage": "The book is ___ the table.",
       "optionen": [
         "on",
         "in",
         "at"
       ],
       "richtig": 0,
-      "erklaerung": "Bei Wochentagen (auch mit Tageszeit wie 'Sunday afternoon') steht 'on'."
+      "erklaerung": "Auf einer Oberfläche steht etwas \"on\"."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct preposition: \"The film starts ___ 8 p.m.\"",
+      "frage": "She lives ___ London.",
+      "optionen": [
+        "at",
+        "in",
+        "on"
+      ],
+      "richtig": 1,
+      "erklaerung": "Bei Städten und Ländern benutzt man \"in\"."
+    },
+    {
+      "type": "gap",
+      "frage": "The meeting starts ___ 9 o'clock.",
+      "richtig": [
+        "at"
+      ],
+      "erklaerung": "Bei genauen Uhrzeiten steht \"at\"."
+    },
+    {
+      "type": "mc",
+      "frage": "My birthday is ___ July.",
+      "optionen": [
+        "on",
+        "at",
+        "in"
+      ],
+      "richtig": 2,
+      "erklaerung": "Bei Monaten benutzt man \"in\"."
+    },
+    {
+      "type": "gap",
+      "frage": "We have a test ___ Monday.",
+      "richtig": [
+        "on"
+      ],
+      "erklaerung": "Bei Wochentagen steht \"on\"."
+    },
+    {
+      "type": "mc",
+      "frage": "The cat is hiding ___ the bed.",
+      "optionen": [
+        "under",
+        "on",
+        "at"
+      ],
+      "richtig": 0,
+      "erklaerung": "\"under\" = unter etwas."
+    },
+    {
+      "type": "gap",
+      "frage": "There is a picture ___ the wall.",
+      "richtig": [
+        "on"
+      ],
+      "erklaerung": "An der Wand hängt etwas \"on the wall\"."
+    },
+    {
+      "type": "mc",
+      "frage": "I go to school ___ bus.",
+      "optionen": [
+        "with",
+        "by",
+        "on"
+      ],
+      "richtig": 1,
+      "erklaerung": "Verkehrsmittel: \"by bus, by train\"."
+    },
+    {
+      "type": "gap",
+      "frage": "He is waiting ___ the bus stop.",
+      "richtig": [
+        "at"
+      ],
+      "erklaerung": "Ein bestimmter Punkt/Ort: \"at the bus stop\"."
+    },
+    {
+      "type": "mc",
+      "frage": "The shop is ___ to the bank.",
+      "optionen": [
+        "next",
+        "near",
+        "beside"
+      ],
+      "richtig": 0,
+      "erklaerung": "\"next to\" = direkt neben."
+    },
+    {
+      "type": "gap",
+      "frage": "The children ran ___ the park to the school.",
+      "richtig": [
+        "through"
+      ],
+      "erklaerung": "Bewegung mitten hindurch: \"through\"."
+    },
+    {
+      "type": "mc",
+      "frage": "We arrived ___ the airport very early.",
+      "optionen": [
+        "to",
+        "at",
+        "in"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"arrive at\" bei einem Ort/Gebäude (nicht \"to\")."
+    },
+    {
+      "type": "gap",
+      "frage": "I have been living here ___ 2015.",
+      "richtig": [
+        "since"
+      ],
+      "erklaerung": "\"since\" + Zeitpunkt (Anfang)."
+    },
+    {
+      "type": "gap",
+      "frage": "She has studied English ___ three years.",
+      "richtig": [
+        "for"
+      ],
+      "erklaerung": "\"for\" + Zeitdauer."
+    },
+    {
+      "type": "mc",
+      "frage": "The plane flew ___ the clouds.",
+      "optionen": [
+        "above",
+        "over",
+        "on"
+      ],
+      "richtig": 0,
+      "erklaerung": "\"above\" = oberhalb (ohne direkten Kontakt)."
+    },
+    {
+      "type": "mc",
+      "frage": "Put your coat ___ the hook, please.",
+      "optionen": [
+        "in",
+        "on",
+        "at"
+      ],
+      "richtig": 1,
+      "erklaerung": "An einen Haken hängen: \"on the hook\"."
+    },
+    {
+      "type": "gap",
+      "frage": "They walked ___ the stairs to the second floor.",
+      "richtig": [
+        "up"
+      ],
+      "erklaerung": "Bewegung nach oben: \"up the stairs\"."
+    },
+    {
+      "type": "mc",
+      "frage": "I am really good ___ playing chess.",
       "optionen": [
         "in",
         "at",
         "on"
       ],
       "richtig": 1,
-      "erklaerung": "Bei genauen Uhrzeiten benutzt man 'at': at 8 p.m."
-    },
-    {
-      "type": "mc",
-      "frage": "Choose the correct preposition: \"She is really good ___ playing the guitar.\"",
-      "optionen": [
-        "in",
-        "on",
-        "at"
-      ],
-      "richtig": 2,
-      "erklaerung": "Feste Verbindung: 'good at' (gut in etwas) wird immer mit 'at' gebildet."
+      "erklaerung": "Feste Verbindung: \"good at\"."
     },
     {
       "type": "gap",
-      "frage": "Fill in the gap: \"My birthday is ___ July.\"",
-      "richtig": [
-        "in"
-      ],
-      "erklaerung": "Bei Monaten (und Jahren) steht 'in': in July, in 2025."
-    },
-    {
-      "type": "gap",
-      "frage": "Fill in the gap: \"Please put the keys ___ the table.\"",
-      "richtig": [
-        "on"
-      ],
-      "erklaerung": "Für eine Oberfläche, auf der etwas liegt, benutzt man 'on'."
-    },
-    {
-      "type": "gap",
-      "frage": "Fill in the gap: \"I have been waiting ___ the bus stop for ten minutes.\"",
-      "richtig": [
-        "at"
-      ],
-      "erklaerung": "Für einen bestimmten Punkt/Treffpunkt wie eine Haltestelle benutzt man 'at': at the bus stop."
-    },
-    {
-      "type": "gap",
-      "frage": "Fill in the gap: \"Tom is afraid ___ spiders.\"",
+      "frage": "She is afraid ___ spiders.",
       "richtig": [
         "of"
       ],
-      "erklaerung": "Feste Verbindung: 'afraid of' (Angst vor etwas)."
+      "erklaerung": "Feste Verbindung: \"afraid of\"."
+    },
+    {
+      "type": "mc",
+      "frage": "Congratulations ___ your new job!",
+      "optionen": [
+        "for",
+        "on",
+        "to"
+      ],
+      "richtig": 1,
+      "erklaerung": "Feste Verbindung: \"congratulations on\"."
     },
     {
       "type": "gap",
-      "frage": "Fill in the gap: \"We are flying ___ Spain next week.\"",
+      "frage": "This present is ___ you.",
       "richtig": [
-        "to"
+        "for"
       ],
-      "erklaerung": "Richtung/Ziel einer Bewegung drückt man mit 'to' aus: fly to Spain."
+      "erklaerung": "Empfänger eines Geschenks: \"for you\"."
+    },
+    {
+      "type": "mc",
+      "frage": "We talked ___ the new film for hours.",
+      "optionen": [
+        "about",
+        "of",
+        "on"
+      ],
+      "richtig": 0,
+      "erklaerung": "\"talk about\" = über etwas reden."
+    },
+    {
+      "type": "gap",
+      "frage": "He apologised ___ being late.",
+      "richtig": [
+        "for"
+      ],
+      "erklaerung": "\"apologise for\" (sich für etwas entschuldigen)."
+    },
+    {
+      "type": "mc",
+      "frage": "The temperature dropped ___ five degrees overnight.",
+      "optionen": [
+        "by",
+        "with",
+        "of"
+      ],
+      "richtig": 0,
+      "erklaerung": "Maß der Veränderung: \"by five degrees\"."
+    },
+    {
+      "type": "gap",
+      "frage": "I'm not interested ___ politics at all.",
+      "richtig": [
+        "in"
+      ],
+      "erklaerung": "Feste Verbindung: \"interested in\"."
+    },
+    {
+      "type": "mc",
+      "frage": "She insisted ___ paying for the meal herself.",
+      "optionen": [
+        "on",
+        "in",
+        "for"
+      ],
+      "richtig": 0,
+      "erklaerung": "Feste Verbindung: \"insist on\"."
     },
     {
       "type": "transform",
-      "frage": "Complete with the correct preposition: \"This present is ___ you.\" (Geschenk fuer dich)",
+      "frage": "Schreibe den Satz mit der richtigen Präposition: \"This decision depends ___ you.\"",
       "richtig": [
-        "This present is for you.",
-        "This present is for you"
+        "This decision depends on you.",
+        "This decision depends on you"
       ],
-      "erklaerung": "'for' drückt aus, fuer wen etwas bestimmt ist: a present for you."
+      "erklaerung": "\"depend on\" = abhängen von."
+    },
+    {
+      "type": "gap",
+      "frage": "The thief broke ___ the house while they were asleep.",
+      "richtig": [
+        "into"
+      ],
+      "erklaerung": "\"break into\" = einbrechen in."
     },
     {
       "type": "transform",
-      "frage": "Fill in the missing preposition and write the full sentence: \"The cat is hiding ___ the sofa.\" (darunter)",
+      "frage": "Vervollständige mit der passenden Präposition: \"You can rely ___ me whenever you need help.\"",
       "richtig": [
-        "The cat is hiding under the sofa.",
-        "The cat is hiding under the sofa"
+        "You can rely on me whenever you need help.",
+        "You can rely on me whenever you need help"
       ],
-      "erklaerung": "'under' bedeutet 'unter/darunter'. Die Katze versteckt sich unter dem Sofa."
+      "erklaerung": "\"rely on\" = sich verlassen auf."
     },
     {
       "type": "transform",
-      "frage": "Complete with the correct preposition: \"She walked ___ the room and closed the door.\" (in den Raum hinein)",
+      "frage": "Setze die richtige Präposition ein: \"Despite the rain, we went out, but we couldn't account ___ the missing money.\"",
       "richtig": [
-        "She walked into the room and closed the door.",
-        "She walked into the room and closed the door"
+        "Despite the rain, we went out, but we couldn't account for the missing money.",
+        "Despite the rain, we went out, but we couldn't account for the missing money"
       ],
-      "erklaerung": "Bei einer Bewegung in einen geschlossenen Raum hinein benutzt man 'into'."
+      "erklaerung": "\"account for\" = erklären/Rechenschaft ablegen über."
     }
   ]
 };

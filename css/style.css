@@ -239,3 +239,48 @@ h2 { font-size: 1.4rem; font-weight: 700; margin: 1.3em 0 .4em; }
     transition-duration: .01ms !important; scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+   Abschlussprüfung (pruefung.html + exam.js)
+   ============================================================ */
+
+/* Startbildschirm: Länge wählen */
+.exam-start { animation: slidein .4s var(--ease); }
+.exam-start__lead { color: var(--muted); font-size: 1.05rem; margin: 4px 0 18px; }
+.exam-start__grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.exam-len {
+  display: flex; flex-direction: column; gap: 4px; text-align: left;
+  font-family: "Baloo 2", sans-serif; cursor: pointer; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  padding: 18px 18px; box-shadow: var(--shadow-sm);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+}
+.exam-len:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--brand); }
+.exam-len:active { transform: translateY(0); }
+.exam-len__t { font-weight: 800; font-size: 1.2rem; color: var(--brand-d); }
+.exam-len__s { font-weight: 700; font-size: .85rem; color: var(--muted); }
+
+/* Themen-Marke im Feedback */
+.exam-topic { display: inline-block; margin-top: 4px; font-style: normal;
+  font-weight: 800; font-size: .78rem; color: var(--brand-d);
+  background: var(--brand-l); border-radius: 999px; padding: 2px 10px; }
+
+/* Prüfungs-Kachel auf der Startseite */
+.exam-cta {
+  display: flex; align-items: center; gap: 14px; margin: 22px auto 4px;
+  max-width: var(--maxw); text-decoration: none; color: var(--ink);
+  background: linear-gradient(180deg, #fff, var(--brand-l));
+  border: 1px solid var(--brand); border-radius: var(--radius);
+  padding: 18px 22px; box-shadow: var(--shadow-sm);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+.exam-cta:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.exam-cta .ec-ic { font-size: 1.8rem; }
+.exam-cta .ec-t { font-family: "Baloo 2", sans-serif; font-weight: 800;
+  font-size: 1.15rem; color: var(--brand-d); }
+.exam-cta .ec-s { display: block; font-weight: 700; font-size: .85rem; color: var(--muted); }
+.exam-cta .ec-go { margin-left: auto; font-family: "Baloo 2", sans-serif;
+  font-weight: 800; color: var(--brand-d); white-space: nowrap; }

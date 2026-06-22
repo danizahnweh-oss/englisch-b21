@@ -7,106 +7,287 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct adverb: \"The children played ___ in the garden.\"",
+      "frage": "She sang ___ at the concert last night.",
       "optionen": [
-        "happy",
-        "happily",
-        "happyly"
+        "beautiful",
+        "beautifully",
+        "beauty"
       ],
       "richtig": 1,
-      "erklaerung": "Aus dem Adjektiv 'happy' wird das Adverb 'happily' (y → ily). Es beschreibt, WIE sie spielten."
+      "erklaerung": "Das Adverb 'beautifully' beschreibt das Verb 'sang' (wie sie sang)."
     },
     {
       "type": "mc",
-      "frage": "Which sentence is correct?",
+      "frage": "He drives very ___ on the motorway.",
       "optionen": [
-        "She sings very good.",
-        "She sings very well.",
-        "She sings very goodly."
-      ],
-      "richtig": 1,
-      "erklaerung": "Das Adverb zu 'good' ist unregelmäßig: 'well'. Nach dem Verb 'sings' braucht man ein Adverb."
-    },
-    {
-      "type": "mc",
-      "frage": "Where does the adverb go? \"I ___ go to the gym on Mondays.\" (usually)",
-      "optionen": [
-        "I usually go",
-        "I go usually",
-        "Usually I go to the gym usually"
+        "fast",
+        "fastly",
+        "faster"
       ],
       "richtig": 0,
-      "erklaerung": "Häufigkeitsadverbien wie 'usually' stehen vor dem Vollverb: 'I usually go'."
+      "erklaerung": "'fast' ist sowohl Adjektiv als auch Adverb; 'fastly' gibt es nicht."
     },
     {
       "type": "gap",
-      "frage": "Fill the gap with the adverb of 'careful': \"He drives very ___.\"",
+      "frage": "The children played ___ (happy) in the garden.",
       "richtig": [
+        "happily"
+      ],
+      "erklaerung": "Adjektive auf -y werden zu -ily: happy -> happily."
+    },
+    {
+      "type": "mc",
+      "frage": "Tom worked ___ and finished early.",
+      "optionen": [
+        "quick",
+        "quickly",
+        "quickness"
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Adverb 'quickly' beschreibt, wie er arbeitete."
+    },
+    {
+      "type": "gap",
+      "frage": "My grandmother speaks ___ (slow) so everyone understands her.",
+      "richtig": [
+        "slowly"
+      ],
+      "erklaerung": "Regelmäßige Bildung: slow + -ly = slowly."
+    },
+    {
+      "type": "mc",
+      "frage": "This cake tastes really ___.",
+      "optionen": [
+        "well",
+        "good",
+        "goodly"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach Sinnesverben wie 'taste' steht ein Adjektiv (good), kein Adverb."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde das Adverb und setze es ein: 'careful'. Satz: He crossed the road ___.",
+      "richtig": [
+        "He crossed the road carefully.",
         "carefully"
       ],
-      "erklaerung": "Aus 'careful' wird das Adverb 'carefully' (+ -ly). Es beschreibt, wie er fährt."
+      "erklaerung": "careful + -ly = carefully, beschreibt das Verb 'crossed'."
     },
     {
       "type": "gap",
-      "frage": "Complete with the correct adverb of 'fast': \"Usain Bolt can run very ___.\"",
+      "frage": "She answered the question ___ (correct).",
       "richtig": [
-        "fast"
+        "correctly"
       ],
-      "erklaerung": "'fast' ist sowohl Adjektiv als auch Adverb und bekommt KEIN -ly ('fastly' ist falsch)."
+      "erklaerung": "correct + -ly = correctly."
+    },
+    {
+      "type": "mc",
+      "frage": "The dog barked ___ all night.",
+      "optionen": [
+        "loud",
+        "loudly",
+        "louder"
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Adverb 'loudly' beschreibt, wie der Hund bellte."
     },
     {
       "type": "gap",
-      "frage": "Put the frequency adverb in the right place: \"My brother ___ eats meat; he is a vegetarian.\" (never)",
+      "frage": "He arrived ___ (late) and missed the train.",
       "richtig": [
-        "never"
+        "late"
       ],
-      "erklaerung": "'never' steht vor dem Vollverb 'eats': 'My brother never eats meat'."
+      "erklaerung": "'late' ist Adjektiv und Adverb zugleich; 'lately' bedeutet 'in letzter Zeit'."
+    },
+    {
+      "type": "mc",
+      "frage": "You speak English very ___.",
+      "optionen": [
+        "good",
+        "well",
+        "goodly"
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Adverb zu 'good' ist 'well'."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde das Adverb und setze es ein: 'easy'. Satz: She passed the exam ___.",
+      "richtig": [
+        "She passed the exam easily.",
+        "easily"
+      ],
+      "erklaerung": "easy -> easily (-y wird zu -ily)."
     },
     {
       "type": "gap",
-      "frage": "Fill in the adverb of 'good': \"She speaks French really ___.\"",
+      "frage": "They danced ___ (graceful) across the stage.",
+      "richtig": [
+        "gracefully"
+      ],
+      "erklaerung": "graceful + -ly = gracefully."
+    },
+    {
+      "type": "mc",
+      "frage": "I ___ go to the gym; only once a month.",
+      "optionen": [
+        "hard",
+        "hardly",
+        "harder"
+      ],
+      "richtig": 1,
+      "erklaerung": "'hardly' bedeutet 'kaum'; 'hard' würde 'hart/intensiv' heißen."
+    },
+    {
+      "type": "gap",
+      "frage": "The team worked ___ (hard) to win the match.",
+      "richtig": [
+        "hard"
+      ],
+      "erklaerung": "Das Adverb von 'hard' (im Sinne von intensiv) ist 'hard', nicht 'hardly'."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze 'always' an die richtige Stelle: 'I drink coffee in the morning.'",
+      "richtig": [
+        "I always drink coffee in the morning."
+      ],
+      "erklaerung": "Häufigkeitsadverbien stehen vor dem Vollverb."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze 'usually' an die richtige Stelle: 'She is happy on weekends.'",
+      "richtig": [
+        "She is usually happy on weekends."
+      ],
+      "erklaerung": "Häufigkeitsadverbien stehen nach 'to be' (am/is/are)."
+    },
+    {
+      "type": "mc",
+      "frage": "We ___ see our cousins because they live abroad.",
+      "optionen": [
+        "rarely",
+        "rare",
+        "rarer"
+      ],
+      "richtig": 0,
+      "erklaerung": "'rarely' (selten) ist das benötigte Häufigkeitsadverb."
+    },
+    {
+      "type": "gap",
+      "frage": "He is ___ (good) at his job; everyone praises him. (Adjektiv oder Adverb?)",
+      "richtig": [
+        "good"
+      ],
+      "erklaerung": "Nach 'is' steht ein Adjektiv: 'good'."
+    },
+    {
+      "type": "mc",
+      "frage": "The film was ___ boring; I almost fell asleep.",
+      "optionen": [
+        "terrible",
+        "terribly",
+        "terror"
+      ],
+      "richtig": 1,
+      "erklaerung": "Vor einem Adjektiv (boring) steht ein Adverb: 'terribly'."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde das Adverb und setze es ein: 'automatic'. Satz: The doors open ___.",
+      "richtig": [
+        "The doors open automatically.",
+        "automatically"
+      ],
+      "erklaerung": "Adjektive auf -ic bilden das Adverb meist mit -ally: automatically."
+    },
+    {
+      "type": "gap",
+      "frage": "She sings ___ (good) and plays the piano ___ (beautiful).",
+      "richtig": [
+        "well; beautifully",
+        "well and beautifully",
+        "well, beautifully"
+      ],
+      "erklaerung": "Beide Lücken brauchen Adverbien: 'well' und 'beautifully'."
+    },
+    {
+      "type": "mc",
+      "frage": "This is a ___ difficult exercise.",
+      "optionen": [
+        "high",
+        "highly",
+        "height"
+      ],
+      "richtig": 1,
+      "erklaerung": "'highly' (sehr) ist ein Steigerungsadverb vor dem Adjektiv; 'high' wäre räumlich."
+    },
+    {
+      "type": "gap",
+      "frage": "He behaved ___ (responsible) during the crisis.",
+      "richtig": [
+        "responsibly"
+      ],
+      "erklaerung": "Adjektive auf -le: das -e fällt weg und -y wird angehängt: responsibly."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde das Adverb und setze es ein: 'true'. Satz: I ___ believe you.",
+      "richtig": [
+        "I truly believe you.",
+        "truly"
+      ],
+      "erklaerung": "true -> truly (das -e entfällt unregelmäßig)."
+    },
+    {
+      "type": "mc",
+      "frage": "She looked at me ___ when I told the joke.",
+      "optionen": [
+        "strange",
+        "strangely",
+        "stranger"
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Adverb 'strangely' beschreibt das Verb 'looked' (auf welche Weise)."
+    },
+    {
+      "type": "gap",
+      "frage": "The patient is recovering ___ (good), the doctor says.",
       "richtig": [
         "well"
       ],
-      "erklaerung": "Das Adverb zu 'good' ist 'well'. Nach 'speaks French' braucht man ein Adverb."
+      "erklaerung": "Hier wird das Verb 'recovering' beschrieben, also das Adverb 'well'."
     },
     {
       "type": "transform",
-      "frage": "Rewrite the sentence using the adverb form: \"He is a quiet worker.\" → \"He works ___.\" (Write the full sentence.)",
+      "frage": "Setze das Adverb 'hardly' richtig ein und behalte die Bedeutung 'kaum': 'I can hear you.' (mit hardly)",
       "richtig": [
-        "He works quietly.",
-        "He works quietly"
+        "I can hardly hear you."
       ],
-      "erklaerung": "Aus dem Adjektiv 'quiet' wird das Adverb 'quietly', das hier das Verb 'works' beschreibt."
-    },
-    {
-      "type": "transform",
-      "frage": "Put the frequency adverb 'often' into the sentence: \"We go to the cinema.\" (Write the full sentence.)",
-      "richtig": [
-        "We often go to the cinema.",
-        "We often go to the cinema"
-      ],
-      "erklaerung": "Häufigkeitsadverbien stehen vor dem Vollverb: 'We often go to the cinema'."
-    },
-    {
-      "type": "transform",
-      "frage": "Put the frequency adverb 'always' into the sentence: \"She is friendly.\" (Write the full sentence.)",
-      "richtig": [
-        "She is always friendly.",
-        "She is always friendly"
-      ],
-      "erklaerung": "Nach dem Verb 'be' steht das Häufigkeitsadverb: 'She is always friendly'."
+      "erklaerung": "'hardly' steht zwischen Hilfsverb (can) und Vollverb (hear) und bedeutet 'kaum'."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct sentence:",
+      "frage": "Choose the correct order: He plays tennis ___.",
       "optionen": [
-        "This exercise was incredible easy.",
-        "This exercise was incredibly easy.",
-        "This exercise was incredibly easily."
+        "well very",
+        "very well",
+        "well very much"
       ],
       "richtig": 1,
-      "erklaerung": "Um ein Adjektiv ('easy') zu verstärken, braucht man das Adverb 'incredibly'. 'easy' bleibt hier Adjektiv."
+      "erklaerung": "Das Steigerungsadverb 'very' steht vor dem Adverb 'well'."
+    },
+    {
+      "type": "gap",
+      "frage": "Although she felt nervous, she spoke ___ (confident) and ___ (clear) to the audience.",
+      "richtig": [
+        "confidently; clearly",
+        "confidently and clearly",
+        "confidently, clearly"
+      ],
+      "erklaerung": "Beide Adverbien beschreiben das Verb 'spoke': confidently und clearly."
     }
   ]
 };

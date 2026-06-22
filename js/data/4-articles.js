@@ -7,71 +7,208 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct article: She wants to become ___ engineer.",
+      "frage": "Choose the correct article: I have ___ apple in my bag.",
       "optionen": [
         "a",
         "an",
         "the"
       ],
       "richtig": 1,
-      "erklaerung": "\"Engineer\" beginnt mit einem Vokal-Laut, deshalb \"an\"."
+      "erklaerung": "Vor Vokal-Lauten (apple = /æ/) steht 'an'."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct article: We waited for ___ hour at the station.",
-      "optionen": [
-        "a",
-        "an",
-        "the"
-      ],
-      "richtig": 1,
-      "erklaerung": "Das \"h\" in \"hour\" ist stumm, der Laut ist ein Vokal, deshalb \"an\"."
-    },
-    {
-      "type": "mc",
-      "frage": "Choose the correct article: He studies at ___ university in London.",
+      "frage": "Choose the correct article: She is ___ teacher.",
       "optionen": [
         "a",
         "an",
         "the"
       ],
       "richtig": 0,
-      "erklaerung": "\"University\" wird wie \"juniversity\" ausgesprochen (j-Laut, Konsonant), deshalb \"a\"."
+      "erklaerung": "Vor Konsonant-Laut (teacher) steht 'a'."
     },
     {
       "type": "gap",
-      "frage": "Look at ___ moon tonight, it is so bright!",
+      "frage": "He bought ___ umbrella because it was raining.",
       "richtig": [
+        "an"
+      ],
+      "erklaerung": "'umbrella' beginnt mit Vokal-Laut /ʌ/, also 'an'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: We saw ___ moon last night.",
+      "optionen": [
+        "a",
+        "an",
         "the"
       ],
-      "erklaerung": "Der Mond ist einzigartig, deshalb steht der bestimmte Artikel \"the\"."
+      "richtig": 2,
+      "erklaerung": "Einzigartige Dinge (der Mond) nehmen 'the'."
     },
     {
       "type": "gap",
-      "frage": "I bought ___ new phone yesterday.",
+      "frage": "There is ___ cat sitting on the wall.",
       "richtig": [
         "a"
       ],
-      "erklaerung": "Ein unbestimmtes, zählbares Nomen mit Konsonant-Laut, deshalb \"a\"."
+      "erklaerung": "Erstmalige Erwähnung, Konsonant-Laut -> 'a'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: I'd like ___ orange, please.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 1,
+      "erklaerung": "'orange' beginnt mit Vokal-Laut /ɒ/, also 'an'."
     },
     {
       "type": "gap",
-      "frage": "My sister can play ___ piano very well.",
+      "frage": "Can you pass me ___ salt? (the one on the table)",
       "richtig": [
         "the"
       ],
-      "erklaerung": "Vor Musikinstrumenten steht im Englischen \"the\": play the piano."
+      "erklaerung": "Bestimmtes, bekanntes Objekt -> 'the'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: He works as ___ engineer.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 1,
+      "erklaerung": "'engineer' beginnt mit Vokal-Laut /e/ -> 'an'."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze den passenden Artikel ein: 'I want ___ banana.' Schreibe den vollständigen Satz.",
+      "richtig": [
+        "I want a banana.",
+        "I want a banana"
+      ],
+      "erklaerung": "'banana' beginnt mit Konsonant-Laut /b/ -> 'a'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: She lives in ___ small house.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 0,
+      "erklaerung": "'small' beginnt mit Konsonant-Laut -> 'a'."
     },
     {
       "type": "gap",
-      "frage": "They don't eat ___ meat because they are vegetarians. (kein Artikel? schreibe '-' )",
+      "frage": "My brother is ___ honest man. (h is silent)",
+      "richtig": [
+        "an"
+      ],
+      "erklaerung": "'honest' hat stummes h, Laut beginnt mit Vokal -> 'an'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: This is ___ best film I've ever seen.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 2,
+      "erklaerung": "Vor Superlativ (best) steht 'the'."
+    },
+    {
+      "type": "gap",
+      "frage": "He plays ___ guitar every evening.",
+      "richtig": [
+        "the"
+      ],
+      "erklaerung": "Vor Musikinstrumenten steht 'the'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: ___ sun rises in the east.",
+      "optionen": [
+        "A",
+        "An",
+        "The"
+      ],
+      "richtig": 2,
+      "erklaerung": "Einzigartige Objekte (Sonne) -> 'the'."
+    },
+    {
+      "type": "gap",
+      "frage": "We had ___ dinner at eight o'clock. (kein Artikel nötig — schreibe das passende Wort oder '-')",
       "richtig": [
         "-",
+        "no article",
         "kein",
-        "no",
-        "nichts"
+        "nothing",
+        "none",
+        ""
       ],
-      "erklaerung": "\"Meat\" ist hier allgemein und unzählbar gemeint, deshalb kein Artikel."
+      "erklaerung": "Vor Mahlzeiten (dinner) steht normalerweise kein Artikel."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: I read ___ interesting book yesterday.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 1,
+      "erklaerung": "'interesting' beginnt mit Vokal-Laut -> 'an'."
+    },
+    {
+      "type": "transform",
+      "frage": "Fülle die Lücke und schreibe den ganzen Satz: 'She is ___ university student.' (u = /juː/)",
+      "richtig": [
+        "She is a university student.",
+        "She is a university student"
+      ],
+      "erklaerung": "'university' beginnt mit Konsonant-Laut /j/ -> 'a'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: ___ children are playing in the garden.",
+      "optionen": [
+        "A",
+        "The",
+        "An"
+      ],
+      "richtig": 1,
+      "erklaerung": "Bestimmte, bekannte Kinder -> 'the'."
+    },
+    {
+      "type": "gap",
+      "frage": "I go to ___ work by bus. (fester Ausdruck — schreibe das passende Wort oder '-')",
+      "richtig": [
+        "-",
+        "no article",
+        "kein",
+        "nothing",
+        "none",
+        ""
+      ],
+      "erklaerung": "'go to work' ist ein fester Ausdruck ohne Artikel."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: He is ___ European citizen.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 0,
+      "erklaerung": "'European' beginnt mit Konsonant-Laut /j/ -> 'a'."
     },
     {
       "type": "gap",
@@ -79,34 +216,113 @@ const QUIZ_DATA = {
       "richtig": [
         "the"
       ],
-      "erklaerung": "Es gibt nur eine Hauptstadt Frankreichs, also etwas Einzigartiges: \"the\"."
+      "erklaerung": "Einzigartige Bezeichnung (the capital) -> 'the'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: ___ love is more important than money. (allgemein)",
+      "optionen": [
+        "A",
+        "The",
+        "—"
+      ],
+      "richtig": 2,
+      "erklaerung": "Abstrakte Begriffe allgemein nehmen keinen Artikel."
+    },
+    {
+      "type": "gap",
+      "frage": "My father went to ___ hospital because he was ill. (BrE, als Patient — schreibe das passende Wort oder '-')",
+      "richtig": [
+        "-",
+        "no article",
+        "kein",
+        "nothing",
+        "none",
+        ""
+      ],
+      "erklaerung": "Als Patient: 'go to hospital' (BrE) ohne Artikel."
     },
     {
       "type": "transform",
-      "frage": "Setze den passenden Artikel ein (a/an/the) und schreibe den ganzen Satz: She is ___ honest person.",
+      "frage": "Setze den richtigen Artikel ein und schreibe den Satz: 'The Alps are ___ highest mountains in Europe.'",
       "richtig": [
-        "She is an honest person.",
-        "She is an honest person"
+        "The Alps are the highest mountains in Europe.",
+        "The Alps are the highest mountains in Europe"
       ],
-      "erklaerung": "Das \"h\" in \"honest\" ist stumm, der Laut ist ein Vokal, deshalb \"an\"."
+      "erklaerung": "Vor Superlativ steht 'the'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: She wants to become ___ MP one day. (M = /em/)",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 1,
+      "erklaerung": "Abkürzung 'MP' beginnt mit Vokal-Laut /e/ -> 'an'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ Thames flows through London. (Fluss)",
+      "richtig": [
+        "The",
+        "the"
+      ],
+      "erklaerung": "Vor Flussnamen steht 'the'."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: I visited ___ United States last summer.",
+      "optionen": [
+        "a",
+        "an",
+        "the"
+      ],
+      "richtig": 2,
+      "erklaerung": "Länder im Plural/mit 'States' nehmen 'the'."
+    },
+    {
+      "type": "gap",
+      "frage": "Mount Everest is ___ highest mountain in the world, but we use no article before its name: ___ Everest. (zweite Lücke)",
+      "richtig": [
+        "-",
+        "no article",
+        "kein",
+        "nothing",
+        "none",
+        ""
+      ],
+      "erklaerung": "Vor einzelnen Bergnamen (Everest) steht kein Artikel."
     },
     {
       "type": "transform",
-      "frage": "Bilde den Satz mit dem richtigen Artikel (a/an/the): This is ___ best film I have ever seen.",
+      "frage": "Korrigiere den Artikelfehler und schreibe den Satz neu: 'He plays a football every weekend.'",
       "richtig": [
-        "This is the best film I have ever seen.",
-        "This is the best film I have ever seen"
+        "He plays football every weekend.",
+        "He plays football every weekend"
       ],
-      "erklaerung": "Vor Superlativen (best) steht immer der bestimmte Artikel \"the\"."
+      "erklaerung": "Vor Sportarten (football) steht kein Artikel."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct article: ___ rich should help ___ poor. (welche Kombination?)",
+      "optionen": [
+        "The / the",
+        "A / a",
+        "— / —"
+      ],
+      "richtig": 0,
+      "erklaerung": "'the + Adjektiv' bezeichnet eine Gruppe (die Reichen, die Armen)."
     },
     {
       "type": "transform",
-      "frage": "Ergänze den Artikel (a/an) und schreibe den Satz: He gave me ___ umbrella.",
+      "frage": "Korrigiere den Fehler und schreibe den Satz neu: 'She is the best at the maths in her class.'",
       "richtig": [
-        "He gave me an umbrella.",
-        "He gave me an umbrella"
+        "She is the best at maths in her class.",
+        "She is the best at maths in her class"
       ],
-      "erklaerung": "\"Umbrella\" beginnt mit einem Vokal-Laut, deshalb \"an\"."
+      "erklaerung": "Schulfächer (maths) stehen ohne Artikel; 'the best' bleibt."
     }
   ]
 };

@@ -7,99 +7,299 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct form: My sister ___ to music every evening.",
+      "frage": "She ___ to school every day.",
       "optionen": [
-        "listen",
-        "listens",
-        "listening"
+        "go",
+        "goes",
+        "going"
       ],
       "richtig": 1,
-      "erklaerung": "3. Person Singular (she) im Simple Present bekommt ein -s: listens."
+      "erklaerung": "3. Person Singular (she) bekommt im Simple Present die Endung -es: goes."
+    },
+    {
+      "type": "gap",
+      "frage": "I ___ coffee every morning. (drink)",
+      "richtig": [
+        "drink"
+      ],
+      "erklaerung": "Bei I bleibt das Verb im Simple Present unverändert: drink."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct form: ___ your parents live near the city centre?",
+      "frage": "He ___ football on Saturdays.",
       "optionen": [
-        "Does",
-        "Do",
-        "Are"
+        "play",
+        "plays",
+        "playes"
       ],
       "richtig": 1,
-      "erklaerung": "Bei der Frage mit Plural-Subjekt (your parents) benutzt man das Hilfsverb 'do'."
+      "erklaerung": "He bekommt -s: plays. Nach Vokal+y bleibt das y erhalten."
     },
     {
-      "type": "mc",
-      "frage": "Choose the correct form: He always ___ his homework before dinner.",
-      "optionen": [
-        "dos",
-        "do",
+      "type": "gap",
+      "frage": "My brother ___ his homework after dinner. (do)",
+      "richtig": [
         "does"
       ],
+      "erklaerung": "3. Person Singular von do ist does."
+    },
+    {
+      "type": "mc",
+      "frage": "The cat ___ on the sofa right now.",
+      "optionen": [
+        "sleep",
+        "sleeps",
+        "is sleeping"
+      ],
       "richtig": 2,
-      "erklaerung": "Das Verb 'do' wird in der 3. Person Singular zu 'does' (Endung -es)."
+      "erklaerung": "'right now' verlangt das Present Continuous: is sleeping."
     },
     {
       "type": "gap",
-      "frage": "Complete the sentence: She ___ (study) English at university.",
+      "frage": "We ___ in London. (live)",
       "richtig": [
-        "studies"
+        "live"
       ],
-      "erklaerung": "Verb auf Konsonant + y (study) wird in der 3. Person Singular zu -ies: studies."
-    },
-    {
-      "type": "gap",
-      "frage": "Complete the sentence: My friends ___ (not / like) horror films.",
-      "richtig": [
-        "don't like",
-        "do not like"
-      ],
-      "erklaerung": "Plural-Subjekt (my friends) in der Verneinung: don't like / do not like."
-    },
-    {
-      "type": "gap",
-      "frage": "Complete the sentence: Tom ___ (watch) football on Saturdays.",
-      "richtig": [
-        "watches"
-      ],
-      "erklaerung": "Verb auf -ch (watch) bekommt in der 3. Person Singular die Endung -es: watches."
-    },
-    {
-      "type": "gap",
-      "frage": "Complete the sentence: ___ (be) you ready for the test tomorrow?",
-      "richtig": [
-        "Are",
-        "are"
-      ],
-      "erklaerung": "Das Verb 'be' lautet bei 'you' im Present: are. In der Frage steht es vorne."
+      "erklaerung": "Bei we bleibt das Verb unverändert: live."
     },
     {
       "type": "transform",
-      "frage": "Rewrite in the 3rd person singular (he): 'I go to school by bus.'",
+      "frage": "Setze ins Simple Present (3. Person): 'They watch TV.' -> mit 'She' als Subjekt.",
       "richtig": [
-        "He goes to school by bus.",
-        "He goes to school by bus"
+        "She watches TV.",
+        "She watches TV"
       ],
-      "erklaerung": "Das Verb 'go' bekommt in der 3. Person Singular die Endung -es: goes."
+      "erklaerung": "Verben auf -ch bekommen -es: watches."
+    },
+    {
+      "type": "mc",
+      "frage": "___ you like pizza?",
+      "optionen": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "richtig": 0,
+      "erklaerung": "Frage mit you im Simple Present: Hilfsverb Do."
+    },
+    {
+      "type": "gap",
+      "frage": "She ___ not eat meat. (Kurzform oder Langform)",
+      "richtig": [
+        "does",
+        "doesn't",
+        "does not"
+      ],
+      "erklaerung": "Verneinung 3. Person Singular: does not / doesn't, danach Grundform eat."
+    },
+    {
+      "type": "mc",
+      "frage": "Yesterday I ___ a new film.",
+      "optionen": [
+        "watch",
+        "watched",
+        "watching"
+      ],
+      "richtig": 1,
+      "erklaerung": "'Yesterday' verlangt Simple Past: watched (regelmäßiges Verb + -ed)."
+    },
+    {
+      "type": "gap",
+      "frage": "He ___ to the radio every evening. (listen)",
+      "richtig": [
+        "listens"
+      ],
+      "erklaerung": "3. Person Singular + -s: listens."
     },
     {
       "type": "transform",
-      "frage": "Make the sentence negative: 'She speaks three languages.'",
+      "frage": "Bilde die Verneinung: 'I like tea.'",
       "richtig": [
-        "She doesn't speak three languages.",
-        "She does not speak three languages.",
-        "She doesn't speak three languages",
-        "She does not speak three languages"
+        "I don't like tea.",
+        "I do not like tea.",
+        "I don't like tea",
+        "I do not like tea"
       ],
-      "erklaerung": "In der Verneinung trägt das Hilfsverb die Endung (doesn't), das Vollverb steht im Grundform: speak."
+      "erklaerung": "Verneinung im Simple Present mit do not / don't + Grundform."
+    },
+    {
+      "type": "mc",
+      "frage": "Last summer we ___ to Italy.",
+      "optionen": [
+        "go",
+        "went",
+        "goed"
+      ],
+      "richtig": 1,
+      "erklaerung": "go ist unregelmäßig; Simple Past ist went."
+    },
+    {
+      "type": "gap",
+      "frage": "The baby ___ now. (cry)",
+      "richtig": [
+        "is crying"
+      ],
+      "erklaerung": "'now' verlangt Present Continuous: is crying. Konsonant+y bleibt erhalten vor -ing."
+    },
+    {
+      "type": "mc",
+      "frage": "She ___ her keys last night.",
+      "optionen": [
+        "lose",
+        "lost",
+        "losed"
+      ],
+      "richtig": 1,
+      "erklaerung": "lose ist unregelmäßig; Simple Past ist lost."
+    },
+    {
+      "type": "gap",
+      "frage": "They ___ football when it started to rain. (play)",
+      "richtig": [
+        "were playing"
+      ],
+      "erklaerung": "Past Continuous für eine laufende Handlung in der Vergangenheit: were playing."
     },
     {
       "type": "transform",
-      "frage": "Turn into a question: 'He has a new car.'",
+      "frage": "Setze ins Simple Past: 'He buys a car.'",
       "richtig": [
-        "Does he have a new car?",
-        "Does he have a new car"
+        "He bought a car.",
+        "He bought a car"
       ],
-      "erklaerung": "Frage im Simple Present mit 'does': Das Vollverb 'have' verliert die Endung und steht in der Grundform."
+      "erklaerung": "buy ist unregelmäßig; Simple Past ist bought."
+    },
+    {
+      "type": "mc",
+      "frage": "I ___ never ___ sushi before.",
+      "optionen": [
+        "have / eaten",
+        "has / eaten",
+        "have / ate"
+      ],
+      "richtig": 0,
+      "erklaerung": "Present Perfect mit I: have + Partizip Perfekt eaten."
+    },
+    {
+      "type": "gap",
+      "frage": "She ___ already ___ her work. (finish)",
+      "richtig": [
+        "has finished"
+      ],
+      "erklaerung": "Present Perfect 3. Person Singular: has + finished."
+    },
+    {
+      "type": "mc",
+      "frage": "How long ___ you ___ here?",
+      "optionen": [
+        "have / lived",
+        "has / lived",
+        "do / live"
+      ],
+      "richtig": 0,
+      "erklaerung": "Present Perfect mit you: have + lived."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze ins Present Perfect: 'They write a letter.'",
+      "richtig": [
+        "They have written a letter.",
+        "They have written a letter"
+      ],
+      "erklaerung": "Present Perfect: have + Partizip written (unregelmäßig)."
+    },
+    {
+      "type": "gap",
+      "frage": "By the time we arrived, the train ___ already ___. (leave)",
+      "richtig": [
+        "had left"
+      ],
+      "erklaerung": "Past Perfect für die frühere von zwei Vergangenheiten: had + left."
+    },
+    {
+      "type": "mc",
+      "frage": "Tomorrow I ___ my grandmother.",
+      "optionen": [
+        "visit",
+        "will visit",
+        "visited"
+      ],
+      "richtig": 1,
+      "erklaerung": "Zukunft mit will: will visit."
+    },
+    {
+      "type": "gap",
+      "frage": "Look at those clouds! It ___ rain. (Vorhersage aufgrund von Anzeichen, going to)",
+      "richtig": [
+        "is going to"
+      ],
+      "erklaerung": "going to für Vorhersagen mit sichtbaren Anzeichen: is going to rain."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde die Frage: 'She has seen the film.'",
+      "richtig": [
+        "Has she seen the film?",
+        "Has she seen the film"
+      ],
+      "erklaerung": "Im Present Perfect rückt das Hilfsverb has vor das Subjekt."
+    },
+    {
+      "type": "mc",
+      "frage": "If it rains tomorrow, we ___ at home.",
+      "optionen": [
+        "stay",
+        "will stay",
+        "stayed"
+      ],
+      "richtig": 1,
+      "erklaerung": "Conditional Typ 1: if + Present, Hauptsatz mit will: will stay."
+    },
+    {
+      "type": "gap",
+      "frage": "I wish I ___ more time. (have, irrealer Wunsch in der Gegenwart)",
+      "richtig": [
+        "had"
+      ],
+      "erklaerung": "Nach 'I wish' für einen irrealen Gegenwartswunsch steht der Simple Past: had."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze ins Passiv (Simple Present): 'Someone cleans the office every day.'",
+      "richtig": [
+        "The office is cleaned every day.",
+        "The office is cleaned every day"
+      ],
+      "erklaerung": "Passiv: is/are + Partizip Perfekt; the office is cleaned."
+    },
+    {
+      "type": "mc",
+      "frage": "She has been ___ English for five years.",
+      "optionen": [
+        "study",
+        "studied",
+        "studying"
+      ],
+      "richtig": 2,
+      "erklaerung": "Present Perfect Continuous: has been + Verb-ing (studying)."
+    },
+    {
+      "type": "gap",
+      "frage": "If I ___ rich, I would travel the world. (be, Conditional Typ 2)",
+      "richtig": [
+        "were",
+        "was"
+      ],
+      "erklaerung": "Conditional Typ 2: if + Simple Past. Bei 'I' wird formell 'were' verwendet, umgangssprachlich auch 'was'."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze ins Past Perfect Continuous: 'They wait for two hours.' (Beginne mit 'They had ...')",
+      "richtig": [
+        "They had been waiting for two hours.",
+        "They had been waiting for two hours"
+      ],
+      "erklaerung": "Past Perfect Continuous: had been + Verb-ing (waiting)."
     }
   ]
 };

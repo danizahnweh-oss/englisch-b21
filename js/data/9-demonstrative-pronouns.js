@@ -7,99 +7,298 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "___ book here in my hand is really interesting.",
+      "frage": "___ is my pen here in my hand.",
       "optionen": [
         "This",
         "These",
         "Those"
       ],
       "richtig": 0,
-      "erklaerung": "\"book\" ist Einzahl und \"here in my hand\" zeigt Nähe, also \"This\"."
+      "erklaerung": "Ein nahes Einzelding: 'this'."
     },
     {
       "type": "mc",
-      "frage": "Look at ___ stars in the sky tonight!",
+      "frage": "Look at ___ stars in the sky far away.",
       "optionen": [
-        "that",
         "this",
+        "these",
         "those"
       ],
       "richtig": 2,
-      "erklaerung": "\"stars\" ist Mehrzahl und am Himmel weit entfernt, also \"those\"."
+      "erklaerung": "Mehrere entfernte Dinge: 'those'."
     },
     {
       "type": "mc",
-      "frage": "Hello, ___ is Sarah speaking. Can I talk to Mr Brown?",
+      "frage": "___ apples in my basket are very sweet.",
       "optionen": [
-        "that",
+        "This",
+        "These",
+        "That"
+      ],
+      "richtig": 1,
+      "erklaerung": "Mehrere nahe Dinge: 'these'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ is the book on the table next to me. (Singular, nah)",
+      "richtig": [
+        "This"
+      ],
+      "erklaerung": "Ein nahes Einzelding bekommt 'this'."
+    },
+    {
+      "type": "gap",
+      "frage": "Do you see ___ house over there on the hill? (Singular, fern)",
+      "richtig": [
+        "that"
+      ],
+      "erklaerung": "Ein entferntes Einzelding: 'that'."
+    },
+    {
+      "type": "mc",
+      "frage": "___ shoes by the door over there are mine.",
+      "optionen": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "richtig": 2,
+      "erklaerung": "Mehrzahl und entfernt: 'those'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ flowers in my hands smell wonderful. (Plural, nah)",
+      "richtig": [
+        "These"
+      ],
+      "erklaerung": "Nahe Mehrzahl: 'these'."
+    },
+    {
+      "type": "mc",
+      "frage": "I really like ___ song that is playing now on the radio.",
+      "optionen": [
         "this",
+        "these",
+        "those"
+      ],
+      "richtig": 0,
+      "erklaerung": "Ein Lied (Singular), gerade gegenwärtig: 'this'."
+    },
+    {
+      "type": "gap",
+      "frage": "Can you pass me ___ cup right here, please? (Singular, nah)",
+      "richtig": [
+        "this"
+      ],
+      "erklaerung": "Nahes Einzelding: 'this'."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze in den Plural: 'This box is empty.'",
+      "richtig": [
+        "These boxes are empty.",
+        "These boxes are empty"
+      ],
+      "erklaerung": "'this' -> 'these', 'box' -> 'boxes', 'is' -> 'are'."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze in den Plural: 'That child is very polite.'",
+      "richtig": [
+        "Those children are very polite.",
+        "Those children are very polite"
+      ],
+      "erklaerung": "'that' -> 'those', unregelmäßiger Plural 'child' -> 'children', 'is' -> 'are'."
+    },
+    {
+      "type": "mc",
+      "frage": "___ is my sister Anna. (am Telefon, wenn man sich vorstellt)",
+      "optionen": [
+        "This",
+        "These",
+        "That"
+      ],
+      "richtig": 0,
+      "erklaerung": "Am Telefon stellt man sich mit 'this' vor."
+    },
+    {
+      "type": "gap",
+      "frage": "Who is ___? (am Telefon nach dem Anrufer fragen)",
+      "richtig": [
+        "that"
+      ],
+      "erklaerung": "Nach dem Anrufer am Telefon fragt man mit 'that'."
+    },
+    {
+      "type": "mc",
+      "frage": "___ days, many people work from home.",
+      "optionen": [
+        "This",
+        "These",
+        "Those"
+      ],
+      "richtig": 1,
+      "erklaerung": "'These days' = heutzutage; feste Wendung mit Plural."
+    },
+    {
+      "type": "gap",
+      "frage": "Back in ___ days, there were no mobile phones. (damals)",
+      "richtig": [
+        "those"
+      ],
+      "erklaerung": "'In those days' = damals; Verweis auf weit zurückliegende Zeit."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze in den Singular: 'These men are firefighters.'",
+      "richtig": [
+        "This man is a firefighter.",
+        "This man is a firefighter"
+      ],
+      "erklaerung": "'these' -> 'this', 'men' -> 'man', 'are' -> 'is', Artikel 'a' nötig."
+    },
+    {
+      "type": "mc",
+      "frage": "___ was a great holiday; I will never forget it.",
+      "optionen": [
+        "This",
+        "That",
+        "These"
+      ],
+      "richtig": 1,
+      "erklaerung": "Rückblick auf etwas Vergangenes: 'that'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ is going to be an amazing year, I can feel it! (auf das kommende Jahr, das gerade beginnt)",
+      "richtig": [
+        "This"
+      ],
+      "erklaerung": "Gegenwärtige/nahe Situation: 'this'."
+    },
+    {
+      "type": "mc",
+      "frage": "I don't agree with ___ you just said.",
+      "optionen": [
+        "this",
+        "that",
         "these"
       ],
       "richtig": 1,
-      "erklaerung": "Am Telefon stellt man sich selbst mit \"this is\" vor."
+      "erklaerung": "Verweis auf eine gerade genannte Äußerung des Anderen: 'that'."
     },
     {
-      "type": "gap",
-      "frage": "___ shoes I'm wearing right now are new. (Schuhe an meinen Füßen)",
+      "type": "transform",
+      "frage": "Setze in den Plural: 'That woman is a doctor.'",
       "richtig": [
-        "These",
-        "these"
+        "Those women are doctors.",
+        "Those women are doctors"
       ],
-      "erklaerung": "\"shoes\" ist Mehrzahl und ganz nah (an den Füßen), also \"These\"."
+      "erklaerung": "'that' -> 'those', 'woman' -> 'women', 'is a doctor' -> 'are doctors'."
     },
     {
       "type": "gap",
-      "frage": "Do you see ___ house at the end of the street? (weit weg)",
+      "frage": "\"I passed my exam!\" \"___ is wonderful news!\" (Reaktion auf gerade Gesagtes)",
       "richtig": [
-        "that",
         "That"
       ],
-      "erklaerung": "\"house\" ist Einzahl und am Ende der Straße entfernt, also \"that\"."
+      "erklaerung": "Reaktion auf eine eben gemachte Aussage: 'that'."
     },
     {
-      "type": "gap",
-      "frage": "___ is my sister, Emma. (Ich stelle die Person neben mir vor)",
-      "richtig": [
+      "type": "mc",
+      "frage": "___ kind of behaviour is simply not acceptable.",
+      "optionen": [
         "This",
-        "this"
-      ],
-      "erklaerung": "Beim Vorstellen einer nahen Person benutzt man \"This is\"."
-    },
-    {
-      "type": "gap",
-      "frage": "I don't like ___ socks over there; I prefer the blue ones. (weit entfernt, Mehrzahl)",
-      "richtig": [
-        "those",
+        "These",
         "Those"
       ],
-      "erklaerung": "\"socks\" ist Mehrzahl und \"over there\" zeigt Entfernung, also \"those\"."
+      "richtig": 0,
+      "erklaerung": "'kind' ist Singular, daher 'this'."
+    },
+    {
+      "type": "gap",
+      "frage": "All ___ problems we discussed must be solved soon. (Plural, auf zuvor Erwähntes)",
+      "richtig": [
+        "these",
+        "those"
+      ],
+      "erklaerung": "Plural; 'these' (nah/aktuell) oder 'those' (distanzierter) sind beide möglich."
+    },
+    {
+      "type": "mc",
+      "frage": "This is John, and ___ are his parents over there.",
+      "optionen": [
+        "this",
+        "these",
+        "those"
+      ],
+      "richtig": 2,
+      "erklaerung": "Plural und entfernt ('over there'): 'those'."
     },
     {
       "type": "transform",
-      "frage": "Setze in den Singular: \"These apples are fresh.\"",
+      "frage": "Setze in den Singular: 'Those mice ran into the kitchen.'",
       "richtig": [
-        "This apple is fresh.",
-        "This apple is fresh"
+        "That mouse ran into the kitchen.",
+        "That mouse ran into the kitchen"
       ],
-      "erklaerung": "\"These\" (Plural, nah) wird im Singular zu \"This\", und \"apples are\" wird zu \"apple is\"."
+      "erklaerung": "'those' -> 'that', unregelmäßiger Plural 'mice' -> 'mouse'."
+    },
+    {
+      "type": "gap",
+      "frage": "My new shoes are nicer than ___ I wore last year. (statt 'the ones', distanziert/Plural)",
+      "richtig": [
+        "those",
+        "the ones"
+      ],
+      "erklaerung": "'those' ersetzt 'the shoes' im Vergleich; 'the ones' ist ebenfalls korrekt."
+    },
+    {
+      "type": "mc",
+      "frage": "The weather here is far better than ___ in the north.",
+      "optionen": [
+        "this",
+        "that",
+        "these"
+      ],
+      "richtig": 1,
+      "erklaerung": "'that' ersetzt 'the weather' (unzählbar, Singular) im Vergleich."
+    },
+    {
+      "type": "gap",
+      "frage": "___ who arrive late will not be allowed to enter. (formell: 'die Leute, die ...', Plural)",
+      "richtig": [
+        "Those"
+      ],
+      "erklaerung": "Formelles 'those who ...' = 'diejenigen, die ...'."
     },
     {
       "type": "transform",
-      "frage": "Setze in den Plural: \"That dog is barking.\"",
+      "frage": "Schreibe mit Demonstrativpronomen statt 'It': 'It is the most beautiful painting I have ever seen.' (auf ein nahes, gerade betrachtetes Bild)",
       "richtig": [
-        "Those dogs are barking.",
-        "Those dogs are barking"
+        "This is the most beautiful painting I have ever seen.",
+        "This is the most beautiful painting I have ever seen"
       ],
-      "erklaerung": "\"That\" (Singular, fern) wird im Plural zu \"Those\", und \"dog is\" wird zu \"dogs are\"."
+      "erklaerung": "Für ein gerade betrachtetes nahes Objekt passt 'This'."
     },
     {
-      "type": "transform",
-      "frage": "Setze in den Plural: \"This is my friend.\"",
-      "richtig": [
-        "These are my friends.",
-        "These are my friends"
+      "type": "mc",
+      "frage": "Of all his films, ___ ones from the 1980s are the best.",
+      "optionen": [
+        "this",
+        "that",
+        "those"
       ],
-      "erklaerung": "\"This is\" wird im Plural zu \"These are\", und \"friend\" wird zu \"friends\"."
+      "richtig": 2,
+      "erklaerung": "Plural ('ones') und zeitlich distanziert: 'those'."
+    },
+    {
+      "type": "gap",
+      "frage": "Life today is so different from ___ of fifty years ago. (Singular 'life', distanziert)",
+      "richtig": [
+        "that"
+      ],
+      "erklaerung": "'that' ersetzt 'the life' im Vergleich; Singular und entfernt."
     }
   ]
 };

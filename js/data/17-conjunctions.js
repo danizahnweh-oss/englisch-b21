@@ -7,109 +7,323 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "I wanted to come ___ I was too busy.",
+      "frage": "I like tea ___ coffee in the morning.",
       "optionen": [
+        "and",
         "but",
-        "so",
         "because"
       ],
       "richtig": 0,
-      "erklaerung": "\"but\" drückt einen Gegensatz aus: Ich wollte kommen, aber ich war zu beschäftigt."
+      "erklaerung": "'and' verbindet zwei gleichwertige Dinge."
     },
     {
       "type": "mc",
-      "frage": "It was raining, ___ we took an umbrella.",
+      "frage": "She is tired, ___ she keeps working.",
       "optionen": [
+        "and",
         "but",
-        "so",
-        "or"
+        "so"
       ],
       "richtig": 1,
-      "erklaerung": "\"so\" leitet eine Folge ein: Es regnete, deshalb nahmen wir einen Schirm."
+      "erklaerung": "'but' drückt einen Gegensatz aus."
     },
     {
       "type": "mc",
-      "frage": "___ it was very cold, she went swimming.",
+      "frage": "It was raining, ___ we stayed at home.",
       "optionen": [
-        "Because",
-        "So",
-        "Although"
+        "so",
+        "but",
+        "or"
       ],
-      "richtig": 2,
-      "erklaerung": "\"Although\" bedeutet \"obwohl\" und zeigt den Gegensatz zwischen Kälte und Schwimmen."
+      "richtig": 0,
+      "erklaerung": "'so' zeigt eine Folge an."
     },
     {
       "type": "mc",
-      "frage": "You can have tea ___ coffee. Which do you prefer?",
+      "frage": "Would you like tea ___ coffee?",
       "optionen": [
         "and",
         "or",
         "but"
       ],
       "richtig": 1,
-      "erklaerung": "\"or\" bietet eine Auswahl zwischen zwei Möglichkeiten an."
+      "erklaerung": "'or' bietet eine Auswahl/Alternative an."
     },
     {
       "type": "gap",
-      "frage": "She was tired ___ she kept working until midnight.",
+      "frage": "I was hungry, ___ I made a sandwich. (Folge)",
       "richtig": [
+        "so"
+      ],
+      "erklaerung": "'so' verbindet Ursache mit Folge."
+    },
+    {
+      "type": "gap",
+      "frage": "He plays football ___ tennis at school.",
+      "richtig": [
+        "and"
+      ],
+      "erklaerung": "'and' verbindet zwei Aktivitäten."
+    },
+    {
+      "type": "mc",
+      "frage": "We went home early ___ we were very tired.",
+      "optionen": [
+        "because",
+        "but",
+        "or"
+      ],
+      "richtig": 0,
+      "erklaerung": "'because' gibt einen Grund an."
+    },
+    {
+      "type": "gap",
+      "frage": "You can take the bus ___ walk to the station.",
+      "richtig": [
+        "or"
+      ],
+      "erklaerung": "'or' nennt eine Alternative."
+    },
+    {
+      "type": "mc",
+      "frage": "___ it was late, we decided to go out.",
+      "optionen": [
+        "Although",
+        "Because",
+        "So"
+      ],
+      "richtig": 0,
+      "erklaerung": "'Although' leitet einen Gegensatz ein (obwohl)."
+    },
+    {
+      "type": "gap",
+      "frage": "The film was boring, ___ I fell asleep. (Folge)",
+      "richtig": [
+        "so"
+      ],
+      "erklaerung": "'so' zeigt die Folge des langweiligen Films."
+    },
+    {
+      "type": "mc",
+      "frage": "I'll call you ___ I arrive at the airport.",
+      "optionen": [
+        "when",
+        "because",
         "but"
       ],
-      "erklaerung": "Gegensatz: Sie war müde, aber sie arbeitete weiter. \"but\" passt am besten."
+      "richtig": 0,
+      "erklaerung": "'when' nennt den Zeitpunkt."
     },
     {
       "type": "gap",
-      "frage": "We stayed at home ___ it was raining heavily.",
+      "frage": "She studied hard, ___ she passed the exam easily. (Folge)",
       "richtig": [
-        "because"
+        "so"
       ],
-      "erklaerung": "\"because\" nennt den Grund: Wir blieben zu Hause, weil es stark regnete."
+      "erklaerung": "'so' verbindet Anstrengung mit dem Erfolg."
     },
     {
-      "type": "gap",
-      "frage": "Please turn off the light ___ you leave the room.",
-      "richtig": [
-        "when",
-        "before",
-        "after"
-      ],
-      "erklaerung": "Zeitliche Verbindung: \"when/before/after\" passen alle sinnvoll zum Verlassen des Raums."
-    },
-    {
-      "type": "gap",
-      "frage": "He likes ___ tea and coffee in the morning.",
-      "richtig": [
-        "both"
-      ],
-      "erklaerung": "Das feste Paar \"both ... and\" bedeutet \"sowohl ... als auch\"."
-    },
-    {
-      "type": "gap",
-      "frage": "I called you ___ I was waiting for the bus.",
-      "richtig": [
+      "type": "mc",
+      "frage": "Please wait here ___ I get the car.",
+      "optionen": [
         "while",
+        "because",
+        "or"
+      ],
+      "richtig": 0,
+      "erklaerung": "'while' beschreibt eine gleichzeitige Handlung."
+    },
+    {
+      "type": "transform",
+      "frage": "Verbinde mit 'because': 'We stayed inside. It was cold.'",
+      "richtig": [
+        "We stayed inside because it was cold.",
+        "We stayed inside because it was cold"
+      ],
+      "erklaerung": "'because' gibt den Grund (Kälte) an."
+    },
+    {
+      "type": "mc",
+      "frage": "___ you study, you will pass the test.",
+      "optionen": [
+        "If",
+        "But",
+        "So"
+      ],
+      "richtig": 0,
+      "erklaerung": "'If' leitet eine Bedingung ein."
+    },
+    {
+      "type": "gap",
+      "frage": "I don't like horror films ___ thrillers.",
+      "richtig": [
+        "or"
+      ],
+      "erklaerung": "In verneinten Sätzen verbindet 'or' zwei Dinge."
+    },
+    {
+      "type": "transform",
+      "frage": "Verbinde mit 'but': 'The hotel was nice. It was expensive.'",
+      "richtig": [
+        "The hotel was nice but it was expensive.",
+        "The hotel was nice, but it was expensive.",
+        "The hotel was nice but it was expensive",
+        "The hotel was nice but expensive."
+      ],
+      "erklaerung": "'but' stellt den Gegensatz dar."
+    },
+    {
+      "type": "mc",
+      "frage": "He didn't go to the party ___ he was ill.",
+      "optionen": [
+        "because",
+        "although",
+        "or"
+      ],
+      "richtig": 0,
+      "erklaerung": "'because' nennt den Grund für das Fehlen."
+    },
+    {
+      "type": "mc",
+      "frage": "We can eat now ___ wait for the others.",
+      "optionen": [
+        "or",
+        "because",
         "when"
       ],
-      "erklaerung": "\"while\" (während) oder \"when\" (als) verbinden zwei gleichzeitige Handlungen."
+      "richtig": 0,
+      "erklaerung": "'or' bietet zwei Möglichkeiten an."
+    },
+    {
+      "type": "gap",
+      "frage": "___ I was young, I lived in Spain. (Zeit: als)",
+      "richtig": [
+        "When",
+        "when"
+      ],
+      "erklaerung": "'When' beschreibt den Zeitabschnitt in der Vergangenheit."
     },
     {
       "type": "transform",
-      "frage": "Verbinde die zwei Sätze mit \"because\": He stayed in bed. He was ill.",
+      "frage": "Verbinde mit 'although': 'He was tired. He finished the race.'",
       "richtig": [
-        "He stayed in bed because he was ill.",
-        "He stayed in bed because he was ill"
+        "Although he was tired, he finished the race.",
+        "Although he was tired he finished the race.",
+        "He finished the race although he was tired.",
+        "He finished the race although he was tired"
       ],
-      "erklaerung": "\"because\" leitet den Grund ein und steht zwischen den beiden Teilsätzen."
+      "erklaerung": "'although' zeigt den Gegensatz (obwohl müde, trotzdem fertig)."
+    },
+    {
+      "type": "mc",
+      "frage": "You should hurry, ___ you'll miss the train.",
+      "optionen": [
+        "or",
+        "and",
+        "because"
+      ],
+      "richtig": 0,
+      "erklaerung": "'or' im Sinne von 'sonst' nennt die negative Folge."
+    },
+    {
+      "type": "gap",
+      "frage": "I'll stay at home ___ it rains tomorrow. (Bedingung)",
+      "richtig": [
+        "if"
+      ],
+      "erklaerung": "'if' leitet die Bedingung ein."
+    },
+    {
+      "type": "mc",
+      "frage": "___ I finished my homework, I watched TV.",
+      "optionen": [
+        "After",
+        "Because",
+        "But"
+      ],
+      "richtig": 0,
+      "erklaerung": "'After' beschreibt die zeitliche Reihenfolge (danach)."
     },
     {
       "type": "transform",
-      "frage": "Verbinde die zwei Sätze mit \"although\" am Anfang: It was late. They continued playing.",
+      "frage": "Verbinde mit 'so': 'The shop was closed. We went home.'",
       "richtig": [
-        "Although it was late, they continued playing.",
-        "Although it was late they continued playing.",
-        "Although it was late, they continued playing"
+        "The shop was closed, so we went home.",
+        "The shop was closed so we went home.",
+        "The shop was closed so we went home"
       ],
-      "erklaerung": "\"Although\" am Satzanfang leitet den Gegensatz ein; nach dem ersten Teilsatz steht ein Komma."
+      "erklaerung": "'so' zeigt die Folge der Schließung."
+    },
+    {
+      "type": "mc",
+      "frage": "She won't come ___ you invite her personally.",
+      "optionen": [
+        "unless",
+        "because",
+        "although"
+      ],
+      "richtig": 0,
+      "erklaerung": "'unless' bedeutet 'wenn nicht / es sei denn'."
+    },
+    {
+      "type": "gap",
+      "frage": "Both my brother ___ my sister speak French. (... and ...)",
+      "richtig": [
+        "and"
+      ],
+      "erklaerung": "Bei 'both ... and ...' folgt 'and'."
+    },
+    {
+      "type": "mc",
+      "frage": "He neither called ___ wrote to us.",
+      "optionen": [
+        "nor",
+        "or",
+        "and"
+      ],
+      "richtig": 0,
+      "erklaerung": "Auf 'neither' folgt 'nor'."
+    },
+    {
+      "type": "transform",
+      "frage": "Verbinde mit 'while': 'I cooked dinner. She set the table.'",
+      "richtig": [
+        "I cooked dinner while she set the table.",
+        "While I cooked dinner, she set the table.",
+        "While I cooked dinner she set the table.",
+        "I cooked dinner while she set the table"
+      ],
+      "erklaerung": "'while' drückt Gleichzeitigkeit aus."
+    },
+    {
+      "type": "mc",
+      "frage": "___ it was a great offer, I decided not to buy the car.",
+      "optionen": [
+        "Even though",
+        "Because",
+        "So"
+      ],
+      "richtig": 0,
+      "erklaerung": "'Even though' verstärkt den Gegensatz (obwohl gut, trotzdem nicht)."
+    },
+    {
+      "type": "gap",
+      "frage": "You can have ___ the cake or the ice cream, not both. (entweder)",
+      "richtig": [
+        "either"
+      ],
+      "erklaerung": "Bei 'either ... or ...' steht zuerst 'either'."
+    },
+    {
+      "type": "transform",
+      "frage": "Verbinde mit 'as soon as': 'The guests arrive. We will serve dinner.'",
+      "richtig": [
+        "As soon as the guests arrive, we will serve dinner.",
+        "As soon as the guests arrive we will serve dinner.",
+        "We will serve dinner as soon as the guests arrive.",
+        "We will serve dinner as soon as the guests arrive"
+      ],
+      "erklaerung": "'as soon as' bedeutet 'sobald'; im Nebensatz steht Präsens."
     }
   ]
 };

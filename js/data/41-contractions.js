@@ -7,113 +7,296 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Which contraction is correct for \"I am\"?",
+      "frage": "Which is the correct contraction of \"I am\"?",
       "optionen": [
         "I'm",
-        "Im'",
-        "I'am"
+        "Im",
+        "I're"
       ],
       "richtig": 0,
-      "erklaerung": "Bei \"I am\" ersetzt der Apostroph das \"a\": I'm."
+      "erklaerung": "\"I am\" wird zu \"I'm\" zusammengezogen (Apostroph statt \"a\")."
     },
     {
       "type": "mc",
-      "frage": "What is the correct contraction of \"will not\"?",
+      "frage": "Choose the contraction for \"you are\".",
+      "optionen": [
+        "youre",
+        "you're",
+        "your"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"You are\" = \"you're\". \"Your\" ist ein Possessivpronomen."
+    },
+    {
+      "type": "gap",
+      "frage": "\"He is my brother.\" Short form: \"___ my brother.\"",
+      "richtig": [
+        "He's"
+      ],
+      "erklaerung": "\"He is\" wird zu \"He's\"."
+    },
+    {
+      "type": "mc",
+      "frage": "What is the contraction of \"it is\"?",
+      "optionen": [
+        "its",
+        "it's",
+        "its'"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"It is\" = \"it's\". \"Its\" (ohne Apostroph) ist der Possessiv."
+    },
+    {
+      "type": "gap",
+      "frage": "\"We are ready.\" Short form: \"___ ready.\"",
+      "richtig": [
+        "We're"
+      ],
+      "erklaerung": "\"We are\" wird zu \"We're\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Write with a contraction: \"They are at home.\"",
+      "richtig": [
+        "They're at home.",
+        "They're at home"
+      ],
+      "erklaerung": "\"They are\" wird zu \"They're\"."
+    },
+    {
+      "type": "mc",
+      "frage": "Which is the correct negative contraction of \"is not\"?",
+      "optionen": [
+        "isnt",
+        "is'nt",
+        "isn't"
+      ],
+      "richtig": 2,
+      "erklaerung": "Der Apostroph ersetzt das \"o\" in \"not\": \"isn't\"."
+    },
+    {
+      "type": "gap",
+      "frage": "\"I do not like coffee.\" Short form: \"I ___ like coffee.\"",
+      "richtig": [
+        "don't"
+      ],
+      "erklaerung": "\"Do not\" wird zu \"don't\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Write with a contraction: \"She does not work here.\"",
+      "richtig": [
+        "She doesn't work here.",
+        "She doesn't work here"
+      ],
+      "erklaerung": "\"Does not\" wird zu \"doesn't\"."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct contraction: \"We ___ have any milk.\"",
+      "optionen": [
+        "don't",
+        "doesn't",
+        "aren't"
+      ],
+      "richtig": 0,
+      "erklaerung": "Bei \"we\" (Plural) im Present Simple steht \"don't\"."
+    },
+    {
+      "type": "gap",
+      "frage": "\"He cannot swim.\" Short form: \"He ___ swim.\"",
+      "richtig": [
+        "can't",
+        "cannot"
+      ],
+      "erklaerung": "\"Cannot\" wird zu \"can't\" zusammengezogen."
+    },
+    {
+      "type": "mc",
+      "frage": "Which is the contraction of \"will not\"?",
       "optionen": [
         "willn't",
         "won't",
-        "willnot"
+        "wont"
       ],
       "richtig": 1,
-      "erklaerung": "\"will not\" hat die Sonderform won't und nicht *willn't."
+      "erklaerung": "\"Will not\" hat die unregelmäßige Kurzform \"won't\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Write with a contraction: \"I have finished my homework.\"",
+      "richtig": [
+        "I've finished my homework.",
+        "I've finished my homework"
+      ],
+      "erklaerung": "\"I have\" wird im Perfect zu \"I've\"."
+    },
+    {
+      "type": "gap",
+      "frage": "\"They have left already.\" Short form: \"___ left already.\"",
+      "richtig": [
+        "They've"
+      ],
+      "erklaerung": "\"They have\" wird zu \"They've\"."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct sentence.",
+      "frage": "Choose the contraction for \"she will\".",
       "optionen": [
-        "She's got two cats.",
-        "She'is got two cats.",
-        "Shes got two cats."
+        "she'll",
+        "shell",
+        "she'l"
       ],
       "richtig": 0,
-      "erklaerung": "\"she has\" wird zu she's; der Apostroph steht für das fehlende \"ha\"."
+      "erklaerung": "\"She will\" wird zu \"she'll\"."
     },
     {
       "type": "gap",
-      "frage": "We ___ have any milk left, so let's go shopping. (do not)",
+      "frage": "\"You will see.\" Short form: \"___ see.\"",
       "richtig": [
-        "don't",
-        "do not"
+        "You'll"
       ],
-      "erklaerung": "\"do not\" wird zur Kurzform don't; beide Schreibweisen sind korrekt."
+      "erklaerung": "\"You will\" wird zu \"You'll\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Write with a contraction: \"We would like some tea.\"",
+      "richtig": [
+        "We'd like some tea.",
+        "We'd like some tea"
+      ],
+      "erklaerung": "\"We would\" wird zu \"We'd\"."
+    },
+    {
+      "type": "mc",
+      "frage": "\"I ___ go to the party if I had time.\" Which contraction fits?",
+      "optionen": [
+        "I'll",
+        "I'd",
+        "I've"
+      ],
+      "richtig": 1,
+      "erklaerung": "Im Conditional steht \"would\": \"I would\" = \"I'd\"."
     },
     {
       "type": "gap",
-      "frage": "Sorry, I ___ come to your party tomorrow. (cannot)",
+      "frage": "\"He has not arrived yet.\" Short form (contract \"has not\"): \"He ___ arrived yet.\"",
       "richtig": [
-        "can't",
-        "cannot",
-        "can not"
+        "hasn't"
       ],
-      "erklaerung": "\"cannot\" wird zu can't; die getrennte Form \"can not\" ist ebenfalls möglich."
+      "erklaerung": "\"Has not\" wird zu \"hasn't\"."
     },
     {
       "type": "gap",
-      "frage": "They ___ already finished their homework. (have)",
+      "frage": "\"They were not at school.\" Short form: \"They ___ at school.\"",
       "richtig": [
-        "'ve",
-        "have"
+        "weren't"
       ],
-      "erklaerung": "\"they have\" wird zu they've; hier passt die Kurzform 've oder die Vollform have."
+      "erklaerung": "\"Were not\" wird zu \"weren't\"."
+    },
+    {
+      "type": "mc",
+      "frage": "Which sentence is correct?",
+      "optionen": [
+        "She wasn't tired.",
+        "She was'nt tired.",
+        "She wasnt tired."
+      ],
+      "richtig": 0,
+      "erklaerung": "\"Was not\" = \"wasn't\"; der Apostroph steht vor dem \"t\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Write with a contraction: \"Let us start now.\"",
+      "richtig": [
+        "Let's start now.",
+        "Let's start now"
+      ],
+      "erklaerung": "\"Let us\" wird zu \"Let's\"."
     },
     {
       "type": "gap",
-      "frage": "He ___ be here at six o'clock. (will)",
+      "frage": "Question tag: \"You are coming, ___ you?\" (negative contraction)",
       "richtig": [
-        "'ll",
-        "will"
+        "aren't"
       ],
-      "erklaerung": "\"he will\" wird zu he'll; akzeptiert sind die Kurzform 'll und die Vollform will."
+      "erklaerung": "Positiver Satz mit \"are\" -> negatives Tag \"aren't you?\"."
+    },
+    {
+      "type": "mc",
+      "frage": "In \"What's your name?\", \"What's\" stands for:",
+      "optionen": [
+        "What has",
+        "What is",
+        "What us"
+      ],
+      "richtig": 1,
+      "erklaerung": "Hier bedeutet \"What's\" = \"What is\"."
+    },
+    {
+      "type": "gap",
+      "frage": "\"There is a problem.\" Short form: \"___ a problem.\"",
+      "richtig": [
+        "There's"
+      ],
+      "erklaerung": "\"There is\" wird zu \"There's\"."
     },
     {
       "type": "transform",
-      "frage": "Use a contraction: \"It is raining outside.\"",
+      "frage": "Write with a contraction: \"She had already eaten when I called.\"",
       "richtig": [
-        "It's raining outside.",
-        "It's raining outside"
+        "She'd already eaten when I called.",
+        "She'd already eaten when I called"
       ],
-      "erklaerung": "\"it is\" wird zur Kurzform it's: It's raining outside."
+      "erklaerung": "Im Past Perfect steht \"had\": \"She had\" = \"She'd\"."
+    },
+    {
+      "type": "mc",
+      "frage": "In \"He's gone home\", \"He's\" means:",
+      "optionen": [
+        "He is",
+        "He was",
+        "He has"
+      ],
+      "richtig": 2,
+      "erklaerung": "Vor einem Partizip (gone) bedeutet \"He's\" = \"He has\"."
+    },
+    {
+      "type": "gap",
+      "frage": "\"Who is at the door?\" Short form: \"___ at the door?\"",
+      "richtig": [
+        "Who's"
+      ],
+      "erklaerung": "\"Who is\" wird zu \"Who's\" (nicht \"whose\")."
     },
     {
       "type": "transform",
-      "frage": "Use a contraction: \"They are not at home.\"",
+      "frage": "Write the full (non-contracted) form: \"They'd better hurry.\"",
       "richtig": [
-        "They aren't at home.",
-        "They're not at home.",
-        "They aren't at home",
-        "They're not at home"
+        "They had better hurry.",
+        "They had better hurry"
       ],
-      "erklaerung": "Es gibt zwei Möglichkeiten: They aren't at home oder They're not at home."
+      "erklaerung": "In \"had better\" steht \"'d\" für \"had\": \"They had better hurry.\""
+    },
+    {
+      "type": "mc",
+      "frage": "Which contraction is NOT normally written in standard English?",
+      "optionen": [
+        "amn't",
+        "shan't",
+        "mightn't"
+      ],
+      "richtig": 0,
+      "erklaerung": "\"Amn't\" ist im Standardenglisch unüblich; man sagt \"I'm not\" oder \"aren't I?\"."
     },
     {
       "type": "transform",
-      "frage": "Write the full form (no contraction): \"We won't tell anyone.\"",
+      "frage": "Write with contractions where possible: \"I would not have done it if I had known.\"",
       "richtig": [
-        "We will not tell anyone.",
-        "We will not tell anyone"
+        "I wouldn't have done it if I'd known.",
+        "I wouldn't have done it if I'd known"
       ],
-      "erklaerung": "won't ist die Kontraktion von will not: We will not tell anyone."
-    },
-    {
-      "type": "transform",
-      "frage": "Use a contraction: \"I have not seen this film.\"",
-      "richtig": [
-        "I haven't seen this film.",
-        "I've not seen this film.",
-        "I haven't seen this film",
-        "I've not seen this film"
-      ],
-      "erklaerung": "Möglich sind I haven't seen this film oder I've not seen this film."
+      "erklaerung": "\"Would not\" = \"wouldn't\" und \"I had\" = \"I'd\" (im if-Satz)."
     }
   ]
 };

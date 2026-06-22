@@ -7,99 +7,296 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct form: Last summer we ___ to Italy.",
+      "frage": "Yesterday I ___ to school by bus.",
       "optionen": [
         "go",
         "went",
         "goed"
       ],
       "richtig": 1,
-      "erklaerung": "\"go\" ist unregelmäßig; die Simple-Past-Form lautet \"went\"."
+      "erklaerung": "\"go\" ist unregelmäßig; die Simple-Past-Form ist \"went\"."
     },
     {
-      "type": "mc",
-      "frage": "Which sentence is correct?",
-      "optionen": [
-        "She didn't called me.",
-        "She didn't call me.",
-        "She not called me."
+      "type": "gap",
+      "frage": "Last weekend we ___ (watch) a great film at the cinema.",
+      "richtig": [
+        "watched"
       ],
-      "richtig": 1,
-      "erklaerung": "Nach \"didn't\" steht die Grundform: \"call\", nicht \"called\"."
+      "erklaerung": "Regelmäßiges Verb: watch + -ed = watched."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct question: ___ you watch the film yesterday?",
+      "frage": "She ___ her homework before dinner.",
       "optionen": [
-        "Did",
-        "Do",
-        "Was"
+        "did",
+        "done",
+        "does"
       ],
       "richtig": 0,
-      "erklaerung": "Fragen im Simple Past bildet man mit \"Did\" + Grundform."
+      "erklaerung": "\"do\" wird im Simple Past zu \"did\"."
     },
     {
       "type": "gap",
-      "frage": "Yesterday I ___ (buy) a new phone.",
+      "frage": "They ___ (play) football in the park last Sunday.",
       "richtig": [
-        "bought"
+        "played"
       ],
-      "erklaerung": "\"buy\" ist unregelmäßig; die Simple-Past-Form ist \"bought\"."
+      "erklaerung": "Regelmäßiges Verb: play + -ed = played."
     },
     {
-      "type": "gap",
-      "frage": "They ___ (not / visit) us last weekend.",
+      "type": "transform",
+      "frage": "Setze ins Simple Past: I eat an apple.",
       "richtig": [
-        "did not visit",
-        "didn't visit"
+        "I ate an apple.",
+        "I ate an apple"
       ],
-      "erklaerung": "Verneinung im Simple Past: \"did not / didn't\" + Grundform \"visit\"."
+      "erklaerung": "\"eat\" ist unregelmäßig; Simple Past ist \"ate\"."
     },
     {
-      "type": "gap",
-      "frage": "When she was young, she ___ (live) in London.",
-      "richtig": [
-        "lived"
+      "type": "mc",
+      "frage": "We ___ very happy at the party.",
+      "optionen": [
+        "was",
+        "were",
+        "are"
       ],
-      "erklaerung": "\"live\" ist regelmäßig: live + d = \"lived\" (Endung auf -e, nur -d anhängen)."
+      "richtig": 1,
+      "erklaerung": "Bei \"we\" lautet die Vergangenheitsform von \"to be\" \"were\"."
     },
     {
       "type": "gap",
-      "frage": "___ they at the party last night? (be)",
+      "frage": "My brother ___ (study) for his exam all evening.",
       "richtig": [
-        "Were",
+        "studied"
+      ],
+      "erklaerung": "Verben auf Konsonant + y: y wird zu i, dann -ed: studied."
+    },
+    {
+      "type": "mc",
+      "frage": "He ___ a new car last month.",
+      "optionen": [
+        "buyed",
+        "bought",
+        "buied"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"buy\" ist unregelmäßig; Simple Past ist \"bought\"."
+    },
+    {
+      "type": "gap",
+      "frage": "The dog ___ (stop) suddenly in the middle of the street.",
+      "richtig": [
+        "stopped"
+      ],
+      "erklaerung": "Kurzer betonter Vokal + einzelner Konsonant: Verdopplung, stop -> stopped."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze ins Simple Past: She writes a letter.",
+      "richtig": [
+        "She wrote a letter.",
+        "She wrote a letter"
+      ],
+      "erklaerung": "\"write\" ist unregelmäßig; Simple Past ist \"wrote\"."
+    },
+    {
+      "type": "mc",
+      "frage": "___ you see Tom yesterday?",
+      "optionen": [
+        "Do",
+        "Did",
+        "Was"
+      ],
+      "richtig": 1,
+      "erklaerung": "Fragen im Simple Past bildet man mit \"did\" + Grundform."
+    },
+    {
+      "type": "gap",
+      "frage": "I ___ (not / like) the food in that restaurant.",
+      "richtig": [
+        "did not like",
+        "didn't like"
+      ],
+      "erklaerung": "Verneinung: did not / didn't + Grundform (like)."
+    },
+    {
+      "type": "mc",
+      "frage": "Where ___ they go on holiday last year?",
+      "optionen": [
+        "did",
+        "do",
         "were"
       ],
-      "erklaerung": "\"to be\" im Plural/2. Person: \"were\". Die Frage steht ohne \"did\"."
+      "richtig": 0,
+      "erklaerung": "Fragewort + did + Subjekt + Grundform."
+    },
+    {
+      "type": "gap",
+      "frage": "She ___ (have) a wonderful time in Italy.",
+      "richtig": [
+        "had"
+      ],
+      "erklaerung": "\"have\" ist unregelmäßig; Simple Past ist \"had\"."
     },
     {
       "type": "transform",
-      "frage": "Setze ins Simple Past: 'He plays football every day.' (Beginne mit 'Yesterday')",
+      "frage": "Verneine den Satz: He came home late.",
       "richtig": [
-        "Yesterday he played football.",
-        "Yesterday he played football"
+        "He did not come home late.",
+        "He didn't come home late.",
+        "He did not come home late",
+        "He didn't come home late"
       ],
-      "erklaerung": "\"play\" wird regelmäßig zu \"played\"; die Zeitangabe \"Yesterday\" signalisiert die Vergangenheit."
+      "erklaerung": "Verneinung: did not/didn't + Grundform \"come\"."
+    },
+    {
+      "type": "mc",
+      "frage": "The children ___ tired after the long walk.",
+      "optionen": [
+        "was",
+        "were",
+        "did"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"children\" ist Plural, daher \"were\"."
+    },
+    {
+      "type": "gap",
+      "frage": "We ___ (meet) our old friends at the station.",
+      "richtig": [
+        "met"
+      ],
+      "erklaerung": "\"meet\" ist unregelmäßig; Simple Past ist \"met\"."
     },
     {
       "type": "transform",
-      "frage": "Verneine den Satz: 'I saw him at school.'",
+      "frage": "Bilde eine Frage: They found the keys. (Frage nach dem Objekt mit \"What\")",
       "richtig": [
-        "I did not see him at school.",
-        "I didn't see him at school.",
-        "I did not see him at school",
-        "I didn't see him at school"
+        "What did they find?",
+        "What did they find"
       ],
-      "erklaerung": "Verneinung mit \"did not / didn't\" + Grundform \"see\" (nicht \"saw\")."
+      "erklaerung": "Frage: What + did + Subjekt + Grundform \"find\"."
+    },
+    {
+      "type": "mc",
+      "frage": "I ___ understand the teacher's question.",
+      "optionen": [
+        "didn't",
+        "wasn't",
+        "not"
+      ],
+      "richtig": 0,
+      "erklaerung": "Verneinung im Simple Past: didn't + Grundform."
+    },
+    {
+      "type": "gap",
+      "frage": "He ___ (think) about the problem for a long time.",
+      "richtig": [
+        "thought"
+      ],
+      "erklaerung": "\"think\" ist unregelmäßig; Simple Past ist \"thought\"."
     },
     {
       "type": "transform",
-      "frage": "Bilde eine Frage aus: 'She wrote a letter.'",
+      "frage": "Setze ins Simple Past: They are at home and they read books.",
       "richtig": [
-        "Did she write a letter?",
-        "Did she write a letter"
+        "They were at home and they read books.",
+        "They were at home and they read books"
       ],
-      "erklaerung": "Frage mit \"Did\" + Subjekt + Grundform \"write\" (nicht \"wrote\")."
+      "erklaerung": "\"are\" -> \"were\"; \"read\" bleibt geschrieben gleich (read), wird aber [red] gesprochen."
+    },
+    {
+      "type": "mc",
+      "frage": "When the phone rang, she ___ it immediately.",
+      "optionen": [
+        "answered",
+        "answer",
+        "answers"
+      ],
+      "richtig": 0,
+      "erklaerung": "Regelmäßiges Verb im Simple Past: answer + -ed = answered."
+    },
+    {
+      "type": "gap",
+      "frage": "The film ___ (begin) at eight o'clock last night.",
+      "richtig": [
+        "began"
+      ],
+      "erklaerung": "\"begin\" ist unregelmäßig; Simple Past ist \"began\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde eine Ja/Nein-Frage: She left early.",
+      "richtig": [
+        "Did she leave early?",
+        "Did she leave early"
+      ],
+      "erklaerung": "Did + Subjekt + Grundform \"leave\"."
+    },
+    {
+      "type": "mc",
+      "frage": "We didn't ___ anyone at the conference.",
+      "optionen": [
+        "knew",
+        "know",
+        "known"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach \"didn't\" steht die Grundform (know), nicht die Past-Form."
+    },
+    {
+      "type": "gap",
+      "frage": "While I was cooking, my sister ___ (lay) the table.",
+      "richtig": [
+        "laid"
+      ],
+      "erklaerung": "\"lay\" (legen) ist unregelmäßig; Simple Past ist \"laid\"."
+    },
+    {
+      "type": "transform",
+      "frage": "Setze ins Simple Past: He doesn't catch the train, so he takes a taxi.",
+      "richtig": [
+        "He didn't catch the train, so he took a taxi.",
+        "He didn't catch the train, so he took a taxi"
+      ],
+      "erklaerung": "\"doesn't catch\" -> \"didn't catch\" (Grundform); \"takes\" -> \"took\"."
+    },
+    {
+      "type": "mc",
+      "frage": "I ___ him last week, but I can't remember exactly when.",
+      "optionen": [
+        "seen",
+        "saw",
+        "see"
+      ],
+      "richtig": 1,
+      "erklaerung": "\"see\" ist unregelmäßig; Simple Past ist \"saw\" (\"seen\" wäre Past Participle)."
+    },
+    {
+      "type": "gap",
+      "frage": "Although it ___ (rain) heavily, they still went for a walk.",
+      "richtig": [
+        "rained"
+      ],
+      "erklaerung": "Regelmäßiges Verb: rain + -ed = rained."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde eine Frage mit \"How long\": You waited for the bus. (Verwende \"you\")",
+      "richtig": [
+        "How long did you wait for the bus?",
+        "How long did you wait for the bus"
+      ],
+      "erklaerung": "How long + did + you + Grundform \"wait\"."
+    },
+    {
+      "type": "gap",
+      "frage": "Neither the manager nor the staff ___ (be) aware of the mistake until it was too late.",
+      "richtig": [
+        "were",
+        "was"
+      ],
+      "erklaerung": "Bei \"neither ... nor\" richtet sich \"to be\" nach dem näheren Subjekt (staff) -> \"were\"; \"was\" gilt formal auch als akzeptabel."
     }
   ]
 };

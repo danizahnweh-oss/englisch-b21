@@ -7,109 +7,311 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct phrasal verb: I can't read this word. Can you ___ it ___ in the dictionary?",
+      "frage": "Please ___ the light when you leave the room.",
       "optionen": [
-        "look it up",
-        "look up it",
-        "look it after"
+        "turn off",
+        "turn over",
+        "turn into"
       ],
       "richtig": 0,
-      "erklaerung": "\"look up\" bedeutet nachschlagen und ist trennbar; ein Pronomen (it) muss zwischen Verb und Partikel stehen: look it up."
+      "erklaerung": "'turn off' = ausschalten."
     },
     {
       "type": "mc",
-      "frage": "Which sentence has the correct meaning of 'give up'? My grandfather decided to ___ smoking last year.",
+      "frage": "What time do you usually ___ in the morning?",
       "optionen": [
-        "give up",
-        "give in",
-        "give away"
+        "get up",
+        "get over",
+        "get along"
       ],
       "richtig": 0,
-      "erklaerung": "\"give up\" heißt aufhören/aufgeben. \"give in\" = nachgeben, \"give away\" = verschenken/verraten."
+      "erklaerung": "'get up' = aufstehen."
     },
     {
       "type": "mc",
-      "frage": "Our plane was late, so we had to ___ the trip until the next day.",
+      "frage": "I need to ___ my friend. I'll call her tonight.",
+      "optionen": [
+        "call off",
+        "call up",
+        "call for"
+      ],
+      "richtig": 1,
+      "erklaerung": "'call up' = anrufen."
+    },
+    {
+      "type": "gap",
+      "frage": "It's cold outside. Please put ___ your coat before we go.",
+      "richtig": [
+        "on"
+      ],
+      "erklaerung": "'put on' = anziehen."
+    },
+    {
+      "type": "gap",
+      "frage": "Could you turn ___ the music? It's too loud!",
+      "richtig": [
+        "down"
+      ],
+      "erklaerung": "'turn down' = leiser machen."
+    },
+    {
+      "type": "mc",
+      "frage": "The plane is going to ___ in five minutes.",
+      "optionen": [
+        "take off",
+        "take after",
+        "take up"
+      ],
+      "richtig": 0,
+      "erklaerung": "'take off' = abheben (Flugzeug)."
+    },
+    {
+      "type": "gap",
+      "frage": "I can't hear you. Can you speak ___, please?",
+      "richtig": [
+        "up"
+      ],
+      "erklaerung": "'speak up' = lauter sprechen."
+    },
+    {
+      "type": "mc",
+      "frage": "Hurry ___! The bus is coming.",
+      "optionen": [
+        "up",
+        "off",
+        "in"
+      ],
+      "richtig": 0,
+      "erklaerung": "'hurry up' = sich beeilen."
+    },
+    {
+      "type": "gap",
+      "frage": "I usually ___ up early on weekdays, but I sleep in on Sundays.",
+      "richtig": [
+        "get",
+        "wake"
+      ],
+      "erklaerung": "'get up' oder 'wake up' = aufstehen/aufwachen."
+    },
+    {
+      "type": "mc",
+      "frage": "She gets ___ very well with her colleagues.",
+      "optionen": [
+        "along",
+        "over",
+        "up"
+      ],
+      "richtig": 0,
+      "erklaerung": "'get along (with)' = gut auskommen mit."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde einen Imperativ mit dem Phrasal Verb 'sit down' (du bittest jemanden, sich zu setzen).",
+      "richtig": [
+        "Sit down.",
+        "Sit down, please.",
+        "Please sit down.",
+        "Sit down please."
+      ],
+      "erklaerung": "'sit down' = sich hinsetzen."
+    },
+    {
+      "type": "gap",
+      "frage": "Don't throw ___ those old newspapers; we can recycle them.",
+      "richtig": [
+        "away",
+        "out"
+      ],
+      "erklaerung": "'throw away/out' = wegwerfen."
+    },
+    {
+      "type": "mc",
+      "frage": "I'm looking ___ to seeing you next week!",
+      "optionen": [
+        "forward",
+        "after",
+        "up"
+      ],
+      "richtig": 0,
+      "erklaerung": "'look forward to' = sich freuen auf."
+    },
+    {
+      "type": "gap",
+      "frage": "My car broke ___ on the motorway, so I had to call a mechanic.",
+      "richtig": [
+        "down"
+      ],
+      "erklaerung": "'break down' = eine Panne haben."
+    },
+    {
+      "type": "mc",
+      "frage": "Can you look ___ my dog while I'm on holiday?",
+      "optionen": [
+        "after",
+        "up",
+        "into"
+      ],
+      "richtig": 0,
+      "erklaerung": "'look after' = sich kümmern um."
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze 'discover' durch das Phrasal Verb 'find out': 'I want to discover the truth.' Schreibe den ganzen Satz neu.",
+      "richtig": [
+        "I want to find out the truth.",
+        "I want to find the truth out."
+      ],
+      "erklaerung": "'find out' = herausfinden."
+    },
+    {
+      "type": "gap",
+      "frage": "The meeting was cancelled, so they called it ___.",
+      "richtig": [
+        "off"
+      ],
+      "erklaerung": "'call off' = absagen."
+    },
+    {
+      "type": "mc",
+      "frage": "I ran ___ an old friend at the supermarket yesterday.",
+      "optionen": [
+        "into",
+        "over",
+        "up"
+      ],
+      "richtig": 0,
+      "erklaerung": "'run into' = zufällig treffen."
+    },
+    {
+      "type": "gap",
+      "frage": "Please fill ___ this form with your name and address.",
+      "richtig": [
+        "in",
+        "out"
+      ],
+      "erklaerung": "'fill in/out' = ausfüllen."
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze das Objekt in 'Turn off the radio.' durch das Pronomen 'it'. Schreibe den ganzen Satz.",
+      "richtig": [
+        "Turn it off.",
+        "Turn it off!"
+      ],
+      "erklaerung": "Bei trennbaren Phrasal Verbs steht das Pronomen IMMER zwischen Verb und Partikel: 'turn it off', nicht 'turn off it'."
+    },
+    {
+      "type": "mc",
+      "frage": "We've run ___ of milk. Can you buy some more?",
+      "optionen": [
+        "out",
+        "up",
+        "over"
+      ],
+      "richtig": 0,
+      "erklaerung": "'run out of' = ausgehen, alle sein."
+    },
+    {
+      "type": "gap",
+      "frage": "He gave ___ smoking three years ago and feels much healthier now.",
+      "richtig": [
+        "up"
+      ],
+      "erklaerung": "'give up' = aufhören mit, aufgeben."
+    },
+    {
+      "type": "mc",
+      "frage": "The teacher told the students to ___ the difficult word in a dictionary.",
+      "optionen": [
+        "look up",
+        "look after",
+        "look out"
+      ],
+      "richtig": 0,
+      "erklaerung": "'look up' = nachschlagen."
+    },
+    {
+      "type": "gap",
+      "frage": "I came ___ this old photo while I was cleaning the attic.",
+      "richtig": [
+        "across"
+      ],
+      "erklaerung": "'come across' = zufällig finden/stoßen auf."
+    },
+    {
+      "type": "mc",
+      "frage": "You should never ___ until tomorrow what you can do today.",
       "optionen": [
         "put off",
         "put on",
         "put up"
       ],
       "richtig": 0,
-      "erklaerung": "\"put off\" bedeutet verschieben. \"put on\" = anziehen/anschalten, \"put up\" = aufstellen/unterbringen."
+      "erklaerung": "'put off' = aufschieben, verschieben."
+    },
+    {
+      "type": "transform",
+      "frage": "Schreibe den Satz im Passiv: 'They set up the new company in 2010.'",
+      "richtig": [
+        "The new company was set up in 2010.",
+        "The new company was set up in 2010"
+      ],
+      "erklaerung": "Bei Phrasal Verbs im Passiv bleibt die Partikel beim Verb: 'was set up'."
+    },
+    {
+      "type": "gap",
+      "frage": "I don't get ___. Could you explain what you mean again? (verstehen)",
+      "richtig": [
+        "it"
+      ],
+      "erklaerung": "'get it' = es verstehen/kapieren."
     },
     {
       "type": "mc",
-      "frage": "While I'm away, could you ___ my cat?",
+      "frage": "Although the plan failed at first, things finally ___ in the end.",
       "optionen": [
-        "look after",
-        "look for",
-        "look up"
+        "worked out",
+        "worked up",
+        "worked off"
       ],
       "richtig": 0,
-      "erklaerung": "\"look after\" heißt sich kümmern um. \"look for\" = suchen, \"look up\" = nachschlagen."
+      "erklaerung": "'work out' = klappen, gut ausgehen."
     },
     {
       "type": "gap",
-      "frage": "It's cold in here. Could you ___ ___ the heating, please? (anschalten)",
+      "frage": "She takes ___ her mother; they have the same eyes and the same laugh.",
       "richtig": [
-        "turn on",
-        "switch on",
-        "put on"
+        "after"
       ],
-      "erklaerung": "\"turn on\" (auch \"switch on\"/\"put on\") bedeutet ein Gerät anschalten."
-    },
-    {
-      "type": "gap",
-      "frage": "My alarm didn't go off, so I ___ ___ late this morning. (aufstehen)",
-      "richtig": [
-        "got up",
-        "woke up"
-      ],
-      "erklaerung": "\"get up\" (im Past: got up) heißt aufstehen; \"wake up\" (woke up) = aufwachen, passt hier ebenfalls."
-    },
-    {
-      "type": "gap",
-      "frage": "We've run ___ ___ milk. Can you buy some on your way home? (etwas ist ausgegangen / aufgebraucht)",
-      "richtig": [
-        "out of"
-      ],
-      "erklaerung": "\"run out of\" bedeutet, dass etwas aufgebraucht ist. Die Partikeln sind hier 'out of'."
-    },
-    {
-      "type": "gap",
-      "frage": "I don't know what 'awkward' means. I'll ___ it ___ online. (nachschlagen)",
-      "richtig": [
-        "look up"
-      ],
-      "erklaerung": "Bei \"look up\" steht das Pronomen 'it' in der Mitte: look it up. In die Lücken kommt 'look' und 'up'."
+      "erklaerung": "'take after' = jemandem ähneln (Familie)."
     },
     {
       "type": "transform",
-      "frage": "Umformen: Ersetze das Pronomen richtig. Schreibe den Satz so, dass 'it' an der richtigen Stelle steht: 'Please turn off it.'",
+      "frage": "Verneine diesen Satz mit 'didn't': 'He gave up easily.'",
       "richtig": [
-        "Please turn it off.",
-        "Please turn it off"
+        "He didn't give up easily.",
+        "He did not give up easily."
       ],
-      "erklaerung": "Bei trennbaren phrasal verbs muss ein Pronomen zwischen Verb und Partikel: turn it off (nicht 'turn off it')."
+      "erklaerung": "Im Simple Past Verneinung: 'didn't' + Grundform des Phrasal Verbs 'give up'."
     },
     {
-      "type": "transform",
-      "frage": "Umformen: Schreibe den Satz mit dem phrasal verb 'fill in' und dem Objekt 'the form' so um, dass das Objekt zwischen Verb und Partikel steht: 'You must fill in the form.'",
-      "richtig": [
-        "You must fill the form in.",
-        "You must fill the form in"
+      "type": "mc",
+      "frage": "The negotiations fell ___ because the two sides couldn't agree.",
+      "optionen": [
+        "through",
+        "out",
+        "over"
       ],
-      "erklaerung": "\"fill in\" ist trennbar, daher kann das Nomen-Objekt auch in der Mitte stehen: fill the form in."
+      "richtig": 0,
+      "erklaerung": "'fall through' = scheitern, ins Wasser fallen."
     },
     {
-      "type": "transform",
-      "frage": "Umformen: Ersetze 'the music' durch ein Pronomen: 'Can you turn down the music?'",
+      "type": "gap",
+      "frage": "I won't put ___ with this rude behaviour any longer! (tolerieren)",
       "richtig": [
-        "Can you turn it down?",
-        "Can you turn it down"
+        "up"
       ],
-      "erklaerung": "Das Pronomen 'it' ersetzt 'the music' und muss in die Mitte: turn it down (nicht 'turn down it')."
+      "erklaerung": "'put up with' = etwas/jemanden ertragen, dulden."
     }
   ]
 };

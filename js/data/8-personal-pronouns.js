@@ -7,97 +7,293 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct pronoun: ___ is my best friend. She is very kind.",
-      "optionen": [
-        "Her",
-        "She",
-        "Hers"
-      ],
-      "richtig": 1,
-      "erklaerung": "Als Subjekt des Satzes (wer ist mein Freund?) steht die Subjektform 'She'."
-    },
-    {
-      "type": "mc",
-      "frage": "Choose the correct pronoun: Can you help ___? I can't open this box.",
+      "frage": "Choose the correct subject pronoun: ___ am a student.",
       "optionen": [
         "I",
-        "my",
-        "me"
+        "Me",
+        "My"
       ],
-      "richtig": 2,
-      "erklaerung": "Nach dem Verb 'help' steht das Objekt, also die Objektform 'me'."
+      "richtig": 0,
+      "erklaerung": "Subjektpronomen der 1. Person Singular ist 'I'."
+    },
+    {
+      "type": "gap",
+      "frage": "This is my brother. ___ is twelve years old.",
+      "richtig": [
+        "He"
+      ],
+      "erklaerung": "Fuer eine maennliche Person benutzt man 'He'."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct pronoun: Tom and Lisa are here. ___ are waiting outside.",
+      "frage": "Look at the bird. ___ is singing.",
+      "optionen": [
+        "He",
+        "It",
+        "She"
+      ],
+      "richtig": 1,
+      "erklaerung": "Fuer Tiere/Dinge ohne bekanntes Geschlecht benutzt man 'It'."
+    },
+    {
+      "type": "gap",
+      "frage": "My sister loves music. ___ plays the piano every day.",
+      "richtig": [
+        "She"
+      ],
+      "erklaerung": "Fuer eine weibliche Person benutzt man 'She'."
+    },
+    {
+      "type": "mc",
+      "frage": "Tom and I are friends. ___ play football together.",
       "optionen": [
         "They",
-        "Them",
+        "We",
+        "You"
+      ],
+      "richtig": 1,
+      "erklaerung": "'Tom and I' = 'We' (1. Person Plural)."
+    },
+    {
+      "type": "gap",
+      "frage": "Where are my keys? ___ are on the table.",
+      "richtig": [
+        "They"
+      ],
+      "erklaerung": "Fuer einen Plural von Dingen benutzt man 'They'."
+    },
+    {
+      "type": "mc",
+      "frage": "Can you help me? ___ need your support.",
+      "optionen": [
+        "I",
+        "Me",
         "We"
       ],
       "richtig": 0,
-      "erklaerung": "Tom und Lisa sind mehrere Personen und das Subjekt; daher 'They'."
+      "erklaerung": "Als Subjekt des Satzes steht 'I'."
     },
     {
       "type": "gap",
-      "frage": "Where is the dog? ___ is sleeping under the table.",
+      "frage": "Anna and Lisa are late. ___ missed the bus.",
       "richtig": [
-        "It",
+        "They"
+      ],
+      "erklaerung": "Zwei Personen werden mit 'They' aufgenommen."
+    },
+    {
+      "type": "mc",
+      "frage": "Choose the correct object pronoun: Please call ___ tonight (the speaker).",
+      "optionen": [
+        "I",
+        "me",
+        "my"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach dem Verb steht das Objektpronomen 'me'."
+    },
+    {
+      "type": "gap",
+      "frage": "I like this song. Can you play ___ again? (the song)",
+      "richtig": [
         "it"
       ],
-      "erklaerung": "Ein Tier/Ding als Subjekt wird mit 'It' ersetzt."
+      "erklaerung": "Ein Ding als Objekt wird mit 'it' ersetzt."
+    },
+    {
+      "type": "mc",
+      "frage": "That's Peter. Do you know ___?",
+      "optionen": [
+        "he",
+        "him",
+        "his"
+      ],
+      "richtig": 1,
+      "erklaerung": "Als Objekt von 'know' steht 'him'."
     },
     {
       "type": "gap",
-      "frage": "I really like your parents. Please say hello to ___ from me.",
+      "frage": "Sarah is nice. I often talk to ___.",
+      "richtig": [
+        "her"
+      ],
+      "erklaerung": "Objektpronomen fuer eine weibliche Person ist 'her'."
+    },
+    {
+      "type": "mc",
+      "frage": "These books are great. I want to read ___.",
+      "optionen": [
+        "they",
+        "them",
+        "their"
+      ],
+      "richtig": 1,
+      "erklaerung": "Plural-Objektpronomen ist 'them'."
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze die unterstrichenen Woerter durch ein Subjektpronomen: 'My parents live in Berlin.'",
+      "richtig": [
+        "They live in Berlin.",
+        "They live in Berlin"
+      ],
+      "erklaerung": "'My parents' (Plural Personen) wird zu 'They'."
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze die unterstrichenen Woerter durch ein Objektpronomen: 'I gave the present to my mother.'",
+      "richtig": [
+        "I gave the present to her.",
+        "I gave the present to her"
+      ],
+      "erklaerung": "'my mother' wird zum Objektpronomen 'her'."
+    },
+    {
+      "type": "mc",
+      "frage": "Excuse me, can ___ tell me the time? (talking to one person)",
+      "optionen": [
+        "you",
+        "they",
+        "it"
+      ],
+      "richtig": 0,
+      "erklaerung": "Zur direkten Anrede einer Person benutzt man 'you'."
+    },
+    {
+      "type": "gap",
+      "frage": "My dog is hungry. I will feed ___ now.",
+      "richtig": [
+        "it",
+        "him",
+        "her"
+      ],
+      "erklaerung": "Ein Tier wird meist mit 'it' ersetzt; bei bekanntem Geschlecht auch 'him'/'her'."
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze beide Substantive durch Pronomen: 'Mark helped the children.'",
+      "richtig": [
+        "He helped them.",
+        "He helped them"
+      ],
+      "erklaerung": "'Mark' wird Subjekt 'He', 'the children' Objekt 'them'."
+    },
+    {
+      "type": "mc",
+      "frage": "It's a heavy box. Can you carry ___ for me?",
+      "optionen": [
+        "it",
+        "him",
+        "them"
+      ],
+      "richtig": 0,
+      "erklaerung": "Ein einzelnes Ding ('box') ist 'it'."
+    },
+    {
+      "type": "gap",
+      "frage": "You and Tom did great work. ___ should be proud of yourselves.",
+      "richtig": [
+        "You"
+      ],
+      "erklaerung": "'You and Tom' wird als Subjekt zu 'You' (Plural)."
+    },
+    {
+      "type": "mc",
+      "frage": "Between you and ___, this is a secret.",
+      "optionen": [
+        "I",
+        "me",
+        "my"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach der Praeposition 'between' steht das Objektpronomen 'me'."
+    },
+    {
+      "type": "gap",
+      "frage": "The students worked hard, so the teacher praised ___.",
       "richtig": [
         "them"
       ],
-      "erklaerung": "Nach der Präposition 'to' steht die Objektform; für die Eltern (Mehrzahl) ist das 'them'."
+      "erklaerung": "'The students' als Objekt wird zu 'them'."
     },
     {
-      "type": "gap",
-      "frage": "My sister loves music. ___ plays the guitar every day.",
+      "type": "transform",
+      "frage": "Ersetze die Substantive durch Pronomen: 'Emma and I invited Jack and Sophie.'",
       "richtig": [
-        "She",
-        "she"
+        "We invited them.",
+        "We invited them"
       ],
-      "erklaerung": "Die Schwester ist weiblich und das Subjekt; daher 'She'."
+      "erklaerung": "'Emma and I' = 'We' (Subjekt), 'Jack and Sophie' = 'them' (Objekt)."
+    },
+    {
+      "type": "mc",
+      "frage": "My grandmother is old, but ___ is still very active.",
+      "optionen": [
+        "it",
+        "she",
+        "her"
+      ],
+      "richtig": 1,
+      "erklaerung": "Als Subjekt fuer eine weibliche Person steht 'she', nicht 'her'."
     },
     {
       "type": "gap",
-      "frage": "This cake is delicious. Can you give ___ another piece, please?",
+      "frage": "I bought flowers for my friends and gave ___ to ___ at the party. (the flowers / the friends)",
+      "richtig": [
+        "them to them"
+      ],
+      "erklaerung": "Die Blumen = 'them' (Objekt Sache), die Freunde = 'them' (Objekt Personen)."
+    },
+    {
+      "type": "mc",
+      "frage": "Who broke the window? It was ___! (formal/standard English)",
+      "optionen": [
+        "I",
+        "me",
+        "mine"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach 'be' verlangt formelles Englisch das Subjektpronomen: 'It was I.'"
+    },
+    {
+      "type": "transform",
+      "frage": "Ersetze die unterstrichenen Teile durch Pronomen: 'The manager told the new employees that the manager trusted the new employees.'",
+      "richtig": [
+        "She told them that she trusted them.",
+        "He told them that he trusted them.",
+        "She told them that she trusted them",
+        "He told them that he trusted them"
+      ],
+      "erklaerung": "'The manager' = he/she, 'the new employees' = them; im zweiten Teil wird beides wiederholt."
+    },
+    {
+      "type": "gap",
+      "frage": "He gave my brother and ___ a lift home yesterday. (the speaker, as object)",
       "richtig": [
         "me"
       ],
-      "erklaerung": "Nach 'give' steht hier das Objekt (wem?); die sprechende Person sagt 'me'."
+      "erklaerung": "In 'my brother and me' steht das Objektpronomen 'me', nicht 'I'."
+    },
+    {
+      "type": "mc",
+      "frage": "Neither she nor ___ knew the answer. (standard English, as subject)",
+      "optionen": [
+        "I",
+        "me",
+        "mine"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach 'neither...nor' als Subjekt steht 'I'."
     },
     {
       "type": "transform",
-      "frage": "Ersetze die unterstrichenen Wörter durch ein Personalpronomen: My brother and I went to the park.",
+      "frage": "Forme so um, dass beide Personen durch ein Pronomen ersetzt werden: 'My colleague and I finished the report, and the boss thanked my colleague and me.'",
       "richtig": [
-        "We went to the park.",
-        "We went to the park"
+        "We finished the report, and the boss thanked us.",
+        "We finished the report and the boss thanked us.",
+        "We finished the report, and the boss thanked us"
       ],
-      "erklaerung": "'My brother and I' als Subjekt wird durch 'We' ersetzt."
-    },
-    {
-      "type": "transform",
-      "frage": "Ersetze die unterstrichenen Wörter durch ein Personalpronomen: I saw Mr. Jones at the station.",
-      "richtig": [
-        "I saw him at the station.",
-        "I saw him at the station"
-      ],
-      "erklaerung": "'Mr. Jones' ist hier das Objekt (männlich); daher 'him'."
-    },
-    {
-      "type": "transform",
-      "frage": "Ersetze die unterstrichenen Wörter durch Personalpronomen: Anna and Sophie helped the children.",
-      "richtig": [
-        "They helped them.",
-        "They helped them"
-      ],
-      "erklaerung": "'Anna and Sophie' (Subjekt) wird zu 'They', 'the children' (Objekt) wird zu 'them'."
+      "erklaerung": "'My colleague and I' = 'We' (Subjekt), 'my colleague and me' = 'us' (Objekt)."
     }
   ]
 };

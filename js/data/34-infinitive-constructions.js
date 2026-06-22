@@ -7,108 +7,301 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "Choose the correct form: \"We decided ___ at home because of the rain.\"",
+      "frage": "I want ___ a new bike.",
+      "optionen": [
+        "to buy",
+        "buy",
+        "buying"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach 'want' folgt der Infinitiv mit 'to'."
+    },
+    {
+      "type": "gap",
+      "frage": "She decided ___ stay at home tonight.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach 'decide' steht der Infinitiv mit 'to': 'to stay'."
+    },
+    {
+      "type": "mc",
+      "frage": "They hope ___ the match on Saturday.",
+      "optionen": [
+        "winning",
+        "to win",
+        "win"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach 'hope' folgt der to-Infinitiv."
+    },
+    {
+      "type": "gap",
+      "frage": "He promised ___ help me with my homework.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach 'promise' steht der to-Infinitiv: 'to help'."
+    },
+    {
+      "type": "mc",
+      "frage": "We need ___ now or we'll miss the train.",
+      "optionen": [
+        "leave",
+        "to leave",
+        "leaving"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach 'need' folgt hier der to-Infinitiv."
+    },
+    {
+      "type": "gap",
+      "frage": "I would like ___ order a cup of coffee, please.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach 'would like' steht der to-Infinitiv: 'to order'."
+    },
+    {
+      "type": "mc",
+      "frage": "She seems ___ very tired today.",
+      "optionen": [
+        "to be",
+        "being",
+        "be"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach 'seem' folgt der to-Infinitiv: 'to be'."
+    },
+    {
+      "type": "gap",
+      "frage": "They agreed ___ meet at the station at six.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach 'agree' steht der to-Infinitiv: 'to meet'."
+    },
+    {
+      "type": "mc",
+      "frage": "My brother learned ___ when he was five.",
+      "optionen": [
+        "swimming",
+        "swim",
+        "to swim"
+      ],
+      "richtig": 2,
+      "erklaerung": "Nach 'learn' folgt der to-Infinitiv: 'to swim'."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde einen Satz mit Infinitiv: 'I plan' + 'visit my grandparents'.",
+      "richtig": [
+        "I plan to visit my grandparents.",
+        "I plan to visit my grandparents"
+      ],
+      "erklaerung": "Nach 'plan' folgt der to-Infinitiv: 'to visit'."
+    },
+    {
+      "type": "mc",
+      "frage": "I went to the shop ___ some bread.",
+      "optionen": [
+        "to buy",
+        "for buy",
+        "for buying"
+      ],
+      "richtig": 0,
+      "erklaerung": "Der Infinitiv des Zwecks ('um zu') wird mit 'to' gebildet: 'to buy'."
+    },
+    {
+      "type": "gap",
+      "frage": "My parents let me ___ out late on Fridays. (stay)",
+      "richtig": [
+        "stay"
+      ],
+      "erklaerung": "Nach 'let' steht der Infinitiv OHNE 'to' (bare infinitive)."
+    },
+    {
+      "type": "mc",
+      "frage": "You should ___ a doctor about that cough.",
+      "optionen": [
+        "to see",
+        "see",
+        "seeing"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach Modalverben wie 'should' steht der Infinitiv ohne 'to'."
+    },
+    {
+      "type": "gap",
+      "frage": "It's important ___ tell the truth.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach 'It's + Adjektiv' folgt der to-Infinitiv: 'to tell'."
+    },
+    {
+      "type": "mc",
+      "frage": "This water is too hot ___.",
+      "optionen": [
+        "for drink",
+        "to drink",
+        "drinking"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach 'too + Adjektiv' folgt der to-Infinitiv: 'to drink'."
+    },
+    {
+      "type": "transform",
+      "frage": "Verbinde mit einem Infinitiv des Zwecks: 'She got up early.' + 'catch the first bus'.",
+      "richtig": [
+        "She got up early to catch the first bus.",
+        "She got up early to catch the first bus"
+      ],
+      "erklaerung": "Der Zweck ('um zu') wird mit dem to-Infinitiv ausgedrückt."
+    },
+    {
+      "type": "mc",
+      "frage": "He's old enough ___ on his own.",
+      "optionen": [
+        "to travel",
+        "for travel",
+        "travelling"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach 'enough' folgt der to-Infinitiv: 'to travel'."
+    },
+    {
+      "type": "gap",
+      "frage": "My teacher made us ___ the test again. (write)",
+      "richtig": [
+        "write"
+      ],
+      "erklaerung": "Nach 'make' (im Aktiv) steht der Infinitiv ohne 'to'."
+    },
+    {
+      "type": "mc",
+      "frage": "I don't know what ___ next.",
+      "optionen": [
+        "doing",
+        "to do",
+        "do"
+      ],
+      "richtig": 1,
+      "erklaerung": "Nach Fragewörtern ('what', 'how', ...) folgt oft der to-Infinitiv: 'what to do'."
+    },
+    {
+      "type": "gap",
+      "frage": "I heard someone ___ the door last night. (knock)",
+      "richtig": [
+        "knock"
+      ],
+      "erklaerung": "Nach Wahrnehmungsverben wie 'hear' steht der bare infinitive (vollständige Handlung)."
+    },
+    {
+      "type": "transform",
+      "frage": "Forme um mit 'asked ... to': 'The teacher said to the students: \"Be quiet.\"' Beginne mit 'The teacher asked'.",
+      "richtig": [
+        "The teacher asked the students to be quiet.",
+        "The teacher asked the students to be quiet"
+      ],
+      "erklaerung": "Nach 'ask + Objekt' steht der to-Infinitiv: 'to be quiet'."
+    },
+    {
+      "type": "mc",
+      "frage": "She would rather ___ at home than go out.",
       "optionen": [
         "to stay",
-        "stay",
-        "staying"
+        "staying",
+        "stay"
+      ],
+      "richtig": 2,
+      "erklaerung": "Nach 'would rather' steht der Infinitiv ohne 'to'."
+    },
+    {
+      "type": "gap",
+      "frage": "I'm glad ___ have met you at last.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Nach Adjektiven der Gefühlsreaktion ('glad') folgt der to-Infinitiv."
+    },
+    {
+      "type": "mc",
+      "frage": "It was nice of you ___ me.",
+      "optionen": [
+        "to help",
+        "helping",
+        "help"
       ],
       "richtig": 0,
-      "erklaerung": "Nach \"decide\" steht der to-Infinitiv: \"decided to stay\"."
+      "erklaerung": "Nach 'It was + Adjektiv + of you' folgt der to-Infinitiv."
+    },
+    {
+      "type": "transform",
+      "frage": "Forme in einen Infinitivsatz um: 'I expect that he will arrive soon.' Beginne mit 'I expect him'.",
+      "richtig": [
+        "I expect him to arrive soon.",
+        "I expect him to arrive soon"
+      ],
+      "erklaerung": "Nach 'expect + Objekt' steht der to-Infinitiv statt eines that-Satzes."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct form: \"My parents let me ___ out last night.\"",
+      "frage": "He pretended ___ asleep when his mother came in.",
       "optionen": [
-        "to go",
-        "go",
-        "going"
+        "being",
+        "to be",
+        "be"
       ],
       "richtig": 1,
-      "erklaerung": "Nach \"let\" steht der reine Infinitiv ohne \"to\": \"let me go\"."
+      "erklaerung": "Nach 'pretend' folgt der to-Infinitiv: 'to be'."
     },
     {
-      "type": "mc",
-      "frage": "Choose the correct form: \"This box is too heavy ___.\"",
-      "optionen": [
-        "to lift",
-        "for lifting",
-        "lift"
+      "type": "gap",
+      "frage": "You'd better not ___ him about the surprise. (tell)",
+      "richtig": [
+        "tell"
       ],
-      "richtig": 0,
-      "erklaerung": "Nach \"too + Adjektiv\" folgt der to-Infinitiv: \"too heavy to lift\"."
+      "erklaerung": "Nach 'had better (not)' steht der Infinitiv ohne 'to'."
     },
     {
       "type": "mc",
-      "frage": "Choose the correct form: \"I heard someone ___ my name in the crowd.\"",
+      "frage": "I'm sorry ___ you that the flight has been cancelled.",
       "optionen": [
-        "to call",
-        "call",
-        "to calling"
+        "telling",
+        "to tell",
+        "tell"
       ],
       "richtig": 1,
-      "erklaerung": "Nach Wahrnehmungsverben wie \"hear\" steht der reine Infinitiv: \"heard someone call\"."
-    },
-    {
-      "type": "gap",
-      "frage": "She went to the station ___ (meet) her friend.",
-      "richtig": [
-        "to meet"
-      ],
-      "erklaerung": "Der to-Infinitiv drückt den Zweck aus: \"to meet her friend\"."
-    },
-    {
-      "type": "gap",
-      "frage": "He is old enough ___ (drive) a car now.",
-      "richtig": [
-        "to drive"
-      ],
-      "erklaerung": "Nach \"enough\" folgt der to-Infinitiv: \"old enough to drive\"."
-    },
-    {
-      "type": "gap",
-      "frage": "I don't know what ___ (say) to her.",
-      "richtig": [
-        "to say"
-      ],
-      "erklaerung": "Nach dem Fragewort \"what\" kann ein to-Infinitiv stehen: \"what to say\"."
-    },
-    {
-      "type": "gap",
-      "frage": "You should ___ (call) the doctor immediately.",
-      "richtig": [
-        "call"
-      ],
-      "erklaerung": "Nach Modalverben wie \"should\" steht der reine Infinitiv ohne \"to\": \"should call\"."
+      "erklaerung": "'be sorry to do' bezieht sich auf eine gerade stattfindende/bevorstehende Handlung."
     },
     {
       "type": "transform",
-      "frage": "Bilde einen Satz mit \"want to\": I / want / learn / Spanish.",
+      "frage": "Verkürze mit einem Infinitiv: 'He was the first person who arrived.' Beginne mit 'He was the first'.",
       "richtig": [
-        "I want to learn Spanish.",
-        "I want to learn Spanish"
+        "He was the first to arrive.",
+        "He was the first person to arrive.",
+        "He was the first to arrive",
+        "He was the first person to arrive"
       ],
-      "erklaerung": "Nach \"want\" folgt der to-Infinitiv: \"want to learn\"."
+      "erklaerung": "Nach Ordinalzahlen/'the first' kann ein Relativsatz durch den to-Infinitiv ersetzt werden."
+    },
+    {
+      "type": "gap",
+      "frage": "She is said ___ be the best lawyer in town.",
+      "richtig": [
+        "to"
+      ],
+      "erklaerung": "Im Passiv von Berichtsverben ('is said') folgt der to-Infinitiv: 'to be'."
     },
     {
       "type": "transform",
-      "frage": "Forme um mit \"made him\": The teacher / make / him / repeat / the sentence.",
+      "frage": "Forme mit Perfekt-Infinitiv um: 'It seems that she has forgotten the keys.' Beginne mit 'She seems'.",
       "richtig": [
-        "The teacher made him repeat the sentence.",
-        "The teacher made him repeat the sentence"
+        "She seems to have forgotten the keys.",
+        "She seems to have forgotten the keys"
       ],
-      "erklaerung": "Nach \"make\" (jemanden zu etwas bringen) steht der reine Infinitiv: \"made him repeat\"."
-    },
-    {
-      "type": "transform",
-      "frage": "Verbinde die Sätze mit einem to-Infinitiv des Zwecks: \"She saved money. She wanted to buy a bike.\"",
-      "richtig": [
-        "She saved money to buy a bike.",
-        "She saved money to buy a bike",
-        "She saved money in order to buy a bike.",
-        "She saved money in order to buy a bike"
-      ],
-      "erklaerung": "Der to-Infinitiv (oder \"in order to\") ersetzt den Zweck-Nebensatz: \"saved money to buy a bike\"."
+      "erklaerung": "Vorzeitigkeit wird mit dem Perfekt-Infinitiv ('to have + Partizip') ausgedrückt."
     }
   ]
 };

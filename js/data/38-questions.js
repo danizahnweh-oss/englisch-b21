@@ -7,106 +7,294 @@ const QUIZ_DATA = {
   "questions": [
     {
       "type": "mc",
-      "frage": "___ your sister speak French?",
+      "frage": "___ you a teacher?",
       "optionen": [
+        "Are",
         "Do",
-        "Does",
         "Is"
       ],
-      "richtig": 1,
-      "erklaerung": "Bei der 3. Person Singular (your sister) und dem Vollverb 'speak' brauchst du 'Does'."
+      "richtig": 0,
+      "erklaerung": "Bei 'to be' (you) steht die Frageform 'Are'."
     },
     {
       "type": "mc",
-      "frage": "___ you at home yesterday evening?",
+      "frage": "___ she like coffee?",
       "optionen": [
-        "Did",
-        "Were",
-        "Was"
-      ],
-      "richtig": 1,
-      "erklaerung": "'you' verlangt im Past 'were'. Bei 'be' steht das Verb direkt vorne, kein 'did'."
-    },
-    {
-      "type": "mc",
-      "frage": "___ happened after the game?",
-      "optionen": [
-        "What did",
-        "What",
-        "What does"
-      ],
-      "richtig": 1,
-      "erklaerung": "'What' fragt hier nach dem Subjekt, deshalb kein 'did': 'What happened?'"
-    },
-    {
-      "type": "gap",
-      "frage": "___ you like coffee or tea?",
-      "richtig": [
+        "Is",
+        "Does",
         "Do"
       ],
-      "erklaerung": "Bei 'you' und dem Vollverb 'like' im Present brauchst du das Hilfsverb 'Do'."
+      "richtig": 1,
+      "erklaerung": "Im Simple Present mit he/she/it nutzt man 'Does'."
+    },
+    {
+      "type": "mc",
+      "frage": "Where ___ you live?",
+      "optionen": [
+        "do",
+        "are",
+        "does"
+      ],
+      "richtig": 0,
+      "erklaerung": "Mit 'you' im Simple Present steht 'do'."
     },
     {
       "type": "gap",
-      "frage": "Where ___ he go last weekend?",
+      "frage": "___ they at home now? (to be)",
+      "richtig": [
+        "Are"
+      ],
+      "erklaerung": "Frage mit 'to be' und 'they' bildet man mit 'Are'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ he speak English? (Simple Present)",
+      "richtig": [
+        "Does"
+      ],
+      "erklaerung": "Mit he/she/it im Simple Present steht das Hilfsverb 'Does'."
+    },
+    {
+      "type": "mc",
+      "frage": "What ___ your name?",
+      "optionen": [
+        "is",
+        "are",
+        "do"
+      ],
+      "richtig": 0,
+      "erklaerung": "'name' ist Singular, daher 'is'."
+    },
+    {
+      "type": "gap",
+      "frage": "Frage nach der Zeit: '___ time is it?'",
+      "richtig": [
+        "What"
+      ],
+      "erklaerung": "Nach der Uhrzeit fragt man mit 'What time'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage: 'You can swim.'",
+      "richtig": [
+        "Can you swim?"
+      ],
+      "erklaerung": "Bei Modalverben wird das Verb (can) nach vorn gestellt."
+    },
+    {
+      "type": "mc",
+      "frage": "___ many brothers do you have?",
+      "optionen": [
+        "How",
+        "What",
+        "Who"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach der Anzahl fragt man mit 'How many'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ are you late? - Because I missed the bus.",
+      "richtig": [
+        "Why"
+      ],
+      "erklaerung": "Nach dem Grund fragt man mit 'Why'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage: 'She is reading a book.'",
+      "richtig": [
+        "Is she reading a book?"
+      ],
+      "erklaerung": "Im Present Progressive wird 'is' nach vorn gestellt."
+    },
+    {
+      "type": "mc",
+      "frage": "___ did you go yesterday?",
+      "optionen": [
+        "Where",
+        "Where do",
+        "Where does"
+      ],
+      "richtig": 0,
+      "erklaerung": "Im Simple Past steht 'did', also nur 'Where' davor."
+    },
+    {
+      "type": "gap",
+      "frage": "What ___ you do last weekend? (Simple Past)",
       "richtig": [
         "did"
       ],
-      "erklaerung": "'last weekend' zeigt Vergangenheit, also 'did' + Grundform 'go'."
+      "erklaerung": "Im Simple Past bildet man Fragen mit dem Hilfsverb 'did'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage: 'They went to London.' (Frage nach dem Ort)",
+      "richtig": [
+        "Where did they go?"
+      ],
+      "erklaerung": "Mit 'Where' und Hilfsverb 'did' im Simple Past."
     },
     {
       "type": "gap",
-      "frage": "She is a teacher, ___ she?",
+      "frage": "___ is your favourite colour? - Blue.",
       "richtig": [
-        "isn't",
-        "isn’t",
-        "is not"
+        "What"
       ],
-      "erklaerung": "Positiver Satz mit 'is' bekommt ein negatives Question Tag: 'isn't she?'"
-    },
-    {
-      "type": "gap",
-      "frage": "___ can you swim? – For about thirty minutes.",
-      "richtig": [
-        "How long"
-      ],
-      "erklaerung": "Die Antwort nennt eine Dauer, also fragt man mit 'How long'."
-    },
-    {
-      "type": "transform",
-      "frage": "Bilde eine Frage: You are coming to the party.",
-      "richtig": [
-        "Are you coming to the party?"
-      ],
-      "erklaerung": "Bei 'be' (are) stellst du das Verb einfach vor das Subjekt: 'Are you coming to the party?'"
-    },
-    {
-      "type": "transform",
-      "frage": "Bilde eine Frage: They watched a film. (Frage nach 'a film' mit 'What')",
-      "richtig": [
-        "What did they watch?"
-      ],
-      "erklaerung": "W-Frage im Past: Fragewort + 'did' + Subjekt + Grundform: 'What did they watch?'"
-    },
-    {
-      "type": "transform",
-      "frage": "Bilde eine Frage: Tom has got a new bike.",
-      "richtig": [
-        "Has Tom got a new bike?",
-        "Does Tom have a new bike?"
-      ],
-      "erklaerung": "Mit 'have got' wird 'has' nach vorne gestellt: 'Has Tom got a new bike?' Auch 'Does Tom have...?' ist korrekt."
+      "erklaerung": "Nach einer Sache/Wahl fragt man mit 'What'."
     },
     {
       "type": "mc",
-      "frage": "You won't be late, ___?",
+      "frage": "___ does the film start? - At 8 p.m.",
       "optionen": [
-        "will you",
-        "won't you",
-        "do you"
+        "What time",
+        "How long",
+        "How often"
       ],
       "richtig": 0,
-      "erklaerung": "Negativer Satz ('won't') bekommt ein positives Tag: 'will you?'"
+      "erklaerung": "Nach dem Zeitpunkt fragt man mit 'What time'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage: 'He has finished his homework.' (Present Perfect)",
+      "richtig": [
+        "Has he finished his homework?"
+      ],
+      "erklaerung": "Im Present Perfect wird 'has' nach vorn gestellt."
+    },
+    {
+      "type": "gap",
+      "frage": "___ have you lived here? - For ten years.",
+      "richtig": [
+        "How long"
+      ],
+      "erklaerung": "Nach der Dauer fragt man mit 'How long'."
+    },
+    {
+      "type": "mc",
+      "frage": "___ book is this? - It's mine.",
+      "optionen": [
+        "Whose",
+        "Who's",
+        "Who"
+      ],
+      "richtig": 0,
+      "erklaerung": "Nach dem Besitzer fragt man mit 'Whose'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage: 'You will come to the party.'",
+      "richtig": [
+        "Will you come to the party?"
+      ],
+      "erklaerung": "Im Future mit 'will' wird 'will' nach vorn gestellt."
+    },
+    {
+      "type": "gap",
+      "frage": "Subjektfrage: '___ broke the window?' - Tom did.",
+      "richtig": [
+        "Who"
+      ],
+      "erklaerung": "Bei einer Subjektfrage mit 'Who' braucht man kein 'did': Who broke...?"
+    },
+    {
+      "type": "mc",
+      "frage": "Who ___ you at the station? - My uncle did.",
+      "optionen": [
+        "met",
+        "did meet",
+        "does meet"
+      ],
+      "richtig": 0,
+      "erklaerung": "Bei der Subjektfrage 'Who' steht das Verb direkt im Past: 'met'."
+    },
+    {
+      "type": "transform",
+      "frage": "Bilde eine Subjektfrage nach dem Subjekt: 'Anna called the police.'",
+      "richtig": [
+        "Who called the police?"
+      ],
+      "erklaerung": "Subjektfrage mit 'Who' ohne Hilfsverb: das Verb bleibt im Past."
+    },
+    {
+      "type": "gap",
+      "frage": "___ often do you go to the gym? - Twice a week.",
+      "richtig": [
+        "How"
+      ],
+      "erklaerung": "Nach der Häufigkeit fragt man mit 'How often'."
+    },
+    {
+      "type": "mc",
+      "frage": "You're a doctor, ___?",
+      "optionen": [
+        "aren't you",
+        "don't you",
+        "isn't it"
+      ],
+      "richtig": 0,
+      "erklaerung": "Question Tag: positiver Satz mit 'are' -> negativer Tag 'aren't you'."
+    },
+    {
+      "type": "gap",
+      "frage": "She doesn't like tea, ___ she? (Question Tag)",
+      "richtig": [
+        "does",
+        "does?"
+      ],
+      "erklaerung": "Negativer Satz mit 'doesn't' -> positiver Tag 'does she'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine indirekte Frage: Beginne mit 'Could you tell me ...' - 'Where is the station?'",
+      "richtig": [
+        "Could you tell me where the station is?"
+      ],
+      "erklaerung": "In indirekten Fragen steht die normale Wortstellung: '...where the station is'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine indirekte Frage: Beginne mit 'Do you know ...' - 'What time does the shop open?'",
+      "richtig": [
+        "Do you know what time the shop opens?"
+      ],
+      "erklaerung": "In der indirekten Frage entfällt 'does' und das Verb wird angepasst: 'opens'."
+    },
+    {
+      "type": "gap",
+      "frage": "___ are you waiting for? - For my friend. (Präposition am Satzende)",
+      "richtig": [
+        "Who",
+        "Whom"
+      ],
+      "erklaerung": "Bei 'wait for' steht das Fragewort 'Who/Whom' vorn, die Präposition 'for' am Ende."
+    },
+    {
+      "type": "mc",
+      "frage": "___ of these two jackets do you prefer?",
+      "optionen": [
+        "Which",
+        "What",
+        "Who"
+      ],
+      "richtig": 0,
+      "erklaerung": "Bei einer Auswahl aus begrenzten Optionen nutzt man 'Which'."
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine verneinte Frage: 'You have seen this film.' (mit 'Haven't')",
+      "richtig": [
+        "Haven't you seen this film?"
+      ],
+      "erklaerung": "Verneinte Frage im Present Perfect: 'Haven't you seen ...?'"
+    },
+    {
+      "type": "transform",
+      "frage": "Mache eine Frage nach dem Subjekt mit 'What': 'Something fell off the shelf.'",
+      "richtig": [
+        "What fell off the shelf?"
+      ],
+      "erklaerung": "Subjektfrage mit 'What' ohne Hilfsverb: 'What fell ...?'"
     }
   ]
 };

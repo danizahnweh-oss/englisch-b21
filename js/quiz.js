@@ -19,9 +19,13 @@
 
   const NAME    = "Nadja";          // Name der Lernenden – wird überall persönlich genutzt
   const data    = QUIZ_DATA;
-  const fragen  = data.questions;
   const root    = document.getElementById("quiz");
   const SPEICHER = "best:" + data.title;   // Schlüssel für localStorage
+
+  // Wie viele Fragen pro Durchgang gezeigt werden (zufällig aus dem Pool).
+  // So ist jede Runde anders – andere Auswahl UND andere Reihenfolge.
+  const RUNDE = 15;
+  let fragen = [];                  // wird pro Runde neu gemischt (siehe neueRunde)
 
   // ---- Zustand (merkt sich, wo wir gerade sind) --------------
   let i        = 0;   // aktuelle Frage (0 = erste)
@@ -51,10 +55,40 @@
   // richtige Antwort als Liste erlaubter Varianten zurückgeben
   const erlaubt = (f) => Array.isArray(f.richtig) ? f.richtig : [f.richtig];
 
+  // Liste zufällig mischen (Fisher-Yates), ohne das Original zu ändern
+  const mische = (arr) => {
+    const a = arr.slice();
+    for (let k = a.length - 1; k > 0; k--) {
+      const j = Math.floor(Math.random() * (k + 1));
+      const tmp = a[k]; a[k] = a[j]; a[j] = tmp;
+    }
+    return a;
+  };
+
+  // Eine neue Runde vorbereiten: Fragen mischen, zufällige Auswahl ziehen
+  // und bei Multiple Choice auch die Optionen-Reihenfolge mischen.
+  function neueRunde() {
+    let pool = mische(data.questions);
+    if (RUNDE && pool.length > RUNDE) pool = pool.slice(0, RUNDE);
+
+    fragen = pool.map((q) => {
+      if (q.type === "mc" && Array.isArray(q.optionen)) {
+        const reihen = mische(q.optionen.map((_, k) => k));   // gemischte Index-Folge
+        return Object.assign({}, q, {
+          optionen: reihen.map((k) => q.optionen[k]),
+          richtig:  reihen.indexOf(q.richtig)                  // neuer Index der richtigen Option
+        });
+      }
+      return q;
+    });
+  }
+
   // ============================================================
   // 1) Erklär-Box + Quiz-Gerüst einmal aufbauen
   // ============================================================
   function aufbauen() {
+    neueRunde();                 // erste, gemischte Runde vorbereiten
+
     // Erklärung
     if (data.explain) {
       const box = el("section", "explain", data.explain);
@@ -264,6 +298,7 @@
 
   function neustart() {
     i = 0; punkte = 0; richtig = 0; streak = 0; beste = 0; beantwortet = false;
+    neueRunde();                 // neue Mischung -> jede Runde anders
     frageZeigen();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
