@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abschlussprüfung – English Grammar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="appbar">
+    <div class="appbar__in">
+      <a class="back" href="index.html">← Übersicht</a>
+      <span class="appbar__title" style="font-size:1rem">Abschlussprüfung</span>
+      <span class="user"><span class="avatar">N</span> Nadja</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 id="topic-title">Abschlussprüfung</h1>
+    <p class="quiz__intro" id="topic-intro">Zufällige Mischung aus allen Grammatik-Themen.</p>
+
+    <!-- exam.js baut hier erst den Start, dann (über quiz.js) das Quiz -->
+    <section class="quiz" id="quiz"></section>
+  </main>
+
+  <!-- Reihenfolge zählt: erst Fragenpool, dann Auswahl-Logik. quiz.js
+       wird von exam.js nachgeladen, sobald die Länge gewählt ist. -->
+  <script src="js/data/exam-bank.js"></script>
+  <script src="js/exam.js"></script>
+</body>
+</html>

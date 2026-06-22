@@ -17,6 +17,7 @@
     return;
   }
 
+  const NAME    = "Nadja";          // Name der Lernenden – wird überall persönlich genutzt
   const data    = QUIZ_DATA;
   const fragen  = data.questions;
   const root    = document.getElementById("quiz");
@@ -183,7 +184,7 @@
       punkte += 10 + bonus;
       fb.className = "feedback good show";
       inner.innerHTML =
-        `<span class="tag">Richtig!</span> ` +
+        `<span class="tag">Richtig${bonus ? ", " + NAME : ""}!</span> ` +
         (bonus ? `<span class="spark">🔥 Serie ${streak} (+${bonus} Bonus)</span><br>` : "") +
         `<span class="why">${f.erklaerung || ""}</span>`;
     } else {
@@ -237,14 +238,14 @@
     if (neuerRekord) { try { localStorage.setItem(SPEICHER, String(punkte)); } catch (e) {} }
 
     let nachricht;
-    if (prozent === 100)      nachricht = "Perfekt! Alles richtig. 🏆";
-    else if (prozent >= 80)   nachricht = "Stark! Sitzt fast komplett.";
-    else if (prozent >= 60)   nachricht = "Gut gemacht. Dranbleiben!";
-    else                      nachricht = "Übung macht den Meister. Nochmal?";
+    if (prozent === 100)      nachricht = `Perfekt, ${NAME}! Alles richtig. 🏆`;
+    else if (prozent >= 80)   nachricht = `Stark, ${NAME}! Sitzt fast komplett.`;
+    else if (prozent >= 60)   nachricht = `Gut gemacht, ${NAME}. Dranbleiben!`;
+    else                      nachricht = `Übung macht den Meister, ${NAME}. Nochmal?`;
 
     const res = el("section", "result");
     res.innerHTML = `
-      <h2>Geschafft!</h2>
+      <h2>Geschafft, ${NAME}!</h2>
       <div class="ring" style="--p:${prozent}"><b>${prozent}%</b></div>
       <p class="msg">${nachricht}</p>
       <p class="sub">${richtig} von ${fragen.length} richtig · ${punkte} Punkte ·
