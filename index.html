@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Englisch B2.1 – Grammatik üben</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Englisch B2.1 üben</h1>
+    <p class="lead">Erst kurz erklärt, dann spielerisch üben. Wähle ein Thema.</p>
+
+    <div class="cards">
+      <a class="card" href="tenses.html">
+        <span class="badge">Modul 1</span>
+        <h2>Tenses</h2>
+        <p>Present Perfect vs. Past Simple, Verlaufsformen, Zukunft. Plus die since/for-Falle.</p>
+        <div class="best" data-best="best:Tenses"></div>
+      </a>
+
+      <a class="card" href="passive-reported.html">
+        <span class="badge">Modul 2</span>
+        <h2>Passive &amp; Reported Speech</h2>
+        <p>Passiv in allen Zeiten, indirekte Rede mit backshift, say vs. tell.</p>
+        <div class="best" data-best="best:Passive &amp; Reported Speech"></div>
+      </a>
+
+      <a class="card" href="relative-conjunctions.html">
+        <span class="badge">Modul 3</span>
+        <h2>Relativsätze &amp; Konjunktionen</h2>
+        <p>who/which/that/whose, defining vs. non-defining, although/despite/because of.</p>
+        <div class="best" data-best="best:Relativsätze &amp; Konjunktionen"></div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Zeigt die gespeicherte Bestpunktzahl pro Modul (falls vorhanden) -->
+  <script>
+    document.querySelectorAll(".best").forEach(function (n) {
+      var p = 0;
+      try { p = parseInt(localStorage.getItem(n.dataset.best) || "0", 10); } catch (e) {}
+      n.textContent = p > 0 ? "Bestpunktzahl: " + p : "";
+    });
+  </script>
+</body>
+</html>
